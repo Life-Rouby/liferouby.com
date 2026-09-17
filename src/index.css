@@ -791,3 +791,117 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+/* Vertical timeline — add this to your global stylesheet (e.g. index.css) */
+
+.vtimeline {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 1rem 0;
+}
+
+/* the central spine */
+.vtimeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--border-color, #d8d4c9) 0,
+    var(--border-color, #d8d4c9) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  transform: translateX(-50%);
+}
+
+.vtimeline-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.vtimeline-row:last-child {
+  margin-bottom: 0;
+}
+
+/* the dot on the spine */
+.vtimeline-node {
+  position: absolute;
+  top: 0.4rem;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent, #b5502e);
+  border: 3px solid var(--bg, #fff);
+  box-shadow: 0 0 0 2px var(--accent, #b5502e);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.vtimeline-content {
+  width: calc(50% - 2.5rem);
+}
+
+/* left entries: content sits left of spine */
+.vtimeline-row.is-left .vtimeline-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+/* right entries: content sits right of spine */
+.vtimeline-row.is-right .vtimeline-content {
+  margin-left: auto;
+  text-align: left;
+}
+
+.vtimeline-year {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--accent, #b5502e);
+  margin-bottom: 0.25rem;
+}
+
+.vtimeline-content h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.vtimeline-location {
+  font-size: 0.85rem;
+  color: var(--text-muted, #767267);
+  margin: 0 0 0.4rem;
+}
+
+.vtimeline-content p:last-child {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* mobile: single column, spine moves to the left edge */
+@media (max-width: 640px) {
+  .vtimeline::before {
+    left: 10px;
+  }
+
+  .vtimeline-node {
+    left: 10px;
+  }
+
+  .vtimeline-content,
+  .vtimeline-row.is-left .vtimeline-content,
+  .vtimeline-row.is-right .vtimeline-content {
+    width: 100%;
+    margin-left: 2.25rem;
+    margin-right: 0;
+    text-align: left;
+  }
+}
