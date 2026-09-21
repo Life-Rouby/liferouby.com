@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap");
+
+.cfb-page {
+  --cfb-bg: #ffffff;
+  --cfb-text: #14181a;
+  --cfb-text-dim: #5f6672;
+  --cfb-on-accent: #ffffff;
+  --cfb-turf: #2f6e4e;
+  --cfb-turf-light: #1f7a4d;
+  --cfb-flag: #b23a26;
+  --cfb-gold: #a9740a;
+  --cfb-line: #dcdfe2;
+
+  background: var(--cfb-bg);
+  color: var(--cfb-text);
+  font-family: "Lexend", sans-serif;
+  padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cfb-page * {
+  box-sizing: border-box;
+}
+
+.cfb-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 3px solid var(--cfb-turf);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.cfb-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cfb-title {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.cfb-title-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.cfb-title-btn:hover .cfb-title {
+  color: var(--cfb-turf-light);
+}
+
+.cfb-title-btn:focus-visible {
+  outline: 2px solid var(--cfb-gold);
+  outline-offset: 4px;
+}
+
+.cfb-tab-strip {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.cfb-tab-btn {
+  font-family: "Lexend", sans-serif;
+  background: transparent;
+  color: var(--cfb-text-dim);
+  border: 1px solid var(--cfb-line);
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.cfb-tab-btn:hover {
+  border-color: var(--cfb-turf-light);
+  color: var(--cfb-text);
+}
+
+.cfb-tab-btn.is-active {
+  background: var(--cfb-turf);
+  border-color: var(--cfb-turf);
+  color: var(--cfb-on-accent);
+}
+
+.cfb-tab-btn:focus-visible {
+  outline: 2px solid var(--cfb-gold);
+  outline-offset: 2px;
+}
+
+.cfb-week-strip {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.cfb-week-btn {
+  font-family: "Lexend", sans-serif;
+  background: transparent;
+  color: var(--cfb-text-dim);
+  border: 1px solid var(--cfb-line);
+  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.cfb-week-btn:hover {
+  border-color: var(--cfb-turf-light);
+  color: var(--cfb-text);
+}
+
+.cfb-week-btn.is-active {
+  background: var(--cfb-turf);
+  border-color: var(--cfb-turf);
+  color: var(--cfb-on-accent);
+}
+
+.cfb-week-btn:focus-visible,
+.cfb-row-clickable:focus-visible {
+  outline: 2px solid var(--cfb-gold);
+  outline-offset: 2px;
+}
+
+.cfb-section {
+  margin-bottom: 1.5rem;
+}
+
+.cfb-section-title {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cfb-turf-light);
+  border-bottom: 1px solid var(--cfb-line);
+  padding-bottom: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.cfb-table-wrap {
+  overflow-x: auto;
+}
+
+.cfb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.cfb-table th,
+.cfb-table td {
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--cfb-line);
+  white-space: nowrap;
+}
+
+.cfb-table thead th {
+  color: var(--cfb-text-dim);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cfb-num {
+  font-family: "Lexend", sans-serif;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.cfb-wk-col {
+  text-align: center;
+}
+
+.cfb-wk-winner {
+  font-weight: 600;
+}
+
+.cfb-total {
+  color: var(--cfb-turf-light);
+  font-size: 1.05rem;
+}
+
+.cfb-row-clickable {
+  cursor: pointer;
+}
+
+.cfb-row-clickable:hover {
+  background: rgba(31, 122, 77, 0.08);
+}
+
+.cfb-roster-row td {
+  padding: 0;
+  border-bottom: 1px solid var(--cfb-line);
+}
+
+.cfb-roster {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cfb-roster-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.cfb-roster-item.status-bye {
+  opacity: 0.6;
+}
+
+.cfb-roster-bar {
+  display: flex;
+  flex: 0 0 auto;
+  align-self: stretch;
+  gap: 2px;
+}
+
+.cfb-roster-bar-seg {
+  width: 6px;
+  align-self: stretch;
+  border-radius: 2px;
+  min-height: 1.6rem;
+}
+
+.cfb-bar-win {
+  background: var(--cfb-turf-light);
+}
+.cfb-bar-loss {
+  background: var(--cfb-flag);
+}
+.cfb-bar-boost {
+  background: var(--cfb-gold);
+}
+.cfb-bar-sabotaged {
+  background: var(--cfb-flag);
+}
+.cfb-bar-bye,
+.cfb-bar-neutral {
+  background: var(--cfb-line);
+}
+
+.cfb-roster-content {
+  display: grid;
+  grid-template-columns: 170px 170px 90px 50px;
+  gap: 0.4rem;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.cfb-roster-team {
+  font-weight: 500;
+}
+
+.cfb-roster-opp,
+.cfb-roster-status {
+  color: var(--cfb-text-dim);
+}
+
+.cfb-matchup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.cfb-matchup-card {
+  border: 1px solid var(--cfb-line);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cfb-matchup-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.cfb-matchup-side.is-winner .cfb-matchup-team {
+  color: var(--cfb-turf-light);
+}
+
+.cfb-matchup-owner {
+  font-size: 0.75rem;
+  color: var(--cfb-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cfb-matchup-team {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cfb-matchup-at {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cfb-text-dim);
+  font-size: 0.8rem;
+  flex: 0 0 auto;
+}
+
+.cfb-matchup-spread {
+  font-family: "Lexend", sans-serif;
+  color: var(--cfb-gold);
+}
+
+.cfb-predictions-table td.is-correct {
+  color: var(--cfb-turf-light);
+  font-weight: 500;
+}
+
+.cfb-predictions-total th,
+.cfb-predictions-total td {
+  border-top: 2px solid var(--cfb-turf);
+  border-bottom: none;
+}
+
+.cfb-home-name {
+  font-weight: 500;
+  text-align: left;
+}
+
+.cfb-home-name-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cfb-home-name-btn:hover {
+  color: var(--cfb-turf-light);
+  text-decoration: underline;
+}
+
+.cfb-home-name-btn:focus-visible {
+  outline: 2px solid var(--cfb-gold);
+  outline-offset: 2px;
+}
+
+.cfb-home-table {
+  font-size: 1.2rem;
+}
+
+.cfb-home-table thead th {
+  font-size: 1.1rem;
+}
+
+.cfb-home-table tbody td.cfb-num:not(.cfb-total) {
+  font-size: 1.05rem;
+}
+
+.cfb-home-table th,
+.cfb-home-table td {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-right: 1px solid var(--cfb-line);
+  text-align: center;
+}
+
+.cfb-home-table th:last-child,
+.cfb-home-table td:last-child {
+  border-right: none;
+}
+
+.cfb-home-table th:nth-child(2),
+.cfb-home-table td:nth-child(2) {
+  text-align: left;
+  padding-right: 0.5rem;
+  border-right: 3px solid var(--cfb-turf);
+}
+
+.cfb-home-table th:nth-child(3),
+.cfb-home-table td:nth-child(3) {
+  padding-left: 0.5rem;
+}
+
+.cfb-home-table .cfb-total {
+  color: var(--cfb-turf-light);
+  font-size: 1.3rem;
+}
+
+.cfb-back-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--cfb-text-dim);
+  border: 1px solid var(--cfb-line);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.cfb-back-btn:hover {
+  border-color: var(--cfb-turf-light);
+  color: var(--cfb-text);
+}
+
+.cfb-team-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cfb-team-chip {
+  font-family: "Lexend", sans-serif;
+  border: 1px solid var(--cfb-line);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.cfb-team-chip.is-boosted-past {
+  border-color: #b8a06b;
+  color: #b8a06b;
+}
+
+.cfb-team-chip.is-boosted-upcoming {
+  border-color: #f4c430;
+  background: rgba(244, 196, 48, 0.18);
+  color: #7a5c00;
+  font-weight: 600;
+}
+
+.cfb-team-chip.is-dropped {
+  border-color: var(--cfb-flag);
+  color: var(--cfb-text-dim);
+  opacity: 0.75;
+}
+
+.cfb-detail-team-name {
+  position: sticky;
+  left: 0;
+  background: var(--cfb-bg);
+  vertical-align: middle;
+}
+
+.cfb-detail-dropped-tag {
+  display: block;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--cfb-flag);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.15rem;
+}
+
+.cfb-detail-label {
+  color: var(--cfb-text-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cfb-detail-cell.status-dropped {
+  color: var(--cfb-text-dim);
+  background: rgba(0, 0, 0, 0.04);
+  opacity: 0.55;
+}
+
+.cfb-detail-cell.outcome-win {
+  background: rgba(31, 122, 77, 0.18);
+  color: var(--cfb-turf-light);
+}
+
+.cfb-detail-cell.outcome-loss {
+  background: rgba(178, 58, 38, 0.16);
+  color: var(--cfb-flag);
+}
+
+.cfb-detail-cell.outcome-bye {
+  background: rgba(95, 102, 114, 0.18);
+  color: var(--cfb-text-dim);
+}
+
+.cfb-detail-team + .cfb-detail-team tr:first-child th,
+.cfb-detail-team + .cfb-detail-team tr:first-child td {
+  border-top: 2px solid var(--cfb-line);
+}
+
+.cfb-detail-summary-row th {
+  text-align: left;
+  color: var(--cfb-turf-light);
+  font-family: "Lexend", sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cfb-detail-summary-row:first-of-type td,
+.cfb-detail-summary-row:first-of-type th {
+  border-top: 2px solid var(--cfb-turf);
+}
+
+.cfb-empty,
+.cfb-loading {
+  color: var(--cfb-text-dim);
+}
+
+.cfb-error {
+  color: var(--cfb-flag);
+}
+
+.cfb-chart-wrap {
+  position: relative;
+}
+
+.cfb-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.cfb-chart-grid {
+  stroke: var(--cfb-line);
+  stroke-width: 1;
+}
+
+.cfb-chart-axis-label {
+  font-family: "Lexend", sans-serif;
+  font-size: 12px;
+  fill: var(--cfb-text-dim);
+}
+
+.cfb-chart-crosshair {
+  stroke: var(--cfb-text-dim);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.cfb-chart-leader {
+  stroke: var(--cfb-line);
+  stroke-width: 1;
+}
+
+.cfb-chart-end-label {
+  font-family: "Lexend", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--cfb-text);
+}
+
+.cfb-chart-tooltip {
+  position: absolute;
+  top: 24px;
+  background: var(--cfb-bg);
+  border: 1px solid var(--cfb-line);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(20, 24, 26, 0.12);
+  padding: 0.5rem 0.65rem;
+  min-width: 150px;
+  pointer-events: none;
+  font-family: "Lexend", sans-serif;
+}
+
+.cfb-chart-tooltip-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cfb-text-dim);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cfb-chart-tooltip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  padding: 0.1rem 0;
+}
+
+.cfb-chart-tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cfb-chart-tooltip-name {
+  flex: 1;
+}
+
+.cfb-chart-tooltip-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}

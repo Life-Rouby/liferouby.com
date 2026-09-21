@@ -1,0 +1,37 @@
+{
+  "season": "2026",
+  "participants": [
+    {
+      "id": "mary-kathryn",
+      "name": "Mary Kathryn"
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan"
+    },
+    {
+      "id": "aarav",
+      "name": "Aarav"
+    },
+    {
+      "id": "life",
+      "name": "Life"
+    },
+    {
+      "id": "kathleen",
+      "name": "Kathleen"
+    },
+    {
+      "id": "kenny",
+      "name": "Kenny"
+    },
+    {
+      "id": "jabir",
+      "name": "Jabir"
+    },
+    {
+      "id": "justin",
+      "name": "Justin"
+    }
+  ]
+}
