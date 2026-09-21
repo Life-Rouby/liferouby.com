@@ -1,0 +1,2503 @@
+{
+  "weeks": {
+    "Week 2": [
+      {
+        "participant1": "aarav",
+        "team1": "California",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Syracuse",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "UNLV",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "North Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Memphis",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Boise State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Ohio State",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Duke",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Illinois",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Arizona",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "BYU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Arizona State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Texas A&M",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Oregon",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Oklahoma State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "South Florida",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Army",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Tennessee",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Georgia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Arkansas",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Utah",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 1": [
+      {
+        "participant1": "aarav",
+        "team1": "Western Michigan",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Tulane",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Duke",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "North Texas",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Indiana",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "East Carolina",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Alabama",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "UNLV",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Hawai'i",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Fresno State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "USC",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Ohio",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Nebraska",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Louisville",
+        "location1": "neutral",
+        "participant2": "kathleen",
+        "team2": "Ole Miss",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Auburn",
+        "location1": "neutral",
+        "participant2": "life",
+        "team2": "Baylor",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "UCLA",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "California",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Sam Houston",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Troy",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Toledo",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Michigan State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Oregon State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Houston",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "SMU",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Florida State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Liberty",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "James Madison",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "UTEP",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Oklahoma",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Colorado",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Georgia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Washington State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Washington",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Boise State",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Notre Dame",
+        "location1": "neutral",
+        "participant2": "life",
+        "team2": "Wisconsin",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week X": [],
+    "Week 0": [
+      {
+        "participant1": "jabir",
+        "team1": "Jacksonville State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "North Dakota State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Virginia",
+        "location1": "neutral",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 3": [
+      {
+        "participant1": "aarav",
+        "team1": "East Carolina",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Old Dominion",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Tulane",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Kansas State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Georgia",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Arkansas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Kennesaw State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Tennessee",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Miami",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Wake Forest",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Troy",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Missouri",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Michigan State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Notre Dame",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Syracuse",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Pittsburgh",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "SMU",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Louisville",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "North Carolina",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Clemson",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Florida State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Alabama",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Colorado",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Northwestern",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "UTSA",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Auburn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "NC State",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Vanderbilt",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Houston",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Texas Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "LSU",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Ole Miss",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 4": [
+      {
+        "participant1": "aarav",
+        "team1": "James Madison",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Old Dominion",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "South Carolina",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Alabama",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Oklahoma",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Georgia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Arizona",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Washington State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Northwestern",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Indiana",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Illinois",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Ohio State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Texas",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Tennessee",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Vanderbilt",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Auburn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Ole Miss",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Oregon",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "USC",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Colorado",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Baylor",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Liberty",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Coastal Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Iowa",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Clemson",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "California",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Boise State",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Western Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "TCU",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "UCF",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Nebraska",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Michigan State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Texas A&M",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "LSU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 5": [
+      {
+        "participant1": "aarav",
+        "team1": "Pittsburgh",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Virginia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "UCF",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Houston",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Fresno State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Washington State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Miami",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Clemson",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Ohio State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Iowa",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Louisville",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Michigan State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Wisconsin",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Auburn",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Tennessee",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Syracuse",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "UConn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Vanderbilt",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Georgia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Cincinnati",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Arizona",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Virginia",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Florida State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Missouri",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Penn State",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Northwestern",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Baylor",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Arizona State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Texas Tech",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Colorado",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Notre Dame",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "North Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 6": [
+      {
+        "participant1": "aarav",
+        "team1": "Tulane",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Army",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "South Carolina",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Georgia",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Alabama",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Jacksonville State",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Kennesaw State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "UCF",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Oklahoma State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Oklahoma",
+        "location1": "neutral",
+        "participant2": "justin",
+        "team2": "Texas",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Duke",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Georgia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Hawai'i",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Arizona State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Wake Forest",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "North Carolina",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Pittsburgh",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Florida State",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Louisville",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Illinois",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Michigan State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "UCLA",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Syracuse",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Virginia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Virginia Tech",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "California",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Iowa",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Washington",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Indiana",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Nebraska",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Texas A&M",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Missouri",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Boise State",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Fresno State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 7": [
+      {
+        "participant1": "jabir",
+        "team1": "Memphis",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Tulane",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Missouri",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Ole Miss",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Georgia Tech",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Virginia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Auburn",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Georgia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Wake Forest",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "California",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Louisville",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Syracuse",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Oklahoma State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Houston",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Ohio State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Indiana",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Troy",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Louisiana",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Florida State",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Miami",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "North Carolina",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Duke",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Arizona State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Texas Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Virginia",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "SMU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida Atlantic",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Army",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Penn State",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Wisconsin",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "UCLA",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Utah",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Colorado",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Nebraska",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "TCU",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Baylor",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 8": [
+      {
+        "participant1": "aarav",
+        "team1": "East Carolina",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Memphis",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Western Michigan",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Toledo",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "California",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "SMU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Michigan State",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "UCLA",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Duke",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Virginia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Liberty",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Kennesaw State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "UTSA",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Tulane",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Colorado",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Oklahoma State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Oregon",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Illinois",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Ole Miss",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Virginia Tech",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Clemson",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Houston",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Utah",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Indiana",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "LSU",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Auburn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Texas Tech",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Cincinnati",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Tennessee",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "South Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "BYU",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "UCF",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Boise State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Washington State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 9": [
+      {
+        "participant1": "aarav",
+        "team1": "South Carolina",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Oklahoma",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "Georgia",
+        "location1": "neutral",
+        "participant2": "kenny",
+        "team2": "Florida",
+        "location2": "neutral",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "California",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Miami",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "North Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Troy",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "James Madison",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Auburn",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Ole Miss",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Northwestern",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Ohio State",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "USC",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Arizona",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Texas Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Army",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Memphis",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Arizona State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "BYU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Virginia",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Wake Forest",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida Atlantic",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "North Texas",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Kansas State",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Colorado",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Baylor",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "UCF",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Clemson",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Florida State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Utah",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Cincinnati",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Wisconsin",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Iowa",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Washington",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Nebraska",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 10": [
+      {
+        "participant1": "aarav",
+        "team1": "Georgia",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Ole Miss",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Oklahoma",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Miami",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Notre Dame",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Michigan State",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Duke",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Oklahoma State",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Kansas State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Texas",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Missouri",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "North Carolina",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "UConn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "South Florida",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "East Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Oregon",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Ohio State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Colorado",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Arizona State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Cincinnati",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Houston",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "UTSA",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida Atlantic",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Iowa",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Northwestern",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Virginia Tech",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "SMU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Old Dominion",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Coastal Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Clemson",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Syracuse",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Texas A&M",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "South Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "TCU",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Arizona",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Nebraska",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Illinois",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Alabama",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "LSU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "BYU",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Utah",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 11": [
+      {
+        "participant1": "aarav",
+        "team1": "James Madison",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "UConn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "North Texas",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "UTSA",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "California",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Virginia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Missouri",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Georgia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Michigan",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Memphis",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "South Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Georgia Tech",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Clemson",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Duke",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Miami",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Louisville",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "North Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Wake Forest",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "SMU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Florida State",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Pittsburgh",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Arizona State",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "UCF",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Syracuse",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "NC State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Texas",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "LSU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Ole Miss",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Oklahoma",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "North Dakota State",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Hawai'i",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Houston",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Colorado",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Kansas State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "TCU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Washington",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Michigan State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Utah",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Arizona",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Texas Tech",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Oklahoma State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Baylor",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "BYU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Alabama",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Vanderbilt",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 12": [
+      {
+        "participant1": "aarav",
+        "team1": "East Carolina",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Army",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Wake Forest",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Georgia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Oklahoma State",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Arizona State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Arizona",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Kansas State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Ohio State",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Nebraska",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "UCLA",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Michigan",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "North Carolina",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Virginia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "SMU",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Notre Dame",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Oregon",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Michigan State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Vanderbilt",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "South Florida",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Florida Atlantic",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Virginia Tech",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Miami",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "NC State",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Florida State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Iowa",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Illinois",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Old Dominion",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "UConn",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Clemson",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Duke",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "LSU",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Tennessee",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Utah",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "TCU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Texas A&M",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Oklahoma",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ],
+    "Week 13": [
+      {
+        "participant1": "aarav",
+        "team1": "Tulane",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "South Florida",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "aarav",
+        "team1": "South Carolina",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Clemson",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Georgia Tech",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "Georgia",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "Michigan",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Ohio State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jabir",
+        "team1": "UCF",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Colorado",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Northwestern",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Illinois",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "jordan",
+        "team1": "Auburn",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Alabama",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Toledo",
+        "location1": "away",
+        "participant2": "jabir",
+        "team2": "Ohio",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Arizona State",
+        "location1": "away",
+        "participant2": "jordan",
+        "team2": "Arizona",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "justin",
+        "team1": "Texas",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "Texas A&M",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Virginia",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Virginia Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kathleen",
+        "team1": "Cincinnati",
+        "location1": "away",
+        "participant2": "mary-kathryn",
+        "team2": "BYU",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "NC State",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "North Carolina",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "kenny",
+        "team1": "Florida",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Florida State",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "USC",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "UCLA",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Washington",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Oregon",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "life",
+        "team1": "Baylor",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Houston",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Coastal Carolina",
+        "location1": "away",
+        "participant2": "aarav",
+        "team2": "James Madison",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Notre Dame",
+        "location1": "away",
+        "participant2": "justin",
+        "team2": "Syracuse",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Tennessee",
+        "location1": "away",
+        "participant2": "kathleen",
+        "team2": "Vanderbilt",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "Nebraska",
+        "location1": "away",
+        "participant2": "kenny",
+        "team2": "Iowa",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      },
+      {
+        "participant1": "mary-kathryn",
+        "team1": "TCU",
+        "location1": "away",
+        "participant2": "life",
+        "team2": "Texas Tech",
+        "location2": "home",
+        "spread": null,
+        "winner": null
+      }
+    ]
+  }
+}
