@@ -117,6 +117,11 @@ ul {
   padding: 3rem 1.5rem 4rem;
 }
 
+.main:has(.home) {
+  flex: 0 0 auto;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
 .footer {
   padding: 1.5rem;
   text-align: center;
@@ -161,8 +166,12 @@ ul {
 .home {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding-top: 1rem;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.home .resume-section {
+  margin-top: 0;
 }
 
 .home-hero {
@@ -177,8 +186,16 @@ ul {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  object-fit: cover;
+  overflow: hidden;
   border: 2px solid var(--border);
+}
+
+.home-headshot-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.25);
 }
 
 .home-intro {
@@ -220,7 +237,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.25rem;
+  padding: 0.7rem 1.25rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
@@ -792,72 +809,162 @@ ul {
   }
 }
 
-/* Vertical timeline — add this to your global stylesheet (e.g. index.css) */
+/* Horizontal timeline — add this to your global stylesheet (e.g. index.css) */
 
 .vtimeline {
-  position: relative;
   margin: 2.5rem 0;
-  padding: 1rem 0;
+  padding: 1rem 0 1.25rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  scroll-snap-type: x proximity;
+  cursor: grab;
+  --fade-start: transparent;
+  --fade-end: transparent;
+  -webkit-mask-image: linear-gradient(to right, var(--fade-start), black 32px, black calc(100% - 32px), var(--fade-end));
+  mask-image: linear-gradient(to right, var(--fade-start), black 32px, black calc(100% - 32px), var(--fade-end));
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color, #d8d4c9) transparent;
+}
+
+.vtimeline.at-start {
+  --fade-start: black;
+}
+
+.vtimeline.at-end {
+  --fade-end: black;
+}
+
+.vtimeline.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.vtimeline::-webkit-scrollbar {
+  height: 6px;
+}
+
+.vtimeline::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.vtimeline::-webkit-scrollbar-thumb {
+  background: var(--border-color, #d8d4c9);
+  border-radius: 3px;
+}
+
+.vtimeline::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #b5502e);
+}
+
+.vtimeline-track {
+  position: relative;
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  padding: 0 1.5rem;
 }
 
 /* the central spine */
-.vtimeline::before {
+.vtimeline-track::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
   background: repeating-linear-gradient(
-    to bottom,
+    to right,
     var(--border-color, #d8d4c9) 0,
     var(--border-color, #d8d4c9) 8px,
     transparent 8px,
     transparent 16px
   );
-  transform: translateX(-50%);
+  transform: translateY(-50%);
 }
 
 .vtimeline-row {
   position: relative;
-  display: flex;
-  width: 100%;
-  margin-bottom: 2.5rem;
+  width: 170px;
+  flex: 0 0 auto;
+  height: 260px;
+  scroll-snap-align: center;
 }
 
 .vtimeline-row:last-child {
-  margin-bottom: 0;
+  padding-right: 1.5rem;
 }
 
-/* the dot on the spine */
+/* the dot on the spine — pinned to the exact center of the row, i.e. the line */
 .vtimeline-node {
   position: absolute;
-  top: 0.4rem;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--accent, #b5502e);
   border: 3px solid var(--bg, #fff);
   box-shadow: 0 0 0 2px var(--accent, #b5502e);
-  transform: translateX(-50%);
   z-index: 1;
 }
 
 .vtimeline-content {
-  width: calc(50% - 2.5rem);
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0 0.5rem;
+  text-align: center;
 }
 
-/* left entries: content sits left of spine */
+/* "top" entries: content sits above the spine — reverse the stack so the
+   date lands nearest the line and the title sits out on top */
 .vtimeline-row.is-left .vtimeline-content {
-  margin-right: auto;
-  text-align: right;
+  bottom: calc(50% + 14px);
+  flex-direction: column-reverse;
 }
 
-/* right entries: content sits right of spine */
+/* "bottom" entries: content sits below the spine — date first (closest
+   to the line), title below it (furthest out) */
 .vtimeline-row.is-right .vtimeline-content {
-  margin-left: auto;
-  text-align: left;
+  top: calc(50% + 14px);
+}
+
+/* compact variant — for use where vertical space is tight (e.g. the home page) */
+.vtimeline--compact {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.vtimeline--compact .vtimeline-row {
+  width: 210px;
+  height: 160px;
+}
+
+.vtimeline--compact .vtimeline-node {
+  width: 11px;
+  height: 11px;
+}
+
+.vtimeline--compact .vtimeline-year {
+  font-size: 0.8rem;
+}
+
+.vtimeline--compact .vtimeline-content h3 {
+  font-size: 0.85rem;
+}
+
+.vtimeline--compact .vtimeline-row.is-left .vtimeline-content {
+  bottom: calc(50% + 11px);
+}
+
+.vtimeline--compact .vtimeline-row.is-right .vtimeline-content {
+  top: calc(50% + 11px);
 }
 
 .vtimeline-year {
@@ -866,42 +973,17 @@ ul {
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: var(--accent, #b5502e);
-  margin-bottom: 0.25rem;
 }
 
 .vtimeline-content h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
-}
-
-.vtimeline-location {
-  font-size: 0.85rem;
-  color: var(--text-muted, #767267);
-  margin: 0 0 0.4rem;
-}
-
-.vtimeline-content p:last-child {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
-/* mobile: single column, spine moves to the left edge */
 @media (max-width: 640px) {
-  .vtimeline::before {
-    left: 10px;
-  }
-
-  .vtimeline-node {
-    left: 10px;
-  }
-
-  .vtimeline-content,
-  .vtimeline-row.is-left .vtimeline-content,
-  .vtimeline-row.is-right .vtimeline-content {
-    width: 100%;
-    margin-left: 2.25rem;
-    margin-right: 0;
-    text-align: left;
+  .vtimeline-row {
+    width: 140px;
+    height: 240px;
   }
 }

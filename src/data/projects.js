@@ -31,6 +31,24 @@
 
 const projects = [
   {
+    slug: 'CFBowledge',
+    title: 'CFBowledge',
+    tagline: '(2026) College Football Game',
+    image: '/images/projects/cfbowledge.png',
+    inspiration: [
+      'I am a huge fan of College Football and I wanted an excuse to cheer for more than just Clemson, so I conceived a game that made my friends and I fans of 10 different teams for the season.',
+    ],
+    whatItDoes: [
+      'Each of the 8 participants drafted 10 teams at the beginning of the year, and these teams gain points each week by winning games. Underdog wins gain more points than favored wins, so there was a lot of strategy involved in the drafting process and the dropping/adding for each participant. Everyone also made preseason predicitons for the season, which offer a chance to gain bonus points at the end of the year!',
+    ],
+    whatWeLearned: [
+      'This project gave me great exposure to what it is like to create an interface that others use competitively, which is something that I have never delt with before. It was also my first experience designing a game, and it will not be my last.',
+    ],
+    tech: ['React', 'React Router', 'Vite', 'JavaScript', 'CSS'],
+    link: 'https://liferouby.com/cfbowledge',
+  },
+
+  {
     slug: 'strikephone',
     title: 'Strikephone',
     tagline: '(2025) CUHackit Project',

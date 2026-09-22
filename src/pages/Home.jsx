@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Timeline from '../components/Timeline'
 
 const sections = [
   { to: '/resume', label: 'Resume' },
@@ -11,11 +12,13 @@ export default function Home() {
   return (
     <section className="page home">
       <div className="home-hero">
-        <img
-          src="/images/headshot/headshot.jpg"
-          alt="Life Rouby"
-          className="home-headshot"
-        />
+        <div className="home-headshot">
+          <img
+            src="/images/headshot/headshot.jpg"
+            alt="Life Rouby"
+            className="home-headshot-img"
+          />
+        </div>
 
         <div className="home-intro">
           <p className="home-eyebrow">Senior · Clemson University · Computer Science</p>
@@ -36,6 +39,11 @@ export default function Home() {
           </Link>
         ))}
       </nav>
+
+      <div className="resume-section">
+        <h2>My Journey</h2>
+        <Timeline compact />
+      </div>
     </section>
   )
 }
