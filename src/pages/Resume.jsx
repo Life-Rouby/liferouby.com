@@ -21,7 +21,6 @@ export default function Resume() {
   return (
     <section className="page">
       <header className="page-header">
-        <p className="eyebrow">Background</p>
         <h1>Resume</h1>
         <p className="page-intro">
           Computer Science student at Clemson University with experience in
