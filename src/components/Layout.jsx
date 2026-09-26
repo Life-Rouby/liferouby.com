@@ -2,10 +2,9 @@ import { NavLink, Outlet } from 'react-router-dom'
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
-  { to: '/resume', label: 'Resume' },
-  { to: '/projects', label: 'Projects' },
   { to: '/about', label: 'About Me' },
-  { to: '/contact', label: 'Contact Me' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Resume' },
 ]
 
 export default function Layout() {

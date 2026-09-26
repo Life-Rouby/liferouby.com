@@ -3,8 +3,15 @@ import Timeline from '../components/Timeline'
 export default function About() {
   return (
     <section className="page">
+      <div className="journey-window about-photos">
+        <img
+          src="/images/about/photo-collage.jpg"
+          alt="Collage of photos from Life's life — football games, travel, friends, and family"
+          className="about-photos-img"
+        />
+      </div>
+
       <header className="page-header">
-        <p className="eyebrow">Who I am</p>
         <h1>About Me</h1>
       </header>
 
@@ -26,27 +33,9 @@ export default function About() {
             </ul>
           </p>
         </div>
-
-        <aside className="about-aside card">
-          <h2>Quick facts</h2>
-          <dl className="facts-list">
-            <div>
-              <dt>Location</dt>
-              <dd>Greenville, SC</dd>
-            </div>
-            <div>
-              <dt>Education</dt>
-              <dd>Clemson University</dd>
-            </div>
-            <div>
-              <dt>Interests</dt>
-              <dd>Web dev, open source, design</dd>
-            </div>
-          </dl>
-        </aside>
       </div>
 
-      <div className="resume-section">
+      <div className="resume-section journey-window">
         <h2>My Journey</h2>
         <Timeline />
       </div>

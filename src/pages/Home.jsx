@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import Timeline from '../components/Timeline'
 
 const sections = [
-  { to: '/resume', label: 'Resume' },
-  { to: '/projects', label: 'Projects' },
   { to: '/about', label: 'About Me' },
-  { to: '/contact', label: 'Contact Me' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Resume' },
 ]
 
 export default function Home() {
@@ -26,9 +25,10 @@ export default function Home() {
             Hey, I'm <span className="accent">Life</span>
           </h1>
           <p className="home-bio">
-            I'm working toward a degree in Computer Science and building a career
-            as an app developer.
+            I'm a senior at Clemson University studying Computer Science with a minor in Business Administration, graduating in December 2026.
           </p>
+          <p> <br></br></p>
+          <p className="home-bio">This site is part portfolio, part résumé, and part personal hub, where I share my projects and keep track of what I'm working on. Thanks for stopping by!</p>
         </div>
       </div>
 
@@ -39,11 +39,6 @@ export default function Home() {
           </Link>
         ))}
       </nav>
-
-      <div className="resume-section">
-        <h2>My Journey</h2>
-        <Timeline compact />
-      </div>
     </section>
   )
 }

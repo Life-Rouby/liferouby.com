@@ -5,7 +5,6 @@ export default function Projects() {
   return (
     <section className="page">
       <header className="page-header">
-        <p className="eyebrow">Work</p>
         <h1>Projects</h1>
         <p className="page-intro">
           Cool things I've done
