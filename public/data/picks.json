@@ -58,11 +58,11 @@
             },
             "Week 4": {
               "opponent": "@ Purdue",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ North Carolina",
@@ -137,7 +137,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "Alabama",
@@ -178,11 +178,11 @@
             },
             "Week 4": {
               "opponent": "South Carolina",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Mississippi State",
@@ -257,7 +257,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "BYU",
@@ -418,11 +418,11 @@
             },
             "Week 4": {
               "opponent": "Texas",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 5.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Auburn",
@@ -538,11 +538,11 @@
             },
             "Week 4": {
               "opponent": "@ LSU",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 8.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Arkansas",
@@ -658,11 +658,11 @@
             },
             "Week 4": {
               "opponent": "@ Western Michigan",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Utah State",
@@ -737,7 +737,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "TCU",
@@ -778,11 +778,11 @@
             },
             "Week 4": {
               "opponent": "@ UCF",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "BYU",
@@ -1018,11 +1018,11 @@
             },
             "Week 4": {
               "opponent": "Liberty",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Georgia Southern",
@@ -1258,11 +1258,11 @@
             },
             "Week 4": {
               "opponent": "@ Michigan State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Maryland",
@@ -1337,7 +1337,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "Louisiana",
@@ -1379,10 +1379,10 @@
             "Week 4": {
               "opponent": "@ Charlotte",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 20.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Arkansas State",
@@ -1457,7 +1457,7 @@
               "won": null
             }
           },
-          "total": 10.0
+          "total": 30.0
         }
       ],
       "weeklyTotal": {
@@ -1465,7 +1465,7 @@
         "Week 1": 80,
         "Week 2": 100,
         "Week 3": 90.0,
-        "Week 4": 0,
+        "Week 4": 60.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -1476,7 +1476,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 280.0,
+      "seasonTotal": 340.0,
       "boostCard": {
         "Week 1": "Tennessee",
         "Week 2": "Nebraska",
@@ -1526,11 +1526,11 @@
             },
             "Week 4": {
               "opponent": "Illinois",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Iowa",
@@ -1605,7 +1605,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Duke",
@@ -1646,11 +1646,11 @@
             },
             "Week 4": {
               "opponent": "William & Mary",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -1725,7 +1725,7 @@
               "won": null
             }
           },
-          "total": 36.5
+          "total": 46.5
         },
         {
           "team": "Troy",
@@ -1767,10 +1767,10 @@
             "Week 4": {
               "opponent": "@ Utah State",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 0.0,
+              "favored": false,
+              "spread": 3.0,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -1886,11 +1886,11 @@
             },
             "Week 4": {
               "opponent": "Vanderbilt",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Tennessee",
@@ -1965,7 +1965,7 @@
               "won": null
             }
           },
-          "total": 20
+          "total": 30.0
         },
         {
           "team": "Lousiville",
@@ -2006,11 +2006,11 @@
             },
             "Week 4": {
               "opponent": "Wake Forest",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ NC State",
@@ -2126,11 +2126,11 @@
             },
             "Week 4": {
               "opponent": "Nebraska",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 6.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Wisconsin",
@@ -2246,11 +2246,11 @@
             },
             "Week 4": {
               "opponent": "@ Washington State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Cincinnati",
@@ -2325,7 +2325,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Hawaii",
@@ -2366,11 +2366,11 @@
             },
             "Week 4": {
               "opponent": "@ Wyoming",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "San Jose State",
@@ -2486,11 +2486,11 @@
             },
             "Week 4": {
               "opponent": "@ Louisville",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 21.5,
+              "favored": false,
+              "spread": 11.5,
+              "won": true
             },
             "Week 5": {
               "opponent": "Stanford",
@@ -2565,7 +2565,7 @@
               "won": null
             }
           },
-          "total": 20
+          "total": 41.5
         },
         {
           "team": "Northwestern",
@@ -2606,11 +2606,11 @@
             },
             "Week 4": {
               "opponent": "@ Indiana",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 20.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Penn State",
@@ -2726,11 +2726,11 @@
             },
             "Week 4": {
               "opponent": "@ West Virginia",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 11.5,
+              "favored": false,
+              "spread": 1.5,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -2805,7 +2805,7 @@
               "won": null
             }
           },
-          "total": 53.5
+          "total": 65.0
         }
       ],
       "weeklyTotal": {
@@ -2813,7 +2813,7 @@
         "Week 1": 90,
         "Week 2": 100.0,
         "Week 3": 60.0,
-        "Week 4": 0,
+        "Week 4": 73.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -2824,7 +2824,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 250.0,
+      "seasonTotal": 323.0,
       "boostCard": {
         "Week 1": "Hawaii",
         "Week 3": "Auburn",
@@ -2873,11 +2873,11 @@
             },
             "Week 4": {
               "opponent": "Oklahoma",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Vanderbilt",
@@ -2952,7 +2952,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "James Madison",
@@ -2993,11 +2993,11 @@
             },
             "Week 4": {
               "opponent": "@ Old Dominion",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Marshall",
@@ -3072,7 +3072,7 @@
               "won": null
             }
           },
-          "total": 45.0
+          "total": 55.0
         },
         {
           "team": "Kennessaw State",
@@ -3113,11 +3113,11 @@
             },
             "Week 4": {
               "opponent": "@ Arkansas State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 6.5,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -3233,11 +3233,11 @@
             },
             "Week 4": {
               "opponent": "Southern Miss",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -3312,7 +3312,7 @@
               "won": null
             }
           },
-          "total": 10
+          "total": 20.0
         },
         {
           "team": "Western Michigan",
@@ -3353,11 +3353,11 @@
             },
             "Week 4": {
               "opponent": "Boise State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 8.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Buffalo",
@@ -3473,11 +3473,11 @@
             },
             "Week 4": {
               "opponent": "Houston Christian",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Tulsa",
@@ -3552,7 +3552,7 @@
               "won": null
             }
           },
-          "total": 13
+          "total": 23.0
         },
         {
           "team": "Pitt",
@@ -3593,11 +3593,11 @@
             },
             "Week 4": {
               "opponent": "Bucknell",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Virginia Tech",
@@ -3672,7 +3672,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "South Carolina",
@@ -3713,11 +3713,11 @@
             },
             "Week 4": {
               "opponent": "@ Alabama",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 12.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Kentucky",
@@ -3833,11 +3833,11 @@
             },
             "Week 4": {
               "opponent": "North Carolina Central",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -3912,7 +3912,7 @@
               "won": null
             }
           },
-          "total": 12.5
+          "total": 22.5
         },
         {
           "team": "Cal",
@@ -3954,10 +3954,10 @@
             "Week 4": {
               "opponent": "Clemson",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ UNLV",
@@ -4040,7 +4040,7 @@
         "Week 1": 60,
         "Week 2": 96.5,
         "Week 3": 77.5,
-        "Week 4": 0,
+        "Week 4": 60.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -4051,7 +4051,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 234.0,
+      "seasonTotal": 294.0,
       "boostCard": {
         "Week 1": "Georgia",
         "Week 2": "South Carolina",
@@ -4102,10 +4102,10 @@
             "Week 4": {
               "opponent": "Sam Houston",
               "status": "sabotaged",
-              "points": 0.0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 5.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Colorado",
@@ -4180,7 +4180,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 45.0
         },
         {
           "team": "Indiana",
@@ -4221,11 +4221,11 @@
             },
             "Week 4": {
               "opponent": "Northwestern",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Rutgers",
@@ -4300,7 +4300,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "USC",
@@ -4341,11 +4341,11 @@
             },
             "Week 4": {
               "opponent": "Oregon",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 3.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Washington",
@@ -4461,11 +4461,11 @@
             },
             "Week 4": {
               "opponent": "@ California",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Miami (FL)",
@@ -4540,7 +4540,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Penn State",
@@ -4581,11 +4581,11 @@
             },
             "Week 4": {
               "opponent": "Wisconsin",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Northwestern",
@@ -4701,11 +4701,11 @@
             },
             "Week 4": {
               "opponent": "Minnesota",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ USC",
@@ -4821,11 +4821,11 @@
             },
             "Week 4": {
               "opponent": "@ Iowa State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -4900,7 +4900,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "Wisconsin",
@@ -4942,10 +4942,10 @@
             "Week 4": {
               "opponent": "@ Penn State",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 39.0,
+              "favored": false,
+              "spread": 9.5,
+              "won": true
             },
             "Week 5": {
               "opponent": "Michigan State",
@@ -5020,7 +5020,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 59.0
         },
         {
           "team": "LSU",
@@ -5061,11 +5061,11 @@
             },
             "Week 4": {
               "opponent": "Texas A&M",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "McNeese",
@@ -5140,7 +5140,7 @@
               "won": null
             }
           },
-          "total": 20
+          "total": 30.0
         },
         {
           "team": "Baylor",
@@ -5181,11 +5181,11 @@
             },
             "Week 4": {
               "opponent": "Colorado",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Arizona State",
@@ -5260,7 +5260,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         }
       ],
       "weeklyTotal": {
@@ -5268,7 +5268,7 @@
         "Week 1": 80,
         "Week 2": 110,
         "Week 3": 100.0,
-        "Week 4": 0,
+        "Week 4": 94.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -5279,7 +5279,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 300.0,
+      "seasonTotal": 394.0,
       "boostCard": {
         "Week 1": "Texas Tech",
         "Week 2": "Baylor",
@@ -5329,11 +5329,11 @@
             },
             "Week 4": {
               "opponent": "@ USC",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -5408,7 +5408,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Ole Miss",
@@ -5449,11 +5449,11 @@
             },
             "Week 4": {
               "opponent": "@ Florida",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 4.0,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -5569,11 +5569,11 @@
             },
             "Week 4": {
               "opponent": "@ Auburn",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 10.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Georgia",
@@ -5689,11 +5689,11 @@
             },
             "Week 4": {
               "opponent": "Delaware",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Florida State",
@@ -5768,7 +5768,7 @@
               "won": null
             }
           },
-          "total": 20
+          "total": 30.0
         },
         {
           "team": "USF",
@@ -5810,10 +5810,10 @@
             "Week 4": {
               "opponent": "@ Bowling Green",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 20.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Temple",
@@ -5888,7 +5888,7 @@
               "won": null
             }
           },
-          "total": 33.0
+          "total": 53.0
         },
         {
           "team": "UConn",
@@ -5929,11 +5929,11 @@
             },
             "Week 4": {
               "opponent": "@ Miami (OH)",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Syracuse",
@@ -6049,11 +6049,11 @@
             },
             "Week 4": {
               "opponent": "@ Baylor",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 8.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Texas Tech",
@@ -6169,11 +6169,11 @@
             },
             "Week 4": {
               "opponent": "@ Coastal Carolina",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Delaware",
@@ -6248,7 +6248,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "UTEP",
@@ -6409,11 +6409,11 @@
             },
             "Week 4": {
               "opponent": "Kansas State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 16.0,
+              "favored": false,
+              "spread": 6.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Arizona",
@@ -6488,7 +6488,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 46.0
         },
         {
           "team": "UTSA",
@@ -6529,11 +6529,11 @@
             },
             "Week 4": {
               "opponent": "Colorado State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Rice",
@@ -6608,7 +6608,7 @@
               "won": null
             }
           },
-          "total": 22.5
+          "total": 32.5
         }
       ],
       "weeklyTotal": {
@@ -6616,7 +6616,7 @@
         "Week 1": 103,
         "Week 2": 85.5,
         "Week 3": 73.0,
-        "Week 4": 0,
+        "Week 4": 76.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -6627,7 +6627,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 271.5,
+      "seasonTotal": 347.5,
       "boostCard": {
         "Week 1": "Colorado",
         "Week 2": "UConn ",
@@ -6677,11 +6677,11 @@
             },
             "Week 4": {
               "opponent": "Appalachian State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Louisville",
@@ -6756,7 +6756,7 @@
               "won": null
             }
           },
-          "total": 10
+          "total": 20.0
         },
         {
           "team": "Virginia Tech",
@@ -6797,11 +6797,11 @@
             },
             "Week 4": {
               "opponent": "@ Boston College",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Pittsburgh",
@@ -6876,7 +6876,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "Houston",
@@ -6917,11 +6917,11 @@
             },
             "Week 4": {
               "opponent": "@ Georgia Southern",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "UCF",
@@ -6996,7 +6996,7 @@
               "won": null
             }
           },
-          "total": 20
+          "total": 30.0
         },
         {
           "team": "Kansas State University",
@@ -7037,11 +7037,11 @@
             },
             "Week 4": {
               "opponent": "@ Cincinnati",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -7277,11 +7277,11 @@
             },
             "Week 4": {
               "opponent": "James Madison",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 7.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Georgia State",
@@ -7397,11 +7397,11 @@
             },
             "Week 4": {
               "opponent": "Arizona",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 11.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Fresno State",
@@ -7517,11 +7517,11 @@
             },
             "Week 4": {
               "opponent": "Ole Miss",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Missouri",
@@ -7596,7 +7596,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "North Dakota State",
@@ -7758,10 +7758,10 @@
             "Week 4": {
               "opponent": "@ Michigan",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 29.0,
+              "favored": false,
+              "spread": 4.5,
+              "won": true
             },
             "Week 5": {
               "opponent": "Ohio State",
@@ -7836,7 +7836,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 59.0
         },
         {
           "team": "FAU",
@@ -7877,11 +7877,11 @@
             },
             "Week 4": {
               "opponent": "@ UL Monroe",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Texas Southern",
@@ -7956,7 +7956,7 @@
               "won": null
             }
           },
-          "total": 10.0
+          "total": 20.0
         }
       ],
       "weeklyTotal": {
@@ -7964,7 +7964,7 @@
         "Week 1": 90,
         "Week 2": 80,
         "Week 3": 70.0,
-        "Week 4": 0,
+        "Week 4": 79.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -7975,7 +7975,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 250.0,
+      "seasonTotal": 329.0,
       "boostCard": {
         "Week 1": "Virginia Tech",
         "Week 2": "Florida",
@@ -8027,11 +8027,11 @@
             },
             "Week 4": {
               "opponent": "Central Michigan",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Clemson",
@@ -8106,7 +8106,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "Georiga Tech",
@@ -8147,11 +8147,11 @@
             },
             "Week 4": {
               "opponent": "@ Stanford",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -8267,11 +8267,11 @@
             },
             "Week 4": {
               "opponent": "@ Georgia",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 11.5,
+              "won": false
             },
             "Week 5": {
               "opponent": null,
@@ -8387,11 +8387,11 @@
             },
             "Week 4": {
               "opponent": "Iowa",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 5": {
               "opponent": "@ Minnesota",
@@ -8507,11 +8507,11 @@
             },
             "Week 4": {
               "opponent": "@ Mississippi State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 3.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Florida",
@@ -8867,11 +8867,11 @@
             },
             "Week 4": {
               "opponent": "Rice",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Washington State",
@@ -8946,7 +8946,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Jacksonville State",
@@ -8987,11 +8987,11 @@
             },
             "Week 4": {
               "opponent": "Middle Tennessee",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -9066,7 +9066,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "Ohio",
@@ -9108,10 +9108,10 @@
             "Week 4": {
               "opponent": "Stonehill",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 20.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Kent State",
@@ -9186,7 +9186,7 @@
               "won": null
             }
           },
-          "total": 10
+          "total": 30.0
         },
         {
           "team": "UCF",
@@ -9227,11 +9227,11 @@
             },
             "Week 4": {
               "opponent": "TCU",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 13.5,
+              "favored": false,
+              "spread": 3.5,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Houston",
@@ -9306,7 +9306,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 33.5
         }
       ],
       "weeklyTotal": {
@@ -9314,7 +9314,7 @@
         "Week 1": 70,
         "Week 2": 55.5,
         "Week 3": 100.0,
-        "Week 4": 0,
+        "Week 4": 63.5,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -9325,7 +9325,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 240.0,
+      "seasonTotal": 303.5,
       "boostCard": {
         "Week 1": "Georgia Tech",
         "Week 2": "Memphis",
@@ -9377,11 +9377,11 @@
             },
             "Week 4": {
               "opponent": "@ Tennessee",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -9456,7 +9456,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "SMU",
@@ -9497,11 +9497,11 @@
             },
             "Week 4": {
               "opponent": "Missouri State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Boston College",
@@ -9576,7 +9576,7 @@
               "won": null
             }
           },
-          "total": 30
+          "total": 40.0
         },
         {
           "team": "Illinois",
@@ -9617,11 +9617,11 @@
             },
             "Week 4": {
               "opponent": "@ Ohio State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 25.5,
+              "won": false
             },
             "Week 5": {
               "opponent": "Purdue",
@@ -9737,11 +9737,11 @@
             },
             "Week 4": {
               "opponent": "@ Maryland",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": null,
@@ -9816,7 +9816,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "Army",
@@ -9857,11 +9857,11 @@
             },
             "Week 4": {
               "opponent": "@ Temple",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Louisiana Tech",
@@ -9936,7 +9936,7 @@
               "won": null
             }
           },
-          "total": 10
+          "total": 20.0
         },
         {
           "team": "App State",
@@ -10577,11 +10577,11 @@
             },
             "Week 4": {
               "opponent": "San Diego State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "@ Ball State",
@@ -10656,7 +10656,7 @@
               "won": null
             }
           },
-          "total": 20.0
+          "total": 30.0
         },
         {
           "team": "North Carolina",
@@ -10818,10 +10818,10 @@
             "Week 4": {
               "opponent": "Central Arkansas",
               "status": "boosted",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "points": 20.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 5": {
               "opponent": "Virginia",
@@ -10896,7 +10896,7 @@
               "won": null
             }
           },
-          "total": 0
+          "total": 20.0
         }
       ],
       "weeklyTotal": {
@@ -10904,7 +10904,7 @@
         "Week 1": 90,
         "Week 2": 50,
         "Week 3": 50.0,
-        "Week 4": 0,
+        "Week 4": 70.0,
         "Week 5": 0,
         "Week 6": 0,
         "Week 7": 0,
@@ -10915,7 +10915,7 @@
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 190.0,
+      "seasonTotal": 260.0,
       "boostCard": {
         "Week 1": "Florida State",
         "Week 2": "Texas",
