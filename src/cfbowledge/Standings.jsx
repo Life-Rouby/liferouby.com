@@ -37,7 +37,7 @@ export default function Standings({ participants, picks, week }) {
         name: p.name,
         weekPoints: entry?.weeklyTotal?.[week] ?? 0,
         total,
-        teams: entry?.teams ?? [],
+        teams: (entry?.teams ?? []).filter((t) => t.weeks[week]?.status !== "dropped"),
       };
     })
     .sort((a, b) => b.total - a.total);
