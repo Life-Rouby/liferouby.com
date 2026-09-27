@@ -1378,8 +1378,8 @@
             },
             "Week 4": {
               "opponent": "@ Charlotte",
-              "status": "scheduled",
-              "points": null,
+              "status": "boosted",
+              "points": 0,
               "favored": null,
               "spread": null,
               "won": null
@@ -1480,7 +1480,8 @@
       "boostCard": {
         "Week 1": "Tennessee",
         "Week 2": "Nebraska",
-        "Week 3": "TCU"
+        "Week 3": "TCU",
+        "Week 4": "Louisiana"
       },
       "sabotageCard": {}
     },
@@ -1765,7 +1766,7 @@
             },
             "Week 4": {
               "opponent": "@ Utah State",
-              "status": "scheduled",
+              "status": "boosted",
               "points": 0,
               "favored": null,
               "spread": null,
@@ -2826,7 +2827,8 @@
       "seasonTotal": 250.0,
       "boostCard": {
         "Week 1": "Hawaii",
-        "Week 3": "Auburn"
+        "Week 3": "Auburn",
+        "Week 4": "Troy"
       },
       "sabotageCard": {}
     },
@@ -3951,7 +3953,7 @@
             },
             "Week 4": {
               "opponent": "Clemson",
-              "status": "scheduled",
+              "status": "boosted",
               "points": 0,
               "favored": null,
               "spread": null,
@@ -4053,7 +4055,8 @@
       "boostCard": {
         "Week 1": "Georgia",
         "Week 2": "South Carolina",
-        "Week 3": "James Madison"
+        "Week 3": "James Madison",
+        "Week 4": "Cal"
       },
       "sabotageCard": {}
     },
@@ -4098,8 +4101,8 @@
             },
             "Week 4": {
               "opponent": "Sam Houston",
-              "status": "scheduled",
-              "points": 0,
+              "status": "sabotaged",
+              "points": 0.0,
               "favored": null,
               "spread": null,
               "won": null
@@ -4938,7 +4941,7 @@
             },
             "Week 4": {
               "opponent": "@ Penn State",
-              "status": "scheduled",
+              "status": "boosted",
               "points": 0,
               "favored": null,
               "spread": null,
@@ -5280,7 +5283,8 @@
       "boostCard": {
         "Week 1": "Texas Tech",
         "Week 2": "Baylor",
-        "Week 3": "Utah"
+        "Week 3": "Utah",
+        "Week 4": "Wisconsin"
       },
       "sabotageCard": {}
     },
@@ -5805,7 +5809,7 @@
             },
             "Week 4": {
               "opponent": "@ Bowling Green",
-              "status": "scheduled",
+              "status": "boosted",
               "points": 0,
               "favored": null,
               "spread": null,
@@ -6627,7 +6631,8 @@
       "boostCard": {
         "Week 1": "Colorado",
         "Week 2": "UConn ",
-        "Week 3": "Virginia"
+        "Week 3": "Virginia",
+        "Week 4": "USF"
       },
       "sabotageCard": {}
     },
@@ -7752,8 +7757,8 @@
             },
             "Week 4": {
               "opponent": "@ Michigan",
-              "status": "scheduled",
-              "points": null,
+              "status": "boosted",
+              "points": 0,
               "favored": null,
               "spread": null,
               "won": null
@@ -7974,9 +7979,12 @@
       "boostCard": {
         "Week 1": "Virginia Tech",
         "Week 2": "Florida",
-        "Week 3": "Houston"
+        "Week 3": "Houston",
+        "Week 4": "Iowa"
       },
-      "sabotageCard": {}
+      "sabotageCard": {
+        "Week 4": "Texas Tech"
+      }
     },
     "jabir": {
       "teams": [
@@ -9099,8 +9107,8 @@
             },
             "Week 4": {
               "opponent": "Stonehill",
-              "status": "scheduled",
-              "points": null,
+              "status": "boosted",
+              "points": 0,
               "favored": null,
               "spread": null,
               "won": null
@@ -9320,7 +9328,8 @@
       "seasonTotal": 240.0,
       "boostCard": {
         "Week 1": "Georgia Tech",
-        "Week 2": "Memphis"
+        "Week 2": "Memphis",
+        "Week 4": "Ohio"
       },
       "sabotageCard": {
         "Week 2": "Boise State",
@@ -10808,8 +10817,8 @@
             },
             "Week 4": {
               "opponent": "Central Arkansas",
-              "status": "scheduled",
-              "points": null,
+              "status": "boosted",
+              "points": 0,
               "favored": null,
               "spread": null,
               "won": null
@@ -10909,7 +10918,8 @@
       "seasonTotal": 190.0,
       "boostCard": {
         "Week 1": "Florida State",
-        "Week 2": "Texas"
+        "Week 2": "Texas",
+        "Week 4": "Florida State"
       },
       "sabotageCard": {}
     }
