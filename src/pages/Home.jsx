@@ -28,7 +28,7 @@ export default function Home() {
             I'm a senior at Clemson University studying Computer Science with a minor in Business Administration, graduating in December 2026.
           </p>
           <p> <br></br></p>
-          <p className="home-bio">This site is part portfolio, part résumé, and part personal hub, where I share my projects and keep track of what I'm working on. Thanks for stopping by!</p>
+          <p className="home-bio">This site is part portfolio, part resume, and part personal hub, where I share my projects and keep track of what I'm working on. Thanks for stopping by!</p>
         </div>
       </div>
 
