@@ -363,6 +363,13 @@ ul {
   color: var(--text);
 }
 
+.resume-download-btn {
+  margin-top: 1rem;
+  padding: 0.975rem 1.875rem;
+  font-size: 1.425rem;
+  border-radius: 12px;
+}
+
 /* Cards */
 
 .card {
@@ -464,10 +471,16 @@ ul {
 .timeline-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.35rem;
+}
+
+.timeline-location {
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--text-muted);
 }
 
 .timeline-company {
@@ -705,6 +718,7 @@ ul {
 }
 
 .about-text p {
+  font-size: 1.25rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
 }

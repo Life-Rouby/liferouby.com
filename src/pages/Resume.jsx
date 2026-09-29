@@ -2,30 +2,37 @@ export default function Resume() {
   const skills = [
     'Python',
     'JavaScript',
-    'React',
-    'React Native',
     'SQL',
-    'AWS',
-    'Streamlit',
-    'Pandas',
-    'Git',
-    'GitHub',
-    'GitHub Actions',
     'Java',
     'C/C++',
     'HTML/CSS',
+    'React',
+    'React Native',
+    'OpenCV',
+    'Streamlit',
+    'Pandas',
+    'AWS',
     'MySQL',
+    'Git',
+    'GitHub',
+    'GitHub Actions',
     'CI/CD',
+    'VS Code',
+    'phpMyAdmin',
   ]
 
   return (
     <section className="page">
       <header className="page-header">
         <h1>Resume</h1>
-        <p className="page-intro">
-          Computer Science student at Clemson University with experience in
-          full-stack web development, data analytics, and software engineering.
-        </p>
+        <a
+          href="/resume/life-rouby-resume.pdf"
+          download="Life-Rouby-Resume.pdf"
+          className="btn btn-primary resume-download-btn"
+          onClick={() => window.open('/resume/life-rouby-resume.pdf', '_blank', 'noopener,noreferrer')}
+        >
+          Download Resume (PDF)
+        </a>
       </header>
 
       <div className="resume-section">
@@ -34,21 +41,56 @@ export default function Resume() {
         <div className="timeline">
           <article className="timeline-item">
             <div className="timeline-meta">
-              <span className="timeline-date">Jun 2026 — Present</span>
+              <span className="timeline-date">Aug 2026 — Present</span>
+              <span className="timeline-location">Clemson, SC</span>
+            </div>
+            <h3>AWS Cloud Engineer (Capstone)</h3>
+            <p className="timeline-company">
+              Axio LLC – Clemson School of Computing Capstone
+            </p>
+            <ul>
+              <li>
+                Building a chain-of-custody mission control platform to
+                monitor and log autonomous medical drone delivery missions.
+              </li>
+              <li>
+                Designing a serverless AWS backend with API Gateway, Lambda,
+                and RDS, secured with Cognito authentication.
+              </li>
+              <li>
+                Collaborating with a cross-disciplinary team of engineers,
+                pilots, and developers to deliver sponsor milestones.
+              </li>
+              <li>
+                Technologies: React, AWS (S3, Lambda, RDS, Cognito, API
+                Gateway), SQL, GitHub.
+              </li>
+            </ul>
+          </article>
+
+          <article className="timeline-item">
+            <div className="timeline-meta">
+              <span className="timeline-date">Jun 2026 — Aug 2026</span>
               <span className="timeline-location">Spartanburg, SC</span>
             </div>
-            <h3>Full Stack Web Development Intern</h3>
+            <h3>Full-Stack Web Development Intern</h3>
             <p className="timeline-company">
               American Credit Acceptance
             </p>
             <ul>
               <li>
-                Developed a full-stack React application with secure
-                authentication and role-based access controls.
+                Built a full-stack React platform that automated business
+                users' manual paper template management into one central
+                system, saving an estimated $65K per year.
               </li>
               <li>
-                Designed and deployed a SQL-backed solution on AWS with
-                automated CI/CD pipelines using GitHub Actions.
+                Implemented secure authentication and role-based access
+                controls, and deployed the SQL-backed app on AWS with GitHub
+                Actions CI/CD.
+              </li>
+              <li>
+                Technologies: React, AWS (S3, Lambda, RDS, Cognito), SQL,
+                GitHub Actions.
               </li>
             </ul>
           </article>
@@ -64,12 +106,16 @@ export default function Resume() {
             </p>
             <ul>
               <li>
+                Developed a coach-facing prospect comparison tool that
+                benchmarks current roster players against future prospects on
+                key stats and KPIs, replacing manual player-by-player lookups.
+              </li>
+              <li>
                 Built and maintained data pipelines for player tracking and
                 game performance analytics.
               </li>
               <li>
-                Developed a coach-facing comparison tool for evaluating player
-                performance and matchup insights.
+                Technologies: Python, Pandas, SQL, Streamlit.
               </li>
             </ul>
           </article>
@@ -79,7 +125,7 @@ export default function Resume() {
               <span className="timeline-date">Jan 2025 — Dec 2025</span>
               <span className="timeline-location">Clemson, SC</span>
             </div>
-            <h3>Front End Developer Intern</h3>
+            <h3>Front-End Developer Intern</h3>
             <p className="timeline-company">
               9x9 Project – Clemson University
             </p>
@@ -89,25 +135,12 @@ export default function Resume() {
                 interactive puzzle-solving and user data management.
               </li>
               <li>
-                Collaborated with a development team to improve UX, optimize
-                data handling, and ensure cross-browser compatibility.
+                Collaborated with a small team to enhance UX, optimize data
+                handling, and ensure cross-browser compatibility.
               </li>
-            </ul>
-          </article>
-
-          <article className="timeline-item">
-            <div className="timeline-meta">
-              <span className="timeline-date">Sep 2024 — Dec 2024</span>
-              <span className="timeline-location">Clemson, SC</span>
-            </div>
-            <h3>Laptop Support Technician</h3>
-            <p className="timeline-company">
-              CCIT – Clemson University
-            </p>
-            <ul>
               <li>
-                Resolved 400+ IT support requests through troubleshooting,
-                software support, and customer service.
+                Technologies: HTML/CSS, JavaScript, PHP, MySQL, phpMyAdmin,
+                Git/GitHub, Hostinger.
               </li>
             </ul>
           </article>
@@ -131,22 +164,17 @@ export default function Resume() {
 
         <article className="timeline-item">
           <div className="timeline-meta">
-            <span className="timeline-date">Aug 2023 — May 2027</span>
+            <span className="timeline-date">Aug 2023 — Dec 2026</span>
           </div>
 
-          <h3>B.S. Computer Science</h3>
+          <h3>B.S. Computer Science, Minor in Business Administration</h3>
 
           <p className="timeline-company">
             Clemson University
           </p>
 
           <p>
-            Minor in Business Administration • GPA: 3.30/4.00
-          </p>
-
-          <p>
-            Coursework: Data Structures & Algorithms, Discrete Structures,
-            Computer Organization, Software Development Foundations
+            GPA: 3.47/4.00
           </p>
         </article>
       </div>

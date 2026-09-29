@@ -18,20 +18,12 @@ export default function About() {
       <div className="about-content">
         <div className="about-text">
           <p>
-            My name is Life Rouby! I am a rising senior at Clemson University studying Computer Science.
-            Currently, I am participating in American Credit Acceptance's Summer 2026 Internship Program with the IT Department.
-            Within IT, I am working with the App Dev Team as a Full Stack Web Developer Intern.
+            Hello, my name is Life Rouby! I am currently a senior at Clemson University, where I am majoring in Computer Science with a minor in Business Administration.
           </p>
-          <p>
-            Outisde of school and building my career, my hobbies include:
-            <ul>
-              <li>- Watching College Football</li>
-              <li>- Creating Videos on YouTube</li>
-              <li>- Playing Volleyball, Basketball, and Football</li>
-              <li>- Collecting Pokemon Cards</li>
-              <li>- Spending time with my family and friends</li>
-            </ul>
-          </p>
+          <p>Over the past summer, I participated in American Credit Acceptance's Summer 2026 Internship Program within the IT Department. At ACA, I spent my time working with the App Development and DevOps teams, where I gained experience as a Full Stack Web Developer Intern. My main contribution over the summer was a template management app, which is estimated to save the business over $50,000 annually.</p>
+          <p>I am looking to continue building my career as an app developer, and I enjoy making things that make other people's day-to-day lives easier.</p>
+          <p>Outside of tech, I spend my time watching college football, creating videos on YouTube, playing volleyball, basketball, and football, collecting Pokémon cards, and spending time with my family and friends.</p>
+          <p>Thank you for visiting my website! If you want to get in contact with me, the best way is to email me at liferouby@gmail.com.</p>
         </div>
       </div>
 
