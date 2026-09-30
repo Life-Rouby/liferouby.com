@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -8,13 +9,42 @@ const navItems = [
 ]
 
 export default function Layout() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  // Close the mobile menu whenever the route changes
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen])
+
   return (
     <div className="site">
-      <header className="header">
+      <header className={menuOpen ? 'header header--open' : 'header'}>
         <NavLink to="/" className="logo">
           Life Rouby
         </NavLink>
-        <nav className="nav">
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="site-nav"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="menu-toggle-bar" />
+          <span className="menu-toggle-bar" />
+          <span className="menu-toggle-bar" />
+        </button>
+        <nav id="site-nav" className="nav">
           {navItems.map(({ to, label, end }) => (
             <NavLink
               key={to}
@@ -29,6 +59,10 @@ export default function Layout() {
           ))}
         </nav>
       </header>
+
+      {menuOpen && (
+        <div className="menu-backdrop" onClick={() => setMenuOpen(false)} />
+      )}
 
       <main className="main">
         <Outlet />

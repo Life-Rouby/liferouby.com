@@ -6,6 +6,7 @@
 //   slug: 'my-new-project',              // required, unique — used in the URL: /projects/my-new-project
 //   title: 'My New Project',             // required
 //   tagline: 'One-line summary',         // optional — shown under the title
+//   date: 'March 2026',                  // optional — 'Month YYYY', adds the project to the About page timeline
 //   image: '/images/projects/my-new-project.png', // required — header/tile image, drop the file in public/images/projects/
 //   inspiration: [                       // optional — one string per paragraph
 //     'What problem or idea sparked this project?',
@@ -34,6 +35,7 @@ const projects = [
     slug: 'CFBowledge',
     title: 'CFBowledge',
     tagline: '(2026) College Football Game',
+    date: 'August 2026',
     image: '/images/projects/cfbowledge.png',
     inspiration: [
       'I am a huge fan of College Football and I wanted an excuse to cheer for more than just Clemson, so I conceived a game that made my friends and I fans of 10 different teams for the season.',
@@ -52,6 +54,7 @@ const projects = [
     slug: 'strikephone',
     title: 'Strikephone',
     tagline: '(2025) CUHackit Project',
+    date: 'February 2025',
     image: '/images/projects/strikephone.png',
     inspiration: [
       'My friends and I play a lot of blitzball, which is a backyard sport similar to baseball. The advantage that blitzball has over baseball is that the ball that is used is much lighter, enabling it to spin and curve much more, especially when pitching. The issue that comes with this is that it can be hard to tell what pitches were balls and what pitches are strikes.',
@@ -72,6 +75,7 @@ const projects = [
     slug: 'anybike',
     title: 'AnyBike',
     tagline: '(2023) SPARK Entrepreneurship Program',
+    date: 'October 2023',
     image: '/images/projects/anybike.png',
     inspiration: [
       'My friend and I both wanted e-bikes, but as broke college students, we couldn\'t afford them. With funding from Clemson University\'s SPARK Entrepreneurship Program, we were able to build a prototype electric bike conversion kit.',

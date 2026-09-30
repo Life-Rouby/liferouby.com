@@ -112,6 +112,11 @@ ul {
   background: rgba(245, 102, 0, 0.1);
 }
 
+.menu-toggle,
+.menu-backdrop {
+  display: none;
+}
+
 .main {
   flex: 1;
   width: 100%;
@@ -744,19 +749,90 @@ ul {
 
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr;
-    align-items: flex-start;
-    height: auto;
-    padding: 1rem 1.25rem;
-    gap: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 1.25rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    margin-right: -0.5rem;
+    padding: 0 10px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu-toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  /* Morph the three lines into an X when open */
+  .header--open .menu-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header--open .menu-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header--open .menu-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .nav {
-    justify-self: stretch;
-    width: 100%;
-    overflow-x: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
     flex-wrap: nowrap;
-    padding-bottom: 0.25rem;
+    gap: 0.25rem;
+    padding: 0.75rem 1.25rem 1.25rem;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 24px rgba(26, 26, 46, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .header--open .nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .nav-link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(26, 26, 46, 0.25);
   }
 
   .main {
@@ -971,6 +1047,19 @@ ul {
   margin: 0;
   font-size: 1rem;
   line-height: 1.3;
+}
+
+/* project entries link through to their project page */
+.vtimeline-project-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+.vtimeline-project-link:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 640px) {
