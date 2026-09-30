@@ -1,6 +1,8 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import projects from '../data/projects'
 
-const milestones = [
+const lifeMilestones = [
   {
     year: 'May 2005',
     title: 'Born',
@@ -47,35 +49,81 @@ const milestones = [
     blurb: 'This was my first time working in corporate tech.',
   },
   {
-    year: 'December 2027',
+    year: 'December 2026',
     title: 'Graduating Clemson University',
     location: 'Clemson, SC',
     blurb: 'B.S. Computer Science, on to the next chapter.',
   },
 ]
 
-const VISIBLE_COUNT = 4
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+]
+
+// 'May 2005' -> sortable number (parsed by hand — Safari's Date can't parse this format)
+function toSortKey(date) {
+  const [month, year] = date.split(' ')
+  return Number(year) * 12 + MONTHS.indexOf(month)
+}
+
+const projectMilestones = projects
+  .filter((p) => p.date)
+  .map((p) => ({
+    year: p.date,
+    title: p.title,
+    to: `/projects/${p.slug}`,
+  }))
+
+const milestones = [...lifeMilestones, ...projectMilestones].sort(
+  (a, b) => toSortKey(a.year) - toSortKey(b.year)
+)
+
+const DESKTOP_VISIBLE_COUNT = 4
+const MOBILE_VISIBLE_COUNT = 2
+const MOBILE_QUERY = '(max-width: 768px)'
+
+function useVisibleCount() {
+  const getCount = () =>
+    window.matchMedia(MOBILE_QUERY).matches ? MOBILE_VISIBLE_COUNT : DESKTOP_VISIBLE_COUNT
+  const [count, setCount] = useState(getCount)
+
+  useEffect(() => {
+    const mql = window.matchMedia(MOBILE_QUERY)
+    const onChange = () => setCount(getCount())
+    mql.addEventListener('change', onChange)
+    return () => mql.removeEventListener('change', onChange)
+  }, [])
+
+  return count
+}
 
 export default function Timeline({ compact = false }) {
+  const visibleCount = useVisibleCount()
   const viewportRef = useRef(null)
   const trackRef = useRef(null)
   const [itemWidth, setItemWidth] = useState(0)
   const [rowHeight, setRowHeight] = useState(0)
   const [start, setStart] = useState(0)
 
-  const maxStart = Math.max(0, milestones.length - VISIBLE_COUNT)
+  const maxStart = Math.max(0, milestones.length - visibleCount)
+
+  // Keep the current position valid when switching between mobile and desktop
+  useEffect(() => {
+    setStart((s) => Math.min(s, maxStart))
+  }, [maxStart])
 
   useLayoutEffect(() => {
     const el = viewportRef.current
     if (!el) return
 
-    const update = () => setItemWidth(el.getBoundingClientRect().width / VISIBLE_COUNT)
+    const update = () => setItemWidth(el.getBoundingClientRect().width / visibleCount)
     update()
 
     const observer = new ResizeObserver(update)
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [visibleCount])
 
   // Row height must fit the tallest wrapped title at the current item width —
   // measure every content block (not just the visible page) and size to the max.
@@ -97,8 +145,8 @@ export default function Timeline({ compact = false }) {
     document.fonts?.ready.then(measure)
   }, [itemWidth])
 
-  const goPrev = () => setStart((s) => Math.max(0, s - VISIBLE_COUNT))
-  const goNext = () => setStart((s) => Math.min(maxStart, s + VISIBLE_COUNT))
+  const goPrev = () => setStart((s) => Math.max(0, s - visibleCount))
+  const goNext = () => setStart((s) => Math.min(maxStart, s + visibleCount))
 
   return (
     <div className={`vtimeline ${compact ? 'vtimeline--compact' : ''}`}>
@@ -132,7 +180,15 @@ export default function Timeline({ compact = false }) {
             >
               <div className="vtimeline-content">
                 <span className="vtimeline-year">{m.year}</span>
-                <h3>{m.title}</h3>
+                <h3>
+                  {m.to ? (
+                    <Link to={m.to} className="vtimeline-project-link">
+                      {m.title}
+                    </Link>
+                  ) : (
+                    m.title
+                  )}
+                </h3>
               </div>
               <div className="vtimeline-node" aria-hidden="true" />
             </div>

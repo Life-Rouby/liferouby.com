@@ -7,7 +7,7 @@ export default function Projects() {
       <header className="page-header">
         <h1>Projects</h1>
         <p className="page-intro">
-          Cool things I've done
+          Cool things i've done
         </p>
       </header>
 
