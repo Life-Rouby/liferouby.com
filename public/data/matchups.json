@@ -822,7 +822,7 @@
         "team2": "Army",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "aarav",
@@ -832,7 +832,7 @@
         "team2": "Florida",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "aarav"
       },
       {
         "participant1": "aarav",
@@ -842,7 +842,7 @@
         "team2": "Alabama",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "aarav"
       },
       {
         "participant1": "jabir",
@@ -852,7 +852,7 @@
         "team2": "Kennesaw State",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jabir"
       },
       {
         "participant1": "jabir",
@@ -862,7 +862,7 @@
         "team2": "Oklahoma State",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "jabir",
@@ -872,7 +872,7 @@
         "team2": "Texas",
         "location2": "neutral",
         "spread": null,
-        "winner": null
+        "winner": "jabir"
       },
       {
         "participant1": "jordan",
@@ -882,7 +882,7 @@
         "team2": "NC State",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "justin",
@@ -892,7 +892,7 @@
         "team2": "Pittsburgh",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "justin",
@@ -902,7 +902,7 @@
         "team2": "Louisville",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "justin",
@@ -912,7 +912,7 @@
         "team2": "Michigan State",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "justin",
@@ -922,7 +922,7 @@
         "team2": "Oregon",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "justin",
@@ -932,7 +932,7 @@
         "team2": "Virginia",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kathleen"
       },
       {
         "participant1": "kenny",
@@ -942,7 +942,7 @@
         "team2": "California",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "aarav"
       },
       {
         "participant1": "kenny",
@@ -952,7 +952,7 @@
         "team2": "Washington",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kenny"
       },
       {
         "participant1": "life",
@@ -962,7 +962,7 @@
         "team2": "Nebraska",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "life"
       },
       {
         "participant1": "mary-kathryn",
@@ -972,7 +972,7 @@
         "team2": "Missouri",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jabir"
       },
       {
         "participant1": "mary-kathryn",
@@ -982,7 +982,7 @@
         "team2": "Fresno State",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "mary-kathryn"
       }
     ],
     "Week 7": [
@@ -994,7 +994,7 @@
         "team2": "Tulane",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "aarav"
       },
       {
         "participant1": "jabir",
@@ -1004,7 +1004,7 @@
         "team2": "Ole Miss",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kathleen"
       },
       {
         "participant1": "jordan",
@@ -1014,7 +1014,7 @@
         "team2": "Georgia",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "jordan",
@@ -1024,7 +1024,7 @@
         "team2": "California",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "jordan",
@@ -1034,7 +1034,7 @@
         "team2": "Syracuse",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "jordan",
@@ -1044,7 +1044,7 @@
         "team2": "Houston",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kenny"
       },
       {
         "participant1": "jordan",
@@ -1054,7 +1054,7 @@
         "team2": "Indiana",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jordan"
       },
       {
         "participant1": "jordan",
@@ -1064,7 +1064,7 @@
         "team2": "Louisiana",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "mary-kathryn"
       },
       {
         "participant1": "justin",
@@ -1074,7 +1074,7 @@
         "team2": "Miami",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jabir"
       },
       {
         "participant1": "justin",
@@ -1084,7 +1084,7 @@
         "team2": "Duke",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "justin",
@@ -1094,7 +1094,7 @@
         "team2": "Texas Tech",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "life"
       },
       {
         "participant1": "kathleen",
@@ -1104,7 +1104,7 @@
         "team2": "SMU",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "kenny",
@@ -1114,7 +1114,7 @@
         "team2": "Texas",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kenny"
       },
       {
         "participant1": "kenny",
@@ -1124,7 +1124,7 @@
         "team2": "Army",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "life",
@@ -1134,7 +1134,7 @@
         "team2": "Michigan",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "jabir"
       },
       {
         "participant1": "life",
@@ -1144,7 +1144,7 @@
         "team2": "UCLA",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "justin"
       },
       {
         "participant1": "life",
@@ -1154,7 +1154,7 @@
         "team2": "Colorado",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "life"
       },
       {
         "participant1": "mary-kathryn",
@@ -1164,7 +1164,7 @@
         "team2": "Oregon",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "kathleen"
       },
       {
         "participant1": "mary-kathryn",
@@ -1174,7 +1174,7 @@
         "team2": "Baylor",
         "location2": "home",
         "spread": null,
-        "winner": null
+        "winner": "mary-kathryn"
       }
     ],
     "Week 8": [
