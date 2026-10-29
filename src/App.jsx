@@ -6,6 +6,8 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import About from './pages/About'
 import CFBowledgePage from './cfbowledge/CFBowledgePage'
+import CFBNilComparisonToolPage from './cfb-nil-comparison-tool/CFBNilComparisonToolPage'
+import TeamPage from './cfb-nil-comparison-tool/TeamPage'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:slug" element={<ProjectDetail />} />
         <Route path="about" element={<About />} />
+        <Route path="cfb-nil-comparison-tool" element={<CFBNilComparisonToolPage />} />
+        <Route path="cfb-nil-comparison-tool/team/:slug" element={<TeamPage />} />
       </Route>
       <Route path="/cfbowledge" element={<CFBowledgePage />} />
     </Routes>

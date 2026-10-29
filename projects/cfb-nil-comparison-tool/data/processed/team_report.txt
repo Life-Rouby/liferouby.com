@@ -1,0 +1,106 @@
+TEAM AGGREGATION REPORT
+============================================================
+
+Transfers: 6,744  |  production measured: 2,363 (35.0%)  |  not measured (no PPA: defense, OL, K/P/LS): 4,381
+Team-seasons: 664  (24 with no incoming transfers)
+
+Production index: 0 = average FBS player with stats at the same broad position
+group (QB/RB/WR/TE) that season; 10 points = one SD; capped at +30.
+
+HIT RATE (share who recorded a stat at the new school) AND QUALITY IF PLAYED
+                  n  hit_rate  quality_if_played
+position_group                                  
+ATH              22      0.73              -0.98
+QB              519      0.79               1.05
+RB              480      0.86               1.58
+TE              350      0.77               0.92
+WR              992      0.82               2.51
+
+PROVEN (played before) vs UNPROVEN (no stats before)
+                     n  hit_rate  quality_if_played  cost_mean
+transfer_profile                                              
+proven            1753      0.89               2.65       0.82
+unproven           610      0.59              -2.18      -4.16
+
+PRODUCTION GAIN (played on both sides only): n = 1,566, mean +1.7, median +1.0 index points, improved 55.7%
+
+TRANSFER-LEVEL SPEARMAN CORRELATIONS (measured transfers; pairwise)
+                  cost_index  played_after  prod_index_after  prod_value_after  prod_gain
+cost_index             1.000         0.178             0.251             0.268     -0.131
+played_after           0.178         1.000               NaN             0.443        NaN
+prod_index_after       0.251           NaN             1.000             1.000      0.627
+prod_value_after       0.268         0.443             1.000             1.000      0.627
+prod_gain             -0.131           NaN             0.627             0.627      1.000
+
+TEAM-SEASON SPEARMAN CORRELATIONS
+                   cost_mean  prod_value_mean  hit_rate  prod_quality_mean
+cost_mean              1.000            0.311     0.131              0.284
+prod_value_mean        0.311            1.000     0.287              0.961
+hit_rate               0.131            0.287     1.000             -0.006
+prod_quality_mean      0.284            0.961    -0.006              1.000
+
+SMALL GROUPS (team averages are plain means, not adjusted)
+Spread of team-season production over expected by number of measured transfers:
+           team_seasons  sd_of_team_means
+n_bin                                    
+(0, 4]              403              6.87
+(4, 9]              180              4.20
+(9, 14]              20              4.03
+(14, 100]             2              3.74
+
+LEADERBOARD ELIGIBILITY: totals need >= 1 measured transfers (133 of 136 teams); team-seasons need >= 1 (605 of 664 team-seasons)
+95% interval excludes average: above 6, below 6, uncertain 121
+
+TOP 15 TEAMS BY AVERAGE COST, 2021-2025 (leaderboard-eligible teams)
+          team  n_transfers  cost_mean
+       Georgia           29       11.7
+       Alabama           38       11.6
+           LSU           55       10.1
+         Miami           59        9.4
+ Florida State           67        9.0
+         Texas           38        8.9
+        Oregon           48        8.7
+    Ohio State           27        8.4
+      Ole Miss           90        7.7
+           USC           74        6.7
+South Carolina           53        6.6
+      Nebraska           43        6.2
+    Notre Dame           27        6.1
+    Penn State           27        6.0
+     Texas A&M           51        5.9
+
+TOP 15 BY PRODUCTION OVER EXPECTED (leaderboard-eligible teams)
+             team  n_measured  cost_mean  hit_rate  prod_quality_mean  prod_expected_mean  prod_value_mean  prod_over_expected_mean  prod_over_expected_lo  prod_over_expected_hi prod_over_expected_signal
+Northern Illinois         6.0      -9.68      0.83               6.66               -2.53             4.38                     6.91                  -0.67                  14.48                 uncertain
+             Duke         7.0       0.48      1.00               9.41                2.56             9.41                     6.84                  -0.17                  13.86                 uncertain
+           Oregon        14.0       8.72      1.00              10.78                4.12            10.78                     6.67                   1.71                  11.63                     above
+            Miami        15.0       9.43      0.93              11.32                3.95            10.12                     6.16                   1.37                  10.96                     above
+       Utah State        22.0      -8.31      0.73               7.84               -1.47             3.73                     5.20                   1.24                   9.15                     above
+          Buffalo        12.0     -10.24      0.83               3.05               -3.37             1.39                     4.76                  -0.59                  10.12                 uncertain
+ Georgia Southern        19.0      -6.59      0.79               4.64               -2.08             2.18                     4.26                   0.00                   8.51                     above
+       Cincinnati        21.0      -1.41      0.90               5.65                0.32             4.35                     4.03                  -0.02                   8.08                 uncertain
+        Tennessee        14.0       3.19      0.86               6.44                0.70             4.58                     3.88                  -1.08                   8.84                 uncertain
+          Indiana        32.0      -0.12      0.94               5.49                1.00             4.71                     3.72                   0.44                   7.00                     above
+              SMU        28.0       1.57      0.86               6.42                0.85             4.47                     3.62                   0.11                   7.12                     above
+       New Mexico        22.0      -5.81      0.82               3.44               -2.02             1.48                     3.50                  -0.46                   7.45                 uncertain
+          Memphis        21.0      -4.20      0.86               4.42               -0.41             2.82                     3.23                  -0.82                   7.28                 uncertain
+              USC        24.0       6.73      0.92               7.40                3.17             6.23                     3.05                  -0.73                   6.84                 uncertain
+             UNLV        24.0      -3.33      0.96               3.08               -0.27             2.74                     3.01                  -0.78                   6.80                 uncertain
+
+BOTTOM 15 BY PRODUCTION OVER EXPECTED (leaderboard-eligible teams)
+            team  n_measured  cost_mean  hit_rate  prod_quality_mean  prod_expected_mean  prod_value_mean  prod_over_expected_mean  prod_over_expected_lo  prod_over_expected_hi prod_over_expected_signal
+            UTEP         9.0      -8.46      0.67              -6.97               -0.33            -7.00                    -6.67                 -12.85                  -0.48                     below
+        Delaware         2.0      -2.12      1.00              -6.88               -0.67            -6.88                    -6.21                 -19.33                   6.91                 uncertain
+            UTSA        13.0      -4.95      0.85              -5.56               -0.22            -5.78                    -5.56                 -10.71                  -0.42                     below
+          Auburn        24.0       5.47      0.75              -0.67                2.34            -2.38                    -4.72                  -8.50                  -0.93                     below
+       Minnesota        18.0      -1.46      0.83              -2.68                1.23            -3.27                    -4.50                  -8.88                  -0.13                     below
+         Georgia        14.0      11.69      0.71               4.71                5.30             1.46                    -3.85                  -8.80                   1.11                 uncertain
+  Oklahoma State        25.0       0.68      0.84              -3.19                0.03            -3.79                    -3.82                  -7.54                  -0.11                     below
+       Texas A&M        21.0       5.90      0.67               0.28                1.55            -2.10                    -3.65                  -7.70                   0.40                 uncertain
+Central Michigan         7.0      -8.44      1.00              -5.43               -1.92            -5.43                    -3.51                 -10.52                   3.50                 uncertain
+      Iowa State         7.0      -0.13      0.86              -1.54                1.14            -2.35                    -3.49                 -10.50                   3.52                 uncertain
+      California        33.0      -0.38      0.79              -1.79                0.59            -2.86                    -3.44                  -6.67                  -0.22                     below
+     Sam Houston        13.0      -8.33      0.77              -5.47               -2.36            -5.76                    -3.40                  -8.54                   1.75                 uncertain
+       Wisconsin        18.0       2.67      0.89              -1.13                1.40            -1.86                    -3.26                  -7.63                   1.12                 uncertain
+   Arizona State        28.0      -0.86      0.82              -1.60                0.49            -2.66                    -3.16                  -6.66                   0.35                 uncertain
+           Texas        15.0       8.91      0.93               2.07                4.42             1.39                    -3.03                  -7.82                   1.76                 uncertain
