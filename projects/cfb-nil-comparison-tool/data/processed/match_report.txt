@@ -1,0 +1,331 @@
+TRANSFER DATASET BUILD REPORT
+============================================================
+
+FILTERS
+Start: 14,422 portal entries (2021-2025)
+  - dropped 3,971 with no destination (incl. withdrawn / unsigned) -> 10,451 remain
+  - dropped 2,154 whose destination was not FBS in the transfer season -> 8,297 remain
+  - dropped 1,414 whose origin was not FBS in the prior season -> 6,883 remain
+  - dropped 138 where destination == origin (returned to same school) -> 6,745 remain
+  - dropped 1 duplicate entries (same season, name, origin, destination; kept latest) -> 6,744 remain
+
+MATCH METHODS
+  BEFORE:
+    exact              4,207
+    unmatched          2,454
+    fuzzy_nickname     41
+    fuzzy              39
+    id_link            3
+  AFTER:
+    exact              4,688
+    unmatched          1,961
+    fuzzy_nickname     49
+    fuzzy              41
+    id_link            4
+    ambiguous_fuzzy    1
+
+MATCH RATES BY SEASON
+           n before_rate after_rate
+season                             
+2021     693       56.7%      70.0%
+2022     917       65.4%      73.1%
+2023    1178       68.2%      71.0%
+2024    1705       65.3%      71.3%
+2025    2251       61.3%      70.0%
+ALL     6744       63.6%      70.9%
+
+MATCH RATES BY PORTAL POSITION
+             n before_rate after_rate
+position                             
+APB          1      100.0%     100.0%
+ATH         22       50.0%      72.7%
+CB         761       74.9%      80.6%
+DL         670       73.1%      83.0%
+DT          18       83.3%      88.9%
+DUAL        11       45.5%      90.9%
+EDGE       450       73.1%      82.9%
+ILB          9       66.7%      77.8%
+IOL        511       10.8%      12.3%
+K          134       70.1%      75.4%
+LB         574       72.8%      85.9%
+LS          56       33.9%      33.9%
+OC           4       25.0%      25.0%
+OG          13        0.0%      15.4%
+OLB         16       50.0%      68.8%
+OT         484        8.3%       8.3%
+P           76       63.2%      76.3%
+PRO         15       80.0%      80.0%
+QB         493       72.4%      79.1%
+RB         479       81.6%      86.2%
+S          584       74.0%      83.6%
+SDE          8       37.5%      62.5%
+TE         350       62.0%      76.6%
+WDE         13       69.2%      84.6%
+WR         992       76.5%      82.2%
+ALL       6744       63.6%      70.9%
+
+NOTE: production data only includes players who recorded a stat. Unmatched
+OL / LS / backups mostly reflect 'no stats recorded', not failed name matching.
+
+ID CONSISTENCY: 3,765 transfers matched on both sides; 16 have different athlete IDs before vs after.
+  CFBD sometimes re-issues IDs (Bo Nix), so this is a review list, not proof of error:
+ transfer_id  season         full_name           origin    destination before_player_id  before_matched_name after_player_id      after_matched_name
+         297    2021   Cameron Johnson      North Texas           UCLA          4262267          Cam Johnson         4243828         Cameron Johnson
+         389    2021       Blake Mazza Washington State            SMU          4361144          Blake Mazza         4242165             Blake Mazza
+         461    2021  Cedric Patterson       New Mexico           Rice          4374065 Cedric Patterson III          136429    Cedric Patterson III
+        1129    2022          DJ James           Oregon         Auburn          4429891             DJ James         4915204              D.J. James
+        1320    2022            Bo Nix           Auburn         Oregon          4567218               Bo Nix         4426338                  Bo Nix
+        1333    2022     Ivan Pace Jr.       Miami (OH)     Cincinnati          4430280        Ivan Pace Jr.         4915279           Ivan Pace Jr.
+        1399    2022      Nick Roberts        UL Monroe            SMU          4887206         Nick Roberts         4255694            Nick Roberts
+        1454    2022       Eddie Smith         Illinois Arkansas State          4372018          Eddie Smith         4912011             Eddie Smith
+        1495    2022       Noah Taylor         Virginia North Carolina          4370814          Noah Taylor         4568681             Noah Taylor
+        2722    2023   Andre White Jr.        Texas A&M   Georgia Tech          4430715      Andre White Jr.         4428829             Andre White
+        3278    2024    Dan Foster Jr.      Texas State     Louisville          4429628           Dan Foster         5218985              Dan Foster
+        3554    2024      Ryan Johnson            Akron  Southern Miss           169499         Ryan Johnson         5193123            Ryan Johnson
+        3757    2024  Dorian Mausi Jr.             Duke         Auburn          4573318         Dorian Mausi         5193687        Dorian Mausi Jr.
+        4921    2025 Sherrod Covil Jr.          Clemson  Virginia Tech          5081433    Sherrod Covil Jr.         4685316           Sherrod Covil
+        5292    2025    Jaylen Hampton Western Kentucky      Charlotte          4432230        Jalen Hampton         5156879          Jaylen Hampton
+        5475    2025   Vincent Jackson         Nebraska          UConn          5219063      Vincent Jackson         5120453 Vincent Carroll-Jackson
+
+FUZZY MATCHES TO REVIEW (BEFORE): 80
+ transfer_id  season           full_name position           origin    before_matched_name before_matched_position before_match_method  before_match_score
+          75    2021   Octavius Brothers      OLB           Auburn          O.C. Brothers                      LB      fuzzy_nickname                78.6
+         272    2021          Geo Howard       CB           Purdue       Geovante' Howard                      CB      fuzzy_nickname                80.0
+         296    2021     Brandon Johnson       WR        Tennessee Brandon Edward Johnson                      WR      fuzzy_nickname                81.1
+         297    2021     Cameron Johnson        S      North Texas            Cam Johnson                      DB      fuzzy_nickname                84.6
+         693    2021     Josh Youngblood       WR     Kansas State      Joshua Youngblood                      WR               fuzzy                93.8
+         775    2022  Keyon Blankenbaker       CB          Wyoming      Keyon Blakenbaker                      DB               fuzzy                97.1
+         780    2022       Gerry Bohanon       QB           Baylor         Gerry Bohannon                      QB               fuzzy                96.3
+         949    2022       Terah Edwards       DL     Northwestern         Te-Rah Edwards                      DL      fuzzy_nickname                81.5
+        1027    2022         Jam Griffin       RB     Georgia Tech        Jamious Griffin                      RB      fuzzy_nickname                84.6
+        1060    2022        Matt Hayball        P Florida Atlantic        Matthew Hayball                       P      fuzzy_nickname                88.9
+        1062    2022        Joshua Hayes       CB         Virginia             Josh Hayes                       S               fuzzy                90.9
+        1118    2022 Christopher Jackson       WR              BYU          Chris Jackson                      WR      fuzzy_nickname                81.2
+        1374    2022        Juwaun Price       RB New Mexico State           Juwuan Price                      RB               fuzzy                91.7
+        1432    2022      Tiaoalii Savea       DL             UCLA         Tiaoalil Savea                      DL               fuzzy                92.9
+        1445    2022  Nesta Jade Silvera       DL            Miami          Nesta Silvera                      DL      fuzzy_nickname                83.9
+        1524    2022      Solomon Turner        S          Hawai'i            Solo Turner                      DB      fuzzy_nickname                88.0
+        1568    2022       Cameron Wiley       RB        Minnesota              Cam Wiley                      RB      fuzzy_nickname                81.8
+        1588    2022         Mekhi Wingo       DL         Missouri            Mehki Wingo                      DT               fuzzy                90.9
+        1688    2023       Vonta Bentley       LB          Clemson        LaVonta Bentley                      LB               fuzzy                92.9
+        1817    2023       Jeffrey Clark       DL    Georgia State          Jeffery Clark                      DL               fuzzy                92.3
+        2438    2023 Kameron Pedescleaux       CB        Louisiana        Kam Pedescleaux                       S      fuzzy_nickname                88.2
+        2459    2023          Trey Potts       RB        Minnesota          Treyson Potts                      RB      fuzzy_nickname                87.0
+        2460    2023      Antwaun Powell     EDGE          Florida         Antwuan Powell                      DL               fuzzy                92.9
+        2561    2023       Stephen Sings      WDE          Liberty       Stephens Sings V                      DL               fuzzy                96.3
+        2623    2023 Willie Taggart, Jr.      ATH Florida Atlantic     Wilile Taggart Jr.                      WR               fuzzy                92.9
+        2693    2023    Alfahiym Walcott        S           Baylor             Al Walcott                      DB      fuzzy_nickname                76.9
+        2794    2024    Armani-Eli Adams        S Florida Atlantic           Armani Adams                       S      fuzzy_nickname                85.7
+        2808    2024       Kam Alexander       CB             UTSA      Kameryn Alexander                      DB      fuzzy_nickname                86.7
+        2838    2024         Josh Atkins       OT          Hawai'i          Joshua Atkins                      OL               fuzzy                91.7
+        2866    2024           Yam Banks        S    South Alabama          Yamarus Banks                       S      fuzzy_nickname                81.8
+        2965    2024   Octavius Brothers       LB           Purdue          O.C. Brothers                      LB      fuzzy_nickname                78.6
+        2992    2024     DeAgo Brumfield       CB          Memphis         DeAgo Brumfeld                      CB               fuzzy                96.6
+        3054    2024       Josh Celiscar     EDGE              UCF        Joshua Celiscar                      DL               fuzzy                92.9
+        3074    2024       Jeffrey Clark       DL       Louisville          Jeffery Clark                      DL               fuzzy                92.3
+        3301    2024   Patrick Garwo III       RB   Boston College          Pat Garwo III                      RB      fuzzy_nickname                81.8
+        3351    2024         Jam Griffin       RB         Ole Miss        Jamious Griffin                      RB      fuzzy_nickname                84.6
+        3418    2024      Zachary Haynes        P New Mexico State            Zach Haynes                       P      fuzzy_nickname                88.0
+        3478    2024       Trent Howland       RB          Indiana        Trenten Howland                      RB               fuzzy                92.9
+        3500    2024     Antione Jackson       CB    East Carolina        Antoine Jackson                      DB               fuzzy                93.3
+        3515    2024   Vandrevius Jacobs       WR    Florida State     Vandrevious Jacobs                      WR               fuzzy                97.1
+        3730    2024          Dez Malone       CB  San Diego State         Dezjhon Malone                      DB      fuzzy_nickname                83.3
+        4017    2024        Juwaun Price       RB         Syracuse           Juwuan Price                      RB               fuzzy                91.7
+        4089    2024            Cam Ross       WR            UConn           Cameron Ross                      WR      fuzzy_nickname                80.0
+        4120    2024      Tiaoalii Savea       DL          Arizona         Tiaoalil Savea                      DL               fuzzy                92.9
+        4158    2024      Jordon Simmons       RB   Michigan State         Jordan Simmons                      RB               fuzzy                92.9
+        4173    2024       Stephen Sings     EDGE           Auburn       Stephens Sings V                      DL               fuzzy                96.3
+        4280    2024       Bryon Threats        S       Cincinnati          Byron Threats                      DB               fuzzy                92.3
+        4284    2024          Lu Tillery       CB        UL Monroe         Lucius Tillery                      DB      fuzzy_nickname                83.3
+        4313    2024   Sai Vadrawale III       CB       California      Sailasa Vadrawale                      DB      fuzzy_nickname                86.7
+        4353    2024            Cam Ward       QB Washington State           Cameron Ward                      QB      fuzzy_nickname                80.0
+        4458    2024            Ed Woods       CB    Arizona State           Edward Woods                      DB      fuzzy_nickname                80.0
+        4486    2024    Benjamin Yurosek       TE         Stanford            Ben Yurosek                      TE      fuzzy_nickname                81.5
+        4550    2025        Steve Angeli       QB       Notre Dame          Steven Angeli                      QB               fuzzy                96.0
+        4589    2025        Thai Baldwin       CB       Ball State       Thailand Baldwin                      DB      fuzzy_nickname                85.7
+        4596    2025      Shad Banks Jr.       LB              TCU         Shadrach Banks                      LB      fuzzy_nickname                83.3
+        4664    2025       Doug Blue-Eli       DL    South Florida       Douglas Blue-Eli                      DL      fuzzy_nickname                89.7
+        4680    2025          Chris Boti       DL          Liberty       Christopher Boti                      DT      fuzzy_nickname                76.9
+        4709    2025        Joshua Braun      IOL         Arkansas             Josh Braun                      OL               fuzzy                90.9
+        4840    2025       Josh Celiscar     EDGE        Texas A&M        Joshua Celiscar                      DL               fuzzy                92.9
+        5013    2025       Lacota Dippre     EDGE        Charlotte          Lakota Dippre                      TE               fuzzy                92.3
+        5143    2025         Cam Fleming        S    Virginia Tech        Cameren Fleming                      DB      fuzzy_nickname                84.6
+        5158    2025      Alexander Ford       CB Western Kentucky              Alex Ford                      DB      fuzzy_nickname                78.3
+        5212    2025          Jy Gilmore        S    Georgia State          Jyron Gilmore                      DB      fuzzy_nickname                87.0
+        5292    2025      Jaylen Hampton       WR Western Kentucky          Jalen Hampton                      RB               fuzzy                96.3
+        5379    2025        Redd Hibbler     EDGE         NC State            Red Hibbler                      DL               fuzzy                95.7
+        5429    2025        Kyron Hudson       WR              USC      Kyron Ware-Hudson                      WR      fuzzy_nickname                82.8
+        5461    2025      Dorion Jackson        S             Troy         Dorian Jackson                       S               fuzzy                92.9
+        5701    2025           Gio Lopez       QB    South Alabama         Giovanni Lopez                      QB      fuzzy_nickname                78.3
+        5719    2025        Landry Lyddy       QB              UAB            Landy Lyddy                      QB               fuzzy                95.7
+        5795    2025         Josh McCray       RB         Illinois          Joshua McCray                      RB               fuzzy                91.7
+        6044    2025         Simote Pepa       DL             Utah           Simonte Pepa                      DL               fuzzy                95.7
+        6053    2025     Parker Petersen       DL           Tulane        Parker Peterson                      DL               fuzzy                93.3
+        6100    2025        Juwaun Price       RB      North Texas           Juwuan Price                      RB               fuzzy                91.7
+        6177    2025    D'Antre Robinson       DL          Florida        D'Ante Robinson                      DL               fuzzy                96.6
+        6198    2025            Cam Ross       WR    James Madison           Cameron Ross                      WR      fuzzy_nickname                80.0
+        6245    2025      Tiaoalii Savea       DL            Texas         Tiaoalil Savea                      DL               fuzzy                92.9
+        6276    2025          Kam Shanks       WR              UAB         Kameran Shanks                      WR      fuzzy_nickname                83.3
+        6325    2025          Greg Smith        S          Florida          Gregory Smith                      DB      fuzzy_nickname                87.0
+        6484    2025       Bryon Threats        S              UCF          Byron Threats                      DB               fuzzy                92.3
+        6675    2025  Zacharyus Williams       WR             Utah          Zach Williams                      WR      fuzzy_nickname                83.9
+
+FUZZY MATCHES TO REVIEW (AFTER): 90
+ transfer_id  season           full_name position       destination      after_matched_name after_matched_position after_match_method  after_match_score
+          75    2021   Octavius Brothers      OLB            Purdue           O.C. Brothers                     LB     fuzzy_nickname               78.6
+         272    2021          Geo Howard       CB         Charlotte        Geovante' Howard                     CB     fuzzy_nickname               80.0
+         296    2021     Brandon Johnson       WR               UCF  Brandon Edward Johnson                     WR     fuzzy_nickname               81.1
+         452    2021   Nikolas Ognenovic       TE             Akron           Nik Ognenovic                     TE     fuzzy_nickname               86.7
+         615    2021      Solomon Turner       LB           Hawai'i             Solo Turner                     DB     fuzzy_nickname               88.0
+         693    2021     Josh Youngblood       WR           Rutgers       Joshua Youngblood                     WR              fuzzy               93.8
+         775    2022  Keyon Blankenbaker       CB        Texas Tech       Keyon Blakenbaker                     DB              fuzzy               97.1
+         780    2022       Gerry Bohanon       QB     South Florida          Gerry Bohannon                     QB              fuzzy               96.3
+         925    2022  Gregory Desrosiers      ATH     Massachusetts       Gregory DeRosiers                     RB              fuzzy               97.1
+         949    2022       Terah Edwards       DL          Illinois          Te-Rah Edwards                     DL     fuzzy_nickname               81.5
+        1027    2022         Jam Griffin       RB      Oregon State         Jamious Griffin                     RB     fuzzy_nickname               84.6
+        1060    2022        Matt Hayball        P        Vanderbilt         Matthew Hayball                      P     fuzzy_nickname               88.9
+        1062    2022        Joshua Hayes       CB      Kansas State              Josh Hayes                      S              fuzzy               90.9
+        1374    2022        Juwaun Price       RB          Syracuse            Juwuan Price                     RB              fuzzy               91.7
+        1432    2022      Tiaoalii Savea       DL           Arizona          Tiaoalil Savea                     DL              fuzzy               92.9
+        1445    2022  Nesta Jade Silvera       DL     Arizona State           Nesta Silvera                     DL     fuzzy_nickname               83.9
+        1568    2022       Cameron Wiley       RB             Akron               Cam Wiley                     RB     fuzzy_nickname               81.8
+        1588    2022         Mekhi Wingo       DL               LSU             Mehki Wingo                     DT              fuzzy               90.9
+        1688    2023       Vonta Bentley       LB          Colorado         LaVonta Bentley                     LB              fuzzy               92.9
+        1817    2023       Jeffrey Clark       DL        Louisville           Jeffery Clark                     DL              fuzzy               92.3
+        2101    2023     Alexander Honig       QB             UConn              Alex Honig                     TE     fuzzy_nickname               80.0
+        2205    2023           Cam Kelly        S        Louisville           Cam'Ron Kelly                     DB     fuzzy_nickname               85.7
+        2277    2023      Zachary Lovett       LB        Iowa State             Zach Lovett                     LB     fuzzy_nickname               88.0
+        2426    2023         Will Parker       OT               UAB          William Parker                     OL     fuzzy_nickname               88.0
+        2438    2023 Kameron Pedescleaux       CB            Tulane         Kam Pedescleaux                      S     fuzzy_nickname               88.2
+        2459    2023          Trey Potts       RB        Penn State           Treyson Potts                     RB     fuzzy_nickname               87.0
+        2460    2023      Antwaun Powell     EDGE     Virginia Tech          Antwuan Powell                     DL              fuzzy               92.9
+        2561    2023       Stephen Sings      WDE            Auburn        Stephens Sings V                     DL              fuzzy               96.3
+        2693    2023    Alfahiym Walcott        S          Arkansas              Al Walcott                     DB     fuzzy_nickname               76.9
+        2794    2024    Armani-Eli Adams        S  Western Michigan            Armani Adams                      S     fuzzy_nickname               85.7
+        2808    2024       Kam Alexander       CB            Oregon       Kameryn Alexander                     DB     fuzzy_nickname               86.7
+        2866    2024           Yam Banks        S          Ole Miss           Yamarus Banks                      S     fuzzy_nickname               81.8
+        2922    2024       Gerry Bohanon       QB               BYU          Gerry Bohannon                     QB              fuzzy               96.3
+        2965    2024   Octavius Brothers       LB               UAB           O.C. Brothers                     LB     fuzzy_nickname               78.6
+        2992    2024     DeAgo Brumfield       CB Mississippi State          DeAgo Brumfeld                     CB              fuzzy               96.6
+        3054    2024       Josh Celiscar     EDGE         Texas A&M         Joshua Celiscar                     DL              fuzzy               92.9
+        3074    2024       Jeffrey Clark       DL     Arizona State           Jeffery Clark                     DL              fuzzy               92.3
+        3301    2024   Patrick Garwo III       RB            Nevada           Pat Garwo III                     RB     fuzzy_nickname               81.8
+        3351    2024         Jam Griffin       RB      Oregon State         Jamious Griffin                     RB     fuzzy_nickname               84.6
+        3429    2024     Dominique Henry       WR  Florida Atlantic               Dom Henry                     WR     fuzzy_nickname               75.0
+        3478    2024       Trent Howland       RB    Oklahoma State         Trenten Howland                     RB              fuzzy               92.9
+        3500    2024     Antione Jackson       CB               UCF         Antoine Jackson                     DB              fuzzy               93.3
+        3515    2024   Vandrevius Jacobs       WR    South Carolina      Vandrevious Jacobs                     WR              fuzzy               97.1
+        3631    2024           Joe Labas       QB  Central Michigan              Joey Labas                     QB              fuzzy               94.7
+        3730    2024          Dez Malone       CB          Oklahoma          Dezjhon Malone                     DB     fuzzy_nickname               83.3
+        4017    2024        Juwaun Price       RB       North Texas            Juwuan Price                     RB              fuzzy               91.7
+        4089    2024            Cam Ross       WR     James Madison            Cameron Ross                     WR     fuzzy_nickname               80.0
+        4120    2024      Tiaoalii Savea       DL             Texas          Tiaoalil Savea                     DL              fuzzy               92.9
+        4158    2024      Jordon Simmons       RB             Akron          Jordan Simmons                     RB              fuzzy               92.9
+        4173    2024       Stephen Sings     EDGE         Charlotte        Stephens Sings V                     DL              fuzzy               96.3
+        4280    2024       Bryon Threats        S               UCF           Byron Threats                     DB              fuzzy               92.3
+        4282    2024          Ayo Tifase       DL         Charlotte          Ayobami Tifase                     DL     fuzzy_nickname               83.3
+        4284    2024          Lu Tillery       CB            Tulane          Lucius Tillery                     DB     fuzzy_nickname               83.3
+        4289    2024        Chris Toudle       TE  Western Michigan      Christopher Toudle                     TE     fuzzy_nickname               80.0
+        4298    2024        Moso Tuitele     EDGE        New Mexico     Moso'oipala Tuitele                     DL     fuzzy_nickname               80.0
+        4313    2024   Sai Vadrawale III       CB      Oregon State       Sailasa Vadrawale                     DB     fuzzy_nickname               86.7
+        4353    2024            Cam Ward       QB             Miami            Cameron Ward                     QB     fuzzy_nickname               80.0
+        4458    2024            Ed Woods       CB    Michigan State            Edward Woods                     DB     fuzzy_nickname               80.0
+        4486    2024    Benjamin Yurosek       TE           Georgia             Ben Yurosek                     TE     fuzzy_nickname               81.5
+        4550    2025        Steve Angeli       QB          Syracuse           Steven Angeli                     QB              fuzzy               96.0
+        4589    2025        Thai Baldwin       CB         Charlotte        Thailand Baldwin                     DB     fuzzy_nickname               85.7
+        4680    2025          Chris Boti       DL    Arkansas State        Christopher Boti                     DT     fuzzy_nickname               76.9
+        4709    2025        Joshua Braun      IOL          Kentucky              Josh Braun                     OL              fuzzy               90.9
+        4840    2025       Josh Celiscar     EDGE     South Florida         Joshua Celiscar                     DL              fuzzy               92.9
+        5013    2025       Lacota Dippre     EDGE     James Madison           Lakota Dippre                     TE              fuzzy               92.3
+        5143    2025         Cam Fleming        S         App State         Cameren Fleming                     DB     fuzzy_nickname               84.6
+        5146    2025      Ricky Fletcher       CB          Ole Miss         Rickey Fletcher                     DB              fuzzy               96.6
+        5158    2025      Alexander Ford       CB    Kennesaw State               Alex Ford                     DB     fuzzy_nickname               78.3
+        5212    2025          Jy Gilmore        S      Georgia Tech           Jyron Gilmore                     DB     fuzzy_nickname               87.0
+        5379    2025        Redd Hibbler     EDGE Mississippi State             Red Hibbler                     DL              fuzzy               95.7
+        5429    2025        Kyron Hudson       WR        Penn State       Kyron Ware-Hudson                     WR     fuzzy_nickname               82.8
+        5461    2025      Dorion Jackson        S            Tulane          Dorian Jackson                      S              fuzzy               92.9
+        5475    2025     Vincent Jackson       DL             UConn Vincent Carroll-Jackson                     DT     fuzzy_nickname               78.9
+        5701    2025           Gio Lopez       QB    North Carolina          Giovanni Lopez                     QB     fuzzy_nickname               78.3
+        5719    2025        Landry Lyddy       QB     Southern Miss             Landy Lyddy                     QB              fuzzy               95.7
+        5723    2025         Sam M'Pemba     EDGE         Texas A&M          Samuel M'Pemba                     DE     fuzzy_nickname               87.0
+        5795    2025         Josh McCray       RB           Georgia           Joshua McCray                     RB              fuzzy               91.7
+        5986    2025       Matt Ogunniyi       TE     Massachusetts        Matthew Ogunniyi                     TE     fuzzy_nickname               89.7
+        6044    2025         Simote Pepa       DL        Washington            Simonte Pepa                     DL              fuzzy               95.7
+        6053    2025     Parker Petersen       DL         Wisconsin         Parker Peterson                     DL              fuzzy               93.3
+        6100    2025        Juwaun Price       RB     Massachusetts            Juwuan Price                     RB              fuzzy               91.7
+        6177    2025    D'Antre Robinson       DL    North Carolina         D'Ante Robinson                     DL              fuzzy               96.6
+        6198    2025            Cam Ross       WR          Virginia            Cameron Ross                     WR     fuzzy_nickname               80.0
+        6245    2025      Tiaoalii Savea       DL           Arizona          Tiaoalil Savea                     DL              fuzzy               92.9
+        6276    2025          Kam Shanks       WR          Arkansas          Kameran Shanks                     WR     fuzzy_nickname               83.3
+        6297    2025      Jordon Simmons       RB     Georgia State          Jordan Simmons                     RB              fuzzy               92.9
+        6325    2025          Greg Smith        S    North Carolina           Gregory Smith                     DB     fuzzy_nickname               87.0
+        6484    2025       Bryon Threats        S              UCLA           Byron Threats                     DB              fuzzy               92.3
+        6530    2025  Cameron Upshaw Jr.        S              UTSA          Cam Upshaw Jr.                      S     fuzzy_nickname               83.3
+        6675    2025  Zacharyus Williams       WR               USC           Zach Williams                     WR     fuzzy_nickname               83.9
+
+AMBIGUOUS (multiple candidates, left unmatched): 1
+ transfer_id  season     full_name origin destination before_match_method after_match_method
+        6532    2025 Logologo Va'a   UTEP      Nevada                 NaN    ambiguous_fuzzy
+
+SPOT CHECKS
+Cam Ward (2024) QB: Washington State -> Miami
+    BEFORE [fuzzy_nickname] Cameron Ward: {'totalPPA_all': 167.42, 'passing_YDS': 3732.0, 'rushing_YDS': 122.0}
+    AFTER  [fuzzy_nickname] Cameron Ward: {'totalPPA_all': 268.048, 'passing_YDS': 4313.0, 'rushing_YDS': 204.0, 'receiving_YDS': 7.0, 'defensive_TOT': 1.0}
+Caleb Downs (2024) S: Alabama -> Ohio State
+    BEFORE [exact] Caleb Downs: {'defensive_TOT': 107.0}
+    AFTER  [exact] Caleb Downs: {'defensive_TOT': 81.0}
+Jaxson Dart (2022) QB: USC -> Ole Miss
+    BEFORE [exact] Jaxson Dart: {'totalPPA_all': 54.818, 'passing_YDS': 1353.0, 'rushing_YDS': 43.0, 'defensive_TOT': 1.0}
+    AFTER  [exact] Jaxson Dart: {'totalPPA_all': 143.639, 'passing_YDS': 2975.0, 'rushing_YDS': 613.0}
+Dillon Gabriel (2022) QB: UCF -> Oklahoma
+    BEFORE [exact] Dillon Gabriel: {'totalPPA_all': 35.421, 'passing_YDS': 814.0, 'rushing_YDS': 125.0, 'receiving_YDS': 20.0}
+    AFTER  [exact] Dillon Gabriel: {'totalPPA_all': 121.314, 'passing_YDS': 3168.0, 'rushing_YDS': 324.0, 'receiving_YDS': 13.0, 'defensive_TOT': 1.0}
+Dillon Gabriel (2024) QB: Oklahoma -> Oregon
+    BEFORE [exact] Dillon Gabriel: {'totalPPA_all': 279.799, 'passing_YDS': 3660.0, 'rushing_YDS': 373.0, 'defensive_TOT': 1.0}
+    AFTER  [exact] Dillon Gabriel: {'totalPPA_all': 210.658, 'passing_YDS': 3857.0, 'rushing_YDS': 149.0}
+Bo Nix (2022) QB: Auburn -> Oregon
+    BEFORE [exact] Bo Nix: {'totalPPA_all': 109.936, 'passing_YDS': 2294.0, 'rushing_YDS': 168.0}
+    AFTER  [exact] Bo Nix: {'totalPPA_all': 234.766, 'passing_YDS': 3594.0, 'rushing_YDS': 514.0, 'receiving_YDS': 36.0}
+Michael Penix Jr. (2022) QB: Indiana -> Washington
+    BEFORE [exact] Michael Penix Jr.: {'totalPPA_all': 8.058, 'passing_YDS': 939.0, 'rushing_YDS': -24.0}
+    AFTER  [exact] Michael Penix Jr.: {'totalPPA_all': 254.762, 'passing_YDS': 4641.0, 'rushing_YDS': 92.0}
+Jayden Daniels (2022) QB: Arizona State -> LSU
+    BEFORE [exact] Jayden Daniels: {'totalPPA_all': 144.969, 'passing_YDS': 2380.0, 'rushing_YDS': 710.0, 'defensive_TOT': 2.0}
+    AFTER  [exact] Jayden Daniels: {'totalPPA_all': 191.543, 'passing_YDS': 2913.0, 'rushing_YDS': 885.0, 'receiving_YDS': 5.0}
+Caleb Williams (2022) QB: Oklahoma -> USC
+    BEFORE [exact] Caleb Williams: {'totalPPA_all': 140.474, 'passing_YDS': 1912.0, 'rushing_YDS': 442.0}
+    AFTER  [exact] Caleb Williams: {'totalPPA_all': 308.511, 'passing_YDS': 4535.0, 'rushing_YDS': 382.0, 'defensive_TOT': 1.0}
+Will Howard (2024) QB: Kansas State -> Ohio State
+    BEFORE [exact] Will Howard: {'totalPPA_all': 153.485, 'passing_YDS': 2643.0, 'rushing_YDS': 364.0, 'receiving_YDS': 8.0}
+    AFTER  [exact] Will Howard: {'totalPPA_all': 260.128, 'passing_YDS': 4010.0, 'rushing_YDS': 226.0, 'receiving_YDS': 0.0}
+Kyle McCord (2024) QB: Ohio State -> Syracuse
+    BEFORE [exact] Kyle McCord: {'totalPPA_all': 204.442, 'passing_YDS': 3170.0, 'rushing_YDS': -65.0, 'defensive_TOT': 1.0}
+    AFTER  [exact] Kyle McCord: {'totalPPA_all': 253.848, 'passing_YDS': 4779.0, 'rushing_YDS': -65.0}
+Quinn Ewers (2022) QB: Ohio State -> Texas
+    BEFORE [nan] nan: {}
+    AFTER  [exact] Quinn Ewers: {'totalPPA_all': 97.014, 'passing_YDS': 2128.0, 'rushing_YDS': -52.0}
+Jahmyr Gibbs (2022) RB: Georgia Tech -> Alabama
+    BEFORE [exact] Jahmyr Gibbs: {'totalPPA_all': 25.981, 'rushing_YDS': 746.0, 'receiving_YDS': 465.0, 'defensive_TOT': 0.0}
+    AFTER  [exact] Jahmyr Gibbs: {'totalPPA_all': 48.643, 'rushing_YDS': 926.0, 'receiving_YDS': 444.0}
+Jordan Addison (2022) WR: Pittsburgh -> USC
+    BEFORE [exact] Jordan Addison: {'totalPPA_all': 115.921, 'rushing_YDS': 56.0, 'receiving_YDS': 1593.0}
+    AFTER  [exact] Jordan Addison: {'totalPPA_all': 59.658, 'rushing_YDS': 33.0, 'receiving_YDS': 875.0}
+Riley Leonard (2024) QB: Duke -> Notre Dame
+    BEFORE [exact] Riley Leonard: {'totalPPA_all': 72.716, 'passing_YDS': 1102.0, 'rushing_YDS': 352.0}
+    AFTER  [exact] Riley Leonard: {'totalPPA_all': 202.015, 'passing_YDS': 2861.0, 'rushing_YDS': 906.0, 'receiving_YDS': -8.0}
+Kurtis Rourke (2024) QB: Ohio -> Indiana
+    BEFORE [exact] Kurtis Rourke: {'totalPPA_all': 131.821, 'passing_YDS': 2207.0, 'rushing_YDS': 219.0, 'receiving_YDS': 7.0}
+    AFTER  [exact] Kurtis Rourke: {'totalPPA_all': 184.75, 'passing_YDS': 3042.0, 'rushing_YDS': -35.0, 'defensive_TOT': 1.0}
+Dante Moore (2024) QB: UCLA -> Oregon
+    BEFORE [exact] Dante Moore: {'totalPPA_all': 54.127, 'passing_YDS': 1610.0, 'rushing_YDS': -83.0}
+    AFTER  [exact] Dante Moore: {'totalPPA_all': 2.218, 'passing_YDS': 49.0, 'rushing_YDS': 6.0}
+Carson Beck (2025) QB: Georgia -> Miami
+    BEFORE [exact] Carson Beck: {'totalPPA_all': 157.217, 'passing_YDS': 3485.0, 'rushing_YDS': 71.0, 'defensive_TOT': 1.0}
+    AFTER  [exact] Carson Beck: {'totalPPA_all': 201.119, 'passing_YDS': 3813.0, 'rushing_YDS': 43.0, 'receiving_YDS': 14.0}
+Tez Johnson (2023) WR: Troy -> Oregon
+    BEFORE [exact] Tez Johnson: {'totalPPA_all': 76.534, 'passing_YDS': 7.0, 'rushing_YDS': 11.0, 'receiving_YDS': 858.0}
+    AFTER  [exact] Tez Johnson: {'totalPPA_all': 90.013, 'receiving_YDS': 1182.0}
+DJ Uiagalelei (2024) QB: Oregon State -> Florida State
+    BEFORE [exact] D.J. Uiagalelei: {'totalPPA_all': 170.27, 'passing_YDS': 2638.0, 'rushing_YDS': 219.0, 'defensive_TOT': 1.0}
+    AFTER  [exact] D.J. Uiagalelei: {'totalPPA_all': 23.438, 'passing_YDS': 1065.0, 'rushing_YDS': -8.0}
+Travis Hunter (2023): NOT IN FILTERED DATA (check filters)

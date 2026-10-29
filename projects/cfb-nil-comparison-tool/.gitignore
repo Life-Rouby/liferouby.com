@@ -1,0 +1,3 @@
+# Cached CFBD API responses (re-pull with pull_cfbd_data.py)
+data/raw/
+__pycache__/
