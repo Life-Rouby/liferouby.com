@@ -1,0 +1,152 @@
+ROBUSTNESS REPORT (team totals, adjusted production over expected)
+============================================================
+
+Variants: baseline, rated_only, no_2021
+
+AGREEMENT WITH BASELINE
+            eligible_teams  spearman_vs_baseline  top10_overlap  bottom10_overlap
+variant                                                                          
+baseline               133                 1.000             10                10
+rated_only             132                 0.896              7                 8
+no_2021                133                 0.946              7                10
+
+Teams in the same tier (top/middle/bottom third) in every variant: 96 of 133
+  top: 35, middle: 26, bottom: 35
+
+BASELINE LEADERBOARD WITH RANK RANGE ACROSS VARIANTS
+(rank_pct: 0 = best, 100 = worst)
+                        rank    mean tier_baseline  rank_pct_best  rank_pct_worst  tier_consistent
+team                                                                                              
+Northern Illinois        1.0  35.714           top              1              23             True
+Miami                    2.0  24.282           top              2               5             True
+Oregon                   3.0  23.822           top              1               2             True
+Duke                     4.0  23.149           top              2               5             True
+Notre Dame               5.0  22.078           top              3               8             True
+Buffalo                  6.0  20.830           top              2               5             True
+Tennessee                7.0  19.674           top              4               9             True
+Cincinnati               8.0  17.998           top              5               9             True
+Georgia Southern         9.0  15.169           top              5              27             True
+Utah State              10.0  13.116           top              8              28             True
+Boston College          11.0  11.388           top              8              10             True
+Indiana                 12.0  10.801           top              9              13             True
+Fresno State            13.0  10.723           top              8              11             True
+USC                     14.0  10.391           top              6              14             True
+South Alabama           15.0  10.244           top              6              20             True
+James Madison           16.0   9.897           top             12              81            False
+Illinois                17.0   9.371           top              4              13             True
+SMU                     18.0   8.655           top             14              34            False
+North Texas             19.0   8.506           top             11              17             True
+Eastern Michigan        20.0   8.439           top             15              22             True
+Washington              21.0   8.416           top             12              16             True
+Arizona                 22.0   7.719           top             14              20             True
+Ohio State              23.0   7.214           top             17              24             True
+Memphis                 24.0   6.792           top              7              31             True
+Louisville              25.0   6.067           top             16              21             True
+Wake Forest             26.0   6.066           top             14              22             True
+Syracuse                27.0   5.673           top             20              32             True
+Akron                   28.0   5.452           top             18              23             True
+App State               29.0   5.352           top             11              54            False
+Louisiana Tech          30.0   5.327           top             23              44            False
+Marshall                31.0   4.737           top             19              24             True
+Florida Atlantic        32.0   4.683           top             24              30             True
+Rutgers                 33.0   4.657           top             17              28             True
+Alabama                 34.0   4.401           top             26              58            False
+Kennesaw State          35.0   4.006           top             20              26             True
+Houston                 36.0   3.710           top             26              33             True
+Florida                 37.0   3.703           top             21              36            False
+UNLV                    38.0   3.257           top             15              29             True
+New Mexico              39.0   3.030           top             25              29             True
+Northwestern            40.0   2.674           top             19              42            False
+Virginia                41.0   2.349           top             29              37            False
+East Carolina           42.0   2.241           top             17              32             True
+BYU                     43.0   2.208           top             32              43            False
+San José State          44.0   1.943           top              7              33             True
+Rice                    45.0   1.917        middle             34              48             True
+Georgia Tech            46.0   1.895        middle             29              35            False
+Wyoming                 47.0   1.654        middle             33              37            False
+Colorado State          48.0   1.652        middle             29              63            False
+NC State                49.0   1.369        middle             35              40             True
+Texas Tech              50.0   1.263        middle             38              45             True
+Nebraska                51.0   1.024        middle             30              45            False
+Arkansas                52.0   0.722        middle             32              43            False
+Ole Miss                53.0   0.595        middle             40              48             True
+Jacksonville State      54.0   0.378        middle             34              41             True
+Florida International   55.0   0.118        middle             30              41            False
+Tulsa                   56.0  -0.074        middle             42              48             True
+Temple                  57.0  -0.103        middle             43              57             True
+Massachusetts           58.0  -0.473        middle             38              47             True
+Pittsburgh              59.0  -0.578        middle             44              46             True
+Old Dominion            60.0  -0.708        middle             45              72            False
+Kansas                  61.0  -0.843        middle             46              50             True
+UConn                   62.0  -0.905        middle             32              49            False
+Middle Tennessee        63.0  -1.005        middle             38              67             True
+Georgia State           64.0  -1.017        middle             42              51             True
+UL Monroe               65.0  -1.147        middle             49              55             True
+Texas State             66.0  -1.287        middle             38              57             True
+Washington State        67.0  -1.726        middle             35              50             True
+Florida State           68.0  -1.734        middle             31              62            False
+Southern Miss           69.0  -1.813        middle             50              61             True
+Liberty                 70.0  -1.813        middle             39              53             True
+Vanderbilt              71.0  -1.937        middle             41              53             True
+Utah                    72.0  -2.111        middle             42              58             True
+TCU                     73.0  -2.516        middle             55              60             True
+Michigan State          74.0  -2.813        middle             56              61             True
+Bowling Green           75.0  -2.931        middle             46              56             True
+Kentucky                76.0  -3.033        middle             57              92            False
+Missouri                77.0  -3.206        middle             56              67            False
+Virginia Tech           78.0  -3.371        middle             59              70            False
+New Mexico State        79.0  -3.376        middle             59              83            False
+Oregon State            80.0  -3.408        middle             47              60             True
+Penn State              81.0  -3.534        middle             53              69            False
+Hawai'i                 82.0  -3.566        middle             51              62             True
+Missouri State          83.0  -3.606        middle             62              82            False
+Troy                    84.0  -3.629        middle              8              77            False
+South Florida           85.0  -3.788        middle             39              64             True
+Kansas State            86.0  -3.989        middle             59              72            False
+Toledo                  87.0  -4.056        middle             65              73            False
+South Carolina          88.0  -4.107        middle             64              66             True
+UCF                     89.0  -4.315        bottom             65              68            False
+North Carolina          90.0  -4.516        bottom             68              84             True
+Texas                   91.0  -4.567        bottom             68              73             True
+Nevada                  92.0  -4.655        bottom             55              69            False
+Western Michigan        93.0  -4.725        bottom             61              70            False
+Oklahoma State          94.0  -4.804        bottom             68              74             True
+Tulane                  95.0  -4.805        bottom             71              77             True
+Miami (OH)              96.0  -4.945        bottom             56              74            False
+Arkansas State          97.0  -5.065        bottom             68              80             True
+UAB                     98.0  -5.077        bottom             52              74            False
+Western Kentucky        99.0  -5.585        bottom             74              83             True
+Purdue                 100.0  -5.670        bottom             75              90             True
+Colorado               101.0  -5.704        bottom             71              76             True
+Mississippi State      102.0  -5.776        bottom             70              77             True
+West Virginia          103.0  -6.006        bottom             74              77             True
+San Diego State        104.0  -6.239        bottom             52              78            False
+Kent State             105.0  -6.325        bottom             76              92             True
+Oklahoma               106.0  -6.508        bottom             65              84            False
+LSU                    107.0  -6.621        bottom             80              83             True
+Arizona State          108.0  -6.710        bottom             78              81             True
+Clemson                109.0  -6.859        bottom             65              82            False
+Ball State             110.0  -6.876        bottom             80              92             True
+Stanford               111.0  -6.984        bottom             77              83             True
+Central Michigan       112.0  -7.041        bottom             64              85            False
+California             113.0  -7.182        bottom             82              85             True
+Boise State            114.0  -7.430        bottom             86              87             True
+Ohio                   115.0  -7.674        bottom             23              86            False
+Minnesota              116.0  -9.166        bottom             86              89             True
+UCLA                   117.0  -9.225        bottom             87              91             True
+Iowa State             118.0  -9.448        bottom             86              92             True
+Michigan               119.0  -9.696        bottom             75              89             True
+Charlotte              120.0  -9.818        bottom             86              90             True
+Coastal Carolina       121.0  -9.985        bottom             88              95             True
+Texas A&M              122.0 -10.493        bottom             89              92             True
+Georgia                123.0 -10.891        bottom             89              94             True
+Maryland               124.0 -11.070        bottom             93              95             True
+Louisiana              125.0 -11.210        bottom             94              98             True
+Auburn                 126.0 -12.067        bottom             93              95             True
+Baylor                 127.0 -12.178        bottom             93              96             True
+UTSA                   128.0 -12.495        bottom             95              97             True
+Sam Houston            129.0 -13.049        bottom             91              97             True
+Wisconsin              130.0 -14.491        bottom             97              98             True
+Iowa                   131.0 -18.309        bottom             98              99             True
+UTEP                   132.0 -18.829        bottom             99             100             True
+Delaware               133.0 -26.180        bottom            100             100             True

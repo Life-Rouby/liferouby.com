@@ -10,27 +10,24 @@ transfers.csv and writes:
 Teams are credited with their INCOMING transfers: the destination school in the
 transfer's portal season.
 
-Production is put on a 0-centered scale so positions can be compared
-(0 = average, + above, - below, 10 = one standard deviation, like DVOA or EPA):
-1. A raw production score per player-season: total PPA (predicted points added,
-   CFBD's college version of EPA). Only QB, RB, WR and TE have PPA, so only they are
-   scored; defenders, OL and specialists count toward cost but not production.
-2. Each transfer's before and after scores become an index against ALL FBS
-   players in that season's production data with the same broad position group
-   (players who recorded at least one stat on an FBS team). Pool scores are capped
-   at their 1st and 99th percentiles before the mean and SD are taken, and so is
-   the transfer's score, so one outlier season can't dominate a team average.
-   The group comes from the position the transfer is listed at in that season's
-   production data, so he's compared with the same labels the pool uses.
+Production is raw PPA, in CFBD's own units ("points added"), with no rescaling or cap:
+1. A production score per player-season: total PPA (predicted points added, CFBD's
+   college version of EPA), summed over every play he was part of. Only QB, RB, WR
+   and TE have PPA, so only they are scored; defenders, OL and specialists aren't.
+2. Each transfer's position group (QB/RB/WR/TE) comes from the position he is listed
+   at in that season's production data, falling back to his portal position. Raw PPA
+   differs a lot by position (QBs touch far more plays), so expected production is
+   fit per position group and players are best compared within a position.
 3. Playing time and quality are kept apart:
    - played_before / played_after: did he record any stat on that side
-   - prod_index_before / prod_index_after: index, only for sides where he played
+   - prod_index_before / prod_index_after: season PPA, only for sides where he
+     played (the column names are kept from an earlier rescaled version)
    - prod_gain: after - before, only for transfers who played on BOTH sides
    - transfer_profile: "proven" (played before) or "unproven" (no stats before;
      redshirt, injury, or depth, which the data can't tell apart)
-4. prod_value_after combines the two: the index if he played, otherwise the index
-   of zero production in his pool. It is what production over expected and team
-   production averages use, so misses still count against the team.
+4. prod_value_after combines the two: his season PPA if he played, otherwise 0. It is
+   what production over expected and team production averages use, so misses still
+   count against the team.
 """
 
 import numpy as np
@@ -41,66 +38,22 @@ from build_dataset import OUT_DIR, fbs_schools_by_season
 # Portal position groups that get a production score: the ones PPA covers.
 MEASURED_PORTAL_GROUPS = {"QB", "RB", "WR", "TE", "ATH"}
 
-# Reference groups for the comparison pools (FB counts as RB).
+# Position groups for scoring and the expected lines (FB counts as RB).
 REF_GROUP = {
     "QB": "QB", "RB": "RB", "FB": "RB", "WR": "WR", "TE": "TE",
     "ATH": "WR",  # portal-only label; used only when production data has no usable position
 }
 OFFENSE_REF = {"QB", "RB", "WR", "TE"}
 
-# 0-centered scale, like DVOA or EPA: 0 = average, + above, - below, 10 points
-# = one SD. Values above +30 (3 SD) are capped so one outlier can't dominate.
-INDEX_MEAN, INDEX_SD = 0, 10
-INDEX_MAX = 30
-CAP_PERCENTILES = (1, 99)  # pool scores are capped here before the mean/SD
-
 
 # --------------------------------------------------------------------------- #
-# Production scores and FBS reference pools
+# Production scores
 # --------------------------------------------------------------------------- #
 
 def production_score(df: pd.DataFrame, ref_group: pd.Series, prefix: str = "") -> pd.Series:
     """Raw production: season total PPA (0 if a player with stats has no PPA row)."""
     score = df[f"{prefix}totalPPA_all"].fillna(0).where(ref_group.isin(OFFENSE_REF))
     return pd.Series(score, index=df.index)
-
-
-def fbs_reference_pools(roster: pd.DataFrame, metrics: pd.DataFrame, teams: pd.DataFrame,
-                        cap: tuple = CAP_PERCENTILES) -> dict:
-    """Index parameters for every FBS player-season pool, by (season, ref group):
-    (cap_low, cap_high, mean, sd), with mean and SD taken after capping."""
-    fbs = fbs_schools_by_season(teams)
-    key = ["season", "team", "player_id"]
-    pool = metrics.merge(roster[key + ["position"]], on=key)
-    pool = pool[[t in fbs.get(s, ()) for s, t in zip(pool["season"], pool["team"])]]
-    pool = pool.assign(ref_group=pool["position"].map(REF_GROUP)).dropna(subset=["ref_group"])
-    pool["score"] = production_score(pool, pool["ref_group"])
-    params = {}
-    for key_, g in pool.groupby(["season", "ref_group"]):
-        lo, hi = np.percentile(g["score"], cap)
-        capped = g["score"].clip(lo, hi)
-        params[key_] = (lo, hi, capped.mean(), capped.std())
-    return params
-
-
-def index_in_pool(value: float, params: tuple) -> float:
-    """Production index of a raw score against one pool (capped like the pool)."""
-    lo, hi, mean, sd = params
-    index = INDEX_MEAN + INDEX_SD * (min(max(value, lo), hi) - mean) / sd
-    return min(index, INDEX_MAX)
-
-
-
-
-def unit_translations(pools: dict) -> dict:
-    """What the rating scale means in real stats, per position group, averaged over
-    seasons: the raw score at 0 (the pool average) and what +10 adds (one pool SD)."""
-    rows = pd.DataFrame([(g, mean, sd) for (_, g), (_, _, mean, sd) in pools.items()],
-                        columns=["group", "mean", "sd"])
-    avg = rows.groupby("group")[["mean", "sd"]].mean()
-    return {g: {"unit": "points added", "zero": round(float(avg.loc[g, "mean"]), 1),
-                "per10": round(float(avg.loc[g, "sd"]), 1)}
-            for g in ["QB", "RB", "WR", "TE"] if g in avg.index}
 
 
 def side_ref_group(df: pd.DataFrame, side: str) -> pd.Series:
@@ -111,43 +64,24 @@ def side_ref_group(df: pd.DataFrame, side: str) -> pd.Series:
     return from_stats.fillna(df["position_group"].map(REF_GROUP))
 
 
-def add_production_columns(df, pools: dict) -> pd.DataFrame:
+def add_production_columns(df) -> pd.DataFrame:
     df = df.copy()
     measured = df["position_group"].isin(MEASURED_PORTAL_GROUPS)
     df["production_measured"] = measured
-    for side, season_col in (("before", "before_season"), ("after", "season")):
+    for side in ("before", "after"):
         played = df[f"has_{side}"] & measured
         group = side_ref_group(df, side).where(measured)
         df[f"played_{side}"] = df[f"has_{side}"].where(measured)
         df[f"prod_ref_group_{side}"] = group
-        df[f"prod_score_{side}"] = production_score(df, group, f"{side}_").where(played)
-        df[f"prod_index_{side}"] = [
-            index_in_pool(score, pools[(season, g)]) if p else np.nan
-            for p, g, score, season in zip(played, group, df[f"prod_score_{side}"], df[season_col])
-        ]
+        df[f"prod_index_{side}"] = production_score(df, group, f"{side}_").where(played)
     df["prod_gain"] = df["prod_index_after"] - df["prod_index_before"]  # NaN unless both sides played
     df["transfer_profile"] = np.where(
         ~measured, None, np.where(df["has_before"], "proven", "unproven"))
 
-    # A transfer who didn't play gets the index of zero production in his pool.
-    zero_index = pd.Series(
-        [index_in_pool(0.0, pools[(s, g)]) if m else np.nan
-         for m, g, s in zip(measured, df["prod_ref_group_after"], df["season"])],
-        index=df.index)
-    df["prod_value_after"] = df["prod_index_after"].where(df["has_after"], zero_index).where(measured)
+    # A transfer who didn't play produced nothing: 0 PPA.
+    df["prod_value_after"] = df["prod_index_after"].where(df["has_after"], 0.0).where(measured)
     df["prod_over_expected"] = production_over_expected(df)
     df["prod_expected"] = df["prod_value_after"] - df["prod_over_expected"]  # what his cost predicts
-
-    # The same two numbers in real stats, total PPA ("points added"). A rating r maps back to
-    # pool mean + r / INDEX_SD * pool SD. Players who didn't play produced 0.
-    def to_raw(rating, season, group):
-        _, _, mean, sd = pools[(season, group)]
-        return mean + (rating - INDEX_MEAN) / INDEX_SD * sd
-    df["prod_actual_raw"] = df["prod_score_after"].where(df["has_after"], 0.0).where(measured)
-    df["prod_expected_raw"] = [
-        to_raw(r, s, g) if m and pd.notna(r) else np.nan
-        for m, r, s, g in zip(measured, df["prod_expected"], df["season"], df["prod_ref_group_after"])
-    ]
     return df
 
 
@@ -155,14 +89,14 @@ def production_over_expected(df: pd.DataFrame) -> pd.Series:
     """AFTER production value minus what cost predicts for that position group.
 
     Fits prod_value_after ~ cost_index separately per position group (least squares
-    on measured transfers). Uses the combined value (zero production if he didn't play), so it
-    rewards both getting on the field and playing well. Positive = more than the
-    cost suggested.
+    on measured transfers), grouped by the position he was scored at. Uses the combined
+    value (0 PPA if he didn't play), so it rewards both getting on the field and playing
+    well. Positive = more than the cost suggested.
     """
     out = pd.Series(np.nan, index=df.index)
     measured = df[df["production_measured"]]
     lines = expected_lines(df)
-    for group, g in measured.groupby("position_group"):
+    for group, g in measured.groupby("prod_ref_group_after"):
         slope, intercept = lines[group]
         out.loc[g.index] = g["prod_value_after"] - (intercept + slope * g["cost_index"])
     return out
@@ -174,7 +108,7 @@ def expected_lines(df: pd.DataFrame) -> dict:
     measured = df[df["production_measured"]]
     return {
         group: tuple(np.polyfit(g["cost_index"], g["prod_value_after"], 1))
-        for group, g in measured.groupby("position_group")
+        for group, g in measured.groupby("prod_ref_group_after")
     }
 
 
@@ -344,11 +278,11 @@ def write_report(df, seasons, totals, path) -> str:
         f"{(~df['production_measured']).sum():,}",
         f"Team-seasons: {len(seasons):,}  ({(seasons['n_transfers'] == 0).sum()} with no incoming transfers)",
         "",
-        "Production index: 0 = average FBS player with stats at the same broad position",
-        "group (QB/RB/WR/TE) that season; 10 points = one SD; capped at +30.",
+        "Production: season total PPA (points added), raw, no cap; 0 if he didn't play.",
+        "Expected production is fit per position group (QB/RB/WR/TE).",
         "",
         "HIT RATE (share who recorded a stat at the new school) AND QUALITY IF PLAYED",
-        m.groupby("position_group").agg(
+        m.groupby("prod_ref_group_after").agg(
             n=("transfer_id", "size"), hit_rate=("has_after", "mean"),
             quality_if_played=("prod_index_after", "mean")).round(2).to_string(),
         "",
@@ -356,7 +290,7 @@ def write_report(df, seasons, totals, path) -> str:
         profile.to_string(),
         "",
         f"PRODUCTION GAIN (played on both sides only): n = {len(gain):,}, "
-        f"mean {gain.mean():+.1f}, median {gain.median():+.1f} index points, "
+        f"mean {gain.mean():+.1f}, median {gain.median():+.1f} points added, "
         f"improved {(gain > 0).mean():.1%}",
         "",
         "TRANSFER-LEVEL SPEARMAN CORRELATIONS (measured transfers; pairwise)",
@@ -390,25 +324,23 @@ def write_report(df, seasons, totals, path) -> str:
     return text
 
 
-def aggregate_teams(df: pd.DataFrame, teams: pd.DataFrame, roster: pd.DataFrame,
-                    metrics: pd.DataFrame):
+def aggregate_teams(df: pd.DataFrame, teams: pd.DataFrame):
     """Add production columns to transfers and write the team files.
 
     Returns (transfers with production columns, report text). Called by build_dataset.py.
     """
     # Imported here because robustness imports helpers from this module.
     from robustness import run_robustness
-    robust, robust_report = run_robustness(df, roster, metrics, teams)
+    robust, robust_report = run_robustness(df)
     (OUT_DIR / "robustness_report.txt").write_text(robust_report, encoding="utf-8")
 
-    pools = fbs_reference_pools(roster, metrics, teams)
-    df = add_production_columns(df, pools)
+    df = add_production_columns(df)
     seasons = team_seasons(df, teams)
     totals = team_totals(df, seasons).merge(robust, left_on="team", right_index=True, how="left")
     seasons.to_csv(OUT_DIR / "team_seasons.csv", index=False)
     totals.to_csv(OUT_DIR / "team_totals.csv", index=False)
 
     from export_site_data import export_site_data
-    exported = export_site_data(df, seasons, totals, teams, unit_translations(pools))
+    exported = export_site_data(df, seasons, totals, teams)
     report = write_report(df, seasons, totals, OUT_DIR / "team_report.txt")
     return df, report + "\n\nSITE DATA EXPORTED\n" + exported

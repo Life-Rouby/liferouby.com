@@ -487,7 +487,7 @@ def build() -> pd.DataFrame:
     df = order_cost_columns(df)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    df, team_report = aggregate_teams(df, teams, roster, metrics)
+    df, team_report = aggregate_teams(df, teams)
     df.to_csv(OUT_DIR / "transfers.csv", index=False)
     report = write_report(df, filter_log, OUT_DIR / "match_report.txt")
     (OUT_DIR / "cost_model_report.txt").write_text(cost_report, encoding="utf-8")
