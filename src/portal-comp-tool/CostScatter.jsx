@@ -62,7 +62,7 @@ export default function CostScatter({ rows, averages, season }) {
   const sx = (v) => MARGIN.left + ((v - xDomain[0]) / (xDomain[1] - xDomain[0])) * plotW;
   const sy = (v) => MARGIN.top + (1 - (v - yDomain[0]) / (yDomain[1] - yDomain[0])) * plotH;
   const query = season === "all" ? "" : `?season=${season}`;
-  const open = (p) => navigate(`/cfb-nil-comparison-tool/team/${teamSlug(p.team.team)}${query}`);
+  const open = (p) => navigate(`/portal-comp-tool/team/${teamSlug(p.team.team)}${query}`);
 
   // Place direct labels right of the dot, else left; skip any that would still
   // collide with an earlier label or another dot (the tooltip always carries the name).

@@ -101,7 +101,7 @@ export default function Leaderboard({ rows, season, fewSample }) {
         return (
         <Link
           key={team.team}
-          to={`/cfb-nil-comparison-tool/team/${teamSlug(team.team)}${season === "all" ? "" : `?season=${season}`}`}
+          to={`/portal-comp-tool/team/${teamSlug(team.team)}${season === "all" ? "" : `?season=${season}`}`}
           className={isRanked ? "nil-board-row" : "nil-board-row is-unranked"}
           role="row"
         >

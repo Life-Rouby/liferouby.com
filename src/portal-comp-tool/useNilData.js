@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-// Data files written by projects/cfb-nil-comparison-tool/src/export_site_data.py.
+// Data files written by projects/portal-comp-tool/src/export_site_data.py.
 // Each file is fetched once per page load and shared between views.
 const cache = {};
 
 function loadJson(name) {
   if (!cache[name]) {
-    cache[name] = fetch(`/data/cfb-nil-comparison-tool/${name}.json`).then((res) => {
+    cache[name] = fetch(`/data/portal-comp-tool/${name}.json`).then((res) => {
       if (!res.ok) throw new Error(`Failed to load ${name}.json (status ${res.status})`);
       return res.json();
     });

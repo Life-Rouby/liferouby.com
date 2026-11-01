@@ -4,7 +4,7 @@ import TeamLogo from "./TeamLogo";
 import {
   equation, fmtIndex, fmtRating, fmtRaw, fmtStars, fmtSubtracted, fmtTenths, rawUnit, fmtInt, fmtPercent, fmtPoints, teamSlug, teamStats, useTeams, useTransfers,
 } from "./useNilData";
-import "./cfb-nil-comparison-tool.css";
+import "./portal-comp-tool.css";
 
 // One-line stat summary at the new school, chosen by position.
 function statLine(t) {
@@ -259,7 +259,7 @@ export default function TeamPage() {
     );
   }, [team, transfers.data, season]);
 
-  const back = <Link to="/cfb-nil-comparison-tool" className="project-detail-back">← All teams</Link>;
+  const back = <Link to="/portal-comp-tool" className="project-detail-back">← All teams</Link>;
 
   if (error) return <section className="page nil-page nil-team-page">{back}<p className="nil-empty">Couldn't load the data ({error}).</p></section>;
   if (!data) return <section className="page nil-page nil-team-page"><p className="nil-empty">Loading…</p></section>;
@@ -291,7 +291,7 @@ export default function TeamPage() {
             <h1>{team.team}</h1>
             <p className="nil-team-sub">
               Players who transferred in, {scopeLabel} · Scores cover QB, RB, WR and TE only ·{" "}
-              <Link to="/cfb-nil-comparison-tool">How to read these numbers</Link>
+              <Link to="/portal-comp-tool">How to read these numbers</Link>
             </p>
           </div>
         </header>

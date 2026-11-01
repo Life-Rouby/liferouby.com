@@ -4,17 +4,17 @@ import CostScatter from "./CostScatter";
 import Leaderboard from "./Leaderboard";
 import ReadingGuide from "./ReadingGuide";
 import { fmtIndex, fmtInt, fmtPercent, teamStats, useTeams } from "./useNilData";
-import "./cfb-nil-comparison-tool.css";
+import "./portal-comp-tool.css";
 
 const VIEWS = [
   { id: "leaderboard", label: "Rankings" },
   { id: "scatter", label: "Price vs. results" },
 ];
 
-// CFB NIL comparison: how much on-field production each FBS program got from the
+// CFB Portal Comparison Tool: how much on-field production each FBS program got from the
 // transfers it brought in, relative to what those players cost. Reachable at
-// /cfb-nil-comparison-tool but intentionally not listed on the Projects page yet.
-export default function CFBNilComparisonToolPage() {
+// /portal-comp-tool but intentionally not listed on the Projects page yet.
+export default function PortalCompToolPage() {
   const { data, error } = useTeams();
   const [params, setParams] = useSearchParams();
   const view = params.get("view") === "scatter" ? "scatter" : "leaderboard";
@@ -69,7 +69,7 @@ export default function CFBNilComparisonToolPage() {
     <section className="page nil-page">
       <header className="page-header nil-header">
         <p className="eyebrow">College football · Transfer portal</p>
-        <h1>CFB NIL Comparison Tool</h1>
+        <h1>CFB Portal Comparison Tool</h1>
         <p className="page-intro">
           Which schools got the best results from the transfer portal for what they paid?
         </p>

@@ -1,7 +1,7 @@
 """
-Export compact JSON for the /cfb-nil-comparison-tool page into the site's public/ folder.
+Export compact JSON for the /portal-comp-tool page into the site's public/ folder.
 
-Runs as the last step of build_dataset.py. Writes to public/data/cfb-nil-comparison-tool/:
+Runs as the last step of build_dataset.py. Writes to public/data/portal-comp-tool/:
 
     teams.json      every team: branding, 2021-2025 totals, and per-season rows
                     (feeds the leaderboard, the cost vs production scatter, and
@@ -22,7 +22,7 @@ from build_dataset import OUT_DIR, ROOT
 from team_aggregate import (FEW_MEASURED_SEASON, FEW_MEASURED_TOTAL, INDEX_MEAN, INDEX_SD,
                             MIN_MEASURED_SEASON, MIN_MEASURED_TOTAL, expected_lines)
 
-SITE_DATA_DIR = ROOT.parents[1] / "public" / "data" / "cfb-nil-comparison-tool"
+SITE_DATA_DIR = ROOT.parents[1] / "public" / "data" / "portal-comp-tool"
 
 # Team metrics shown on the page. Each `{m}` in INTERVAL_METRICS also exports _lo/_hi.
 TEAM_FIELDS = [

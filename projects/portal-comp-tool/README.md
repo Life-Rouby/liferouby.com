@@ -1,7 +1,7 @@
-# CFB NIL Comparison Tool (cfb-nil-comparison-tool)
+# CFB Portal Comparison Tool (portal-comp-tool)
 
 Compares every FBS team's transfer "investment" to the on-field production it gets back.
-The site page lives at [liferouby.com/cfb-nil-comparison-tool](https://liferouby.com/cfb-nil-comparison-tool)
+The site page lives at [liferouby.com/portal-comp-tool](https://liferouby.com/portal-comp-tool)
 and is intentionally not listed on the Projects page yet.
 
 The pipeline builds a player-level dataset of FBS → FBS transfers with production
@@ -32,7 +32,7 @@ The project does **not** pull actual team-level NIL spending numbers.
 ## Project layout
 
 ```
-projects/cfb-nil-comparison-tool/
+projects/portal-comp-tool/
 ├── pull_cfbd_data.py          # downloads raw data from the CFBD API (cached)
 ├── requirements.txt
 ├── notebooks/
@@ -58,9 +58,9 @@ projects/cfb-nil-comparison-tool/
 The site lives outside this folder, at the repo root:
 
 ```
-src/cfb-nil-comparison-tool/                # React page, team pages, charts, styles
-public/data/cfb-nil-comparison-tool/        # teams.json, transfers.json (written by export_site_data.py)
-src/App.jsx                    # routes /cfb-nil-comparison-tool and /cfb-nil-comparison-tool/team/:slug
+src/portal-comp-tool/                # React page, team pages, charts, styles
+public/data/portal-comp-tool/        # teams.json, transfers.json (written by export_site_data.py)
+src/App.jsx                    # routes /portal-comp-tool and /portal-comp-tool/team/:slug
 ```
 
 ## Setup
@@ -80,7 +80,7 @@ a full pull is about 35 calls. Each response is cached and skipped on later runs
    - Windows: `set CFBD_API_KEY=your_key`
 3. From this folder: `python pull_cfbd_data.py`
 
-Run it from `projects/cfb-nil-comparison-tool/`. The script writes to `data/raw/` relative to the
+Run it from `projects/portal-comp-tool/`. The script writes to `data/raw/` relative to the
 current directory.
 
 ### Building the dataset and site data
@@ -90,11 +90,11 @@ python src/build_dataset.py
 ```
 
 This reads only `data/raw/`, makes no API calls, writes everything in
-`data/processed/`, and exports the site JSON to `public/data/cfb-nil-comparison-tool/`.
+`data/processed/`, and exports the site JSON to `public/data/portal-comp-tool/`.
 
 ### Viewing the site locally
 
-From the repo root: `npm run dev`, then open http://localhost:5173/cfb-nil-comparison-tool.
+From the repo root: `npm run dev`, then open http://localhost:5173/portal-comp-tool.
 
 ## Data sources
 
@@ -631,21 +631,21 @@ Scope: QB, RB, WR and TE only (2,363 of 6,744 transfers).
 
 Routes (inside the site layout, in `src/App.jsx`):
 
-- `/cfb-nil-comparison-tool`: main page
-- `/cfb-nil-comparison-tool/team/:slug`: one page per team (slug = lowercase team name with dashes)
+- `/portal-comp-tool`: main page
+- `/portal-comp-tool/team/:slug`: one page per team (slug = lowercase team name with dashes)
 
-Files in `src/cfb-nil-comparison-tool/`:
+Files in `src/portal-comp-tool/`:
 
 | File | What it does |
 |---|---|
-| `CFBNilComparisonToolPage.jsx` | Main page: headline stats, quick guide, filters, view tabs, methodology |
+| `PortalCompToolPage.jsx` | Main page: headline stats, quick guide, filters, view tabs, methodology |
 | `ReadingGuide.jsx` | "New here?" guide: four steps, a key to the ± scale, how expected is calculated (with a chart of the QB line), Cam Ward example |
 | `Leaderboard.jsx` | Ranked list with a range bar and the equation total actual − total expected = total |
 | `CostScatter.jsx` | Price vs. results scatter plot (SVG), one dot per school, per player: expected production (its price in pts) across, actual production up, and a dashed "got what they paid for" line where they're equal. A dot's height above the line is its leaderboard score |
 | `TeamPage.jsx` | Team summary cards, year-by-year table, every-player table |
 | `TeamLogo.jsx` | ESPN logo with a team-color badge fallback |
 | `useNilData.js` | Loads and caches the JSON, formatters |
-| `cfb-nil-comparison-tool.css` | All styles for these pages |
+| `portal-comp-tool.css` | All styles for these pages |
 
 Design notes:
 
@@ -808,5 +808,5 @@ The matching ones are in `src/build_dataset.py`:
   the portal-rating cost measure.
 - Review the flagged fuzzy matches and athlete-ID mismatches in `match_report.txt`.
 - Consider a curved expected-production line (see above).
-- Git cleanup: commit `projects/cfb-nil-comparison-tool/`, `src/cfb-nil-comparison-tool/`, `public/data/cfb-nil-comparison-tool/`
+- Git cleanup: commit `projects/portal-comp-tool/`, `src/portal-comp-tool/`, `public/data/portal-comp-tool/`
   and the route change in `src/App.jsx` on a new branch.
