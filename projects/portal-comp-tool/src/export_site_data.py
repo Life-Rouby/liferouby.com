@@ -19,8 +19,9 @@ from datetime import date
 import pandas as pd
 
 from build_dataset import OUT_DIR, ROOT
-from team_aggregate import (FEW_MEASURED_SEASON, FEW_MEASURED_TOTAL, INDEX_MEAN, INDEX_SD,
-                            MIN_MEASURED_SEASON, MIN_MEASURED_TOTAL, expected_lines)
+from cost_model import INDEX_MEAN, INDEX_SD
+from team_aggregate import (FEW_MEASURED_SEASON, FEW_MEASURED_TOTAL, MIN_MEASURED_SEASON,
+                            MIN_MEASURED_TOTAL, expected_lines)
 
 SITE_DATA_DIR = ROOT.parents[1] / "public" / "data" / "portal-comp-tool"
 
@@ -41,7 +42,7 @@ TRANSFER_FIELDS = [
     "transfer_id", "season", "full_name", "position", "position_group", "origin",
     "destination", "stars", "rating", "cost_index", "rating_display", "stars_display", "rating_imputed", "transfer_profile",
     "production_measured", "played_before", "played_after",
-    "prod_index_before", "prod_index_after", "prod_gain", "prod_value_after", "prod_expected", "prod_actual_raw", "prod_expected_raw",
+    "prod_index_before", "prod_index_after", "prod_gain", "prod_value_after", "prod_expected",
     "prod_ref_group_after",
     "prod_over_expected",
     # headline stats at the new school
@@ -108,7 +109,7 @@ def example_line(transfers: pd.DataFrame, group: str) -> dict:
     every measured transfer in that group as (cost, production) points to draw it."""
     slope, intercept = expected_lines(transfers)[group]
     g = transfers[transfers["production_measured"].astype(bool)
-                  & (transfers["position_group"] == group)]
+                  & (transfers["prod_ref_group_after"] == group)]
     return {
         "position": group,
         "n": int(len(g)),
@@ -138,10 +139,8 @@ def worked_example(transfers: pd.DataFrame, totals: pd.DataFrame) -> dict:
             "expected": clean(t["prod_value_after"] - t["prod_over_expected"]),
             "over_expected": clean(t["prod_over_expected"]),
             "group": t["prod_ref_group_after"],
-            "actual_raw": clean(t["prod_actual_raw"]),
-            "expected_raw": clean(t["prod_expected_raw"]),
         },
-        "line": example_line(transfers, t["position_group"]),
+        "line": example_line(transfers, t["prod_ref_group_after"]),
         "team": {
             "name": t["destination"],
             "n_measured": clean(team["n_measured"]),
@@ -155,7 +154,7 @@ def worked_example(transfers: pd.DataFrame, totals: pd.DataFrame) -> dict:
     }
 
 
-def build_teams_json(transfers, seasons, totals, teams_fbs, units) -> dict:
+def build_teams_json(transfers, seasons, totals, teams_fbs) -> dict:
     brand = branding(teams_fbs)
     by_team = {t: g for t, g in seasons.groupby("team")}
     teams = []
@@ -180,14 +179,13 @@ def build_teams_json(transfers, seasons, totals, teams_fbs, units) -> dict:
             "min_measured_season": MIN_MEASURED_SEASON,
             "few_measured_total": FEW_MEASURED_TOTAL,
             "few_measured_season": FEW_MEASURED_SEASON,
-            "index": {"mean": INDEX_MEAN, "sd": INDEX_SD},
-            "units": units,
+            "index": {"mean": INDEX_MEAN, "sd": INDEX_SD},  # the cost (portal rating) scale
             "averages": overall_averages(transfers),
             "example": worked_example(transfers, totals),
             "notes": [
                 "cost = portal rating vs that season's transfers, 0 = average (imputed when missing)",
-                "production = rating vs all FBS players at the same position group, 0 = average",
-                "ratings: 0 = average, + above, - below, 10 points = one standard deviation, capped at +30",
+                "cost scale: 0 = average, + above, - below, 10 points = one standard deviation, capped at +30",
+                "production = season total PPA (points added), raw; 0 if he didn't play",
                 "team values are plain averages; *_lo/*_hi are 95% ranges around them",
             ],
         },
@@ -203,11 +201,11 @@ def build_transfers_json(transfers: pd.DataFrame) -> dict:
     }
 
 
-def export_site_data(transfers, seasons, totals, teams_fbs, units) -> str:
+def export_site_data(transfers, seasons, totals, teams_fbs) -> str:
     """Write the JSON files and return a one-line summary per file."""
     SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
     outputs = {
-        "teams.json": build_teams_json(transfers, seasons, totals, teams_fbs, units),
+        "teams.json": build_teams_json(transfers, seasons, totals, teams_fbs),
         "transfers.json": build_transfers_json(transfers),
     }
     lines = []

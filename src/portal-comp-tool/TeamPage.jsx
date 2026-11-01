@@ -2,23 +2,9 @@ import { useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import TeamLogo from "./TeamLogo";
 import {
-  equation, fmtIndex, fmtRating, fmtRaw, fmtStars, fmtSubtracted, fmtTenths, rawUnit, fmtInt, fmtPercent, fmtPoints, teamSlug, teamStats, useTeams, useTransfers,
+  equation, fmtAmount, fmtRating, fmtStars, fmtSubtracted, fmtTenths, fmtPercent, fmtPoints, playerHref, statLine, teamSlug, teamStats, useTeams, useTransfers,
 } from "./useNilData";
 import "./portal-comp-tool.css";
-
-// One-line stat summary at the new school, chosen by position.
-function statLine(t) {
-  if (!t.production_measured) return "Not scored (only QB, RB, WR and TE have PPA)";
-  if (!t.played_after) return "Didn't play";
-  const n = (v) => fmtInt(v ?? 0);
-  if (t.position_group === "QB") {
-    return `${n(t.after_passing_YDS)} pass yds, ${n(t.after_passing_TD)} TD, ${n(t.after_rushing_YDS)} rush yds`;
-  }
-  if (t.position_group === "RB") {
-    return `${n(t.after_rushing_YDS)} rush yds, ${n(t.after_rushing_TD)} TD, ${n(t.after_receiving_YDS)} rec yds`;
-  }
-  return `${n(t.after_receiving_REC)} rec, ${n(t.after_receiving_YDS)} yds, ${n(t.after_receiving_TD)} TD`;
-}
 
 const COLUMNS = [
   { key: "season", label: "Season" },
@@ -27,9 +13,9 @@ const COLUMNS = [
   { key: "position", label: "Pos" },
   { key: "origin", label: "From" },
   // actual − expected = difference, laid out like the leaderboard's equation
-  { key: "prod_value_after", label: "Actual", num: true, title: "How he played in his first year after transferring" },
+  { key: "prod_value_after", label: "Actual", num: true, title: "PPA he produced in his first year after transferring" },
   { op: "−" },
-  { key: "prod_expected", label: "Expected", num: true, title: "How well players with his rating at his position usually play" },
+  { key: "prod_expected", label: "Expected", num: true, title: "PPA players with his rating at his position usually produce" },
   { op: "=" },
   { key: "prod_over_expected", label: "Difference", num: true },
 ];
@@ -67,9 +53,10 @@ function Verdict({ stats, nRanked, robustness }) {
   const pos = (v) => `${((v + domain) / (2 * domain)) * 100}%`;
   return (
     <div className="card nil-verdict">
-      <span className="nil-metric-label">Value above price, per player</span>
+      <span className="nil-metric-label">Return on investment, per player</span>
       <span className="nil-verdict-value">
-        {fmtPoints(stats.prod_over_expected_mean)}<span className="nil-unit">pts</span>
+        {fmtTenths(equation(stats.prod_expected_mean, stats.prod_over_expected_mean).difference)}
+        <span className="nil-unit">PPA</span>
       </span>
       <div className="nil-verdict-range">
         <div className="nil-range">
@@ -98,7 +85,7 @@ function Verdict({ stats, nRanked, robustness }) {
 }
 
 // The school's result in one plain sentence, per player: players rated like them
-// usually play at Y, they played at Z, so they beat (or missed) their price by Z − Y.
+// usually add Y points, they added Z, so they beat (or missed) their price by Z − Y.
 function SchoolSentence({ team, stats }) {
   const eq = equation(stats.prod_expected_mean, stats.prod_over_expected_mean);
   if (eq.difference == null) return null;
@@ -107,10 +94,14 @@ function SchoolSentence({ team, stats }) {
     <p className="nil-team-lead">
       {team.team}'s {stats.n_measured} scored transfers (QBs, RBs, WRs and TEs) were rated{" "}
       <strong>{fmtRating(stats.rating_measured_mean)}</strong> on average. Players rated like them
-      usually play at <strong>{fmtTenths(eq.expected)} pts</strong>. They played at{" "}
-      <strong>{fmtTenths(eq.actual)} pts</strong>, so they {beat ? "beat" : "fell short of"} their
-      price by <strong>{fmtTenths(Math.abs(eq.difference)).replace("+", "")} pts</strong> per player.
-      {" "}(0 pts = average player at his position.)
+      usually add <strong>{fmtAmount(eq.expected)} PPA</strong>. They added{" "}
+      <strong>{fmtAmount(eq.actual)}</strong>, so they {beat ? "beat" : "fell short of"} their
+      price by <strong>{fmtTenths(Math.abs(eq.difference)).replace("+", "")} PPA</strong> per player: a{" "}
+      {beat ? "positive" : "negative"} return on investment.
+      <span className="nil-team-lead-note">
+        {" "}School averages mix positions, so QBs move them most, and a completion counts for both
+        the QB and his receiver.
+      </span>
     </p>
   );
 }
@@ -147,7 +138,7 @@ function TransferTable({ transfers }) {
                 </button>
               </th>
             )))}
-            <th className="nil-hide-sm" title="His stat line, and his production in real stats vs. what players rated like him usually produce">At new school</th>
+            <th className="nil-hide-sm" title="His stat line at the new school">At new school</th>
           </tr>
         </thead>
         <tbody>
@@ -157,7 +148,7 @@ function TransferTable({ transfers }) {
             <tr key={t.transfer_id}>
               <td>{t.season}</td>
               <td className="nil-td-name">
-                {t.full_name}
+                <Link className="nil-player-link" to={playerHref(t)}>{t.full_name}</Link>
                 {t.transfer_profile === "unproven" && <span className="nil-chip">no prior stats</span>}
               </td>
               <td className="nil-td-num">
@@ -168,9 +159,9 @@ function TransferTable({ transfers }) {
               <td>{t.position}</td>
               <td>{t.origin}</td>
               <td className="nil-td-num nil-eq-term">
-                {fmtTenths(eq.actual)}
+                {fmtAmount(eq.actual)}
                 {t.production_measured && !t.played_after && (
-                  <span className="nil-est" title="Never got into a game; scored as zero production">didn't play</span>
+                  <span className="nil-dnp" title="Never got into a game; scored as zero production">didn't play</span>
                 )}
               </td>
               <td className="nil-eq-op" aria-hidden="true">{eq.actual != null && "−"}</td>
@@ -185,11 +176,6 @@ function TransferTable({ transfers }) {
               </td>
               <td className="nil-hide-sm nil-td-muted nil-td-wrap">
                 {statLine(t)}
-                {t.prod_actual_raw != null && (
-                  <span className="nil-raw-line">
-                    {fmtRaw(t.prod_actual_raw)} {rawUnit(t.prod_ref_group_after)} (rated like him: about {fmtRaw(t.prod_expected_raw)})
-                  </span>
-                )}
               </td>
             </tr>
             );
@@ -228,7 +214,7 @@ function SeasonTable({ team, meta, setSeason }) {
                   <td className="nil-td-num">{row.n_measured}</td>
                   <td className="nil-td-num">{fmtRating(row.rating_measured_mean)}</td>
                   <td className="nil-td-num">{fmtPercent(row.hit_rate)}</td>
-                  <td className="nil-td-num">{fmtIndex(row.prod_quality_mean)}</td>
+                  <td className="nil-td-num">{fmtTenths(row.prod_quality_mean)}</td>
                   <td className="nil-td-num">{fmtPoints(row.prod_over_expected_mean)}</td>
                   <td className="nil-td-num nil-hide-sm">{row.prod_over_expected_rank ?? "–"}</td>
                 </tr>
@@ -259,7 +245,7 @@ export default function TeamPage() {
     );
   }, [team, transfers.data, season]);
 
-  const back = <Link to="/portal-comp-tool" className="project-detail-back">← All teams</Link>;
+  const back = <Link to="/portal-comp-tool" className="project-detail-back">← All transfers</Link>;
 
   if (error) return <section className="page nil-page nil-team-page">{back}<p className="nil-empty">Couldn't load the data ({error}).</p></section>;
   if (!data) return <section className="page nil-page nil-team-page"><p className="nil-empty">Loading…</p></section>;
@@ -360,10 +346,10 @@ export default function TeamPage() {
                   note={`${stats.n_played_after} of ${stats.n_measured}. All schools: ${fmtPercent(avg.hit_rate)}`}
                 />
                 <Metric
-                  label="Average score when they played"
-                  value={fmtIndex(stats.prod_quality_mean)}
-                  range={valueRange("prod_quality", fmtIndex)}
-                  note={`All schools: ${fmtIndex(avg.prod_quality_mean)}`}
+                  label="Average PPA when they played"
+                  value={fmtTenths(stats.prod_quality_mean)}
+                  range={valueRange("prod_quality", fmtTenths)}
+                  note={`All schools: ${fmtTenths(avg.prod_quality_mean)}`}
                 />
                 <Metric
                   label="Better or worse than before?"
@@ -383,7 +369,7 @@ export default function TeamPage() {
           <h2>Every player</h2>
           <p>
             Actual (his first season at {team.team}) − Expected (typical for his rating) =
-            Difference, in pts (0 = average). Didn't play ≈ −5 to −8; positions without PPA show a
+            Difference, in PPA (points added). Didn't play = 0; positions without PPA show a
             dash; “est.” = estimated rating. Click a column to sort.
           </p>
         </div>

@@ -1,104 +1,13 @@
-import { equation, fmtIndex, fmtPoints, fmtRating, fmtRaw, fmtStars, fmtTenths } from "./useNilData";
+import { equation, fmtAmount, fmtIndex, fmtPoints, fmtRating, fmtRaw, fmtStars, fmtTenths } from "./useNilData";
 
-const STEPS = [
-  {
-    title: "Portal rating",
-    text: "The recruiting-site rating each transfer gets (★★★ .800–.899 is typical; ★★★★ .900+ "
-      + "is top tier). Higher = pricier.",
-  },
-  {
-    title: "How well he played",
-    text: "His first season at the new school in points added (PPA), against every FBS player at "
-      + "his position: 0 = average, + better, − worse. Only QBs, RBs, WRs and TEs have PPA. "
-      + "Didn't play ≈ −5 to −8.",
-  },
-  {
-    title: "Expected vs. actual",
-    text: "Expected = how players with his rating usually play (chart below). Actual − expected "
-      + "= how much he beat (+) or missed (−) it.",
-  },
-  {
-    title: "School score",
-    text: "That difference, averaged over a school's scored transfers: its value above price "
-      + "per player.",
-  },
-];
-
-const GLOSSARY = [
-  ["Hit rate", "Share of players who got into a game."],
-  ["Quality", "Average score of those who played."],
-  ["Better or worse than before", "Change from his old school to his new one."],
-  ["– (dash)", "No score: didn't play, or a position without PPA."],
-  ["est.", "No published rating; we estimated one."],
-  ["no prior stats", "Didn't play the year before transferring."],
-  ["The gray line", "Likely range around the dot. Shorter = more certain."],
-];
+// Round tick step for an axis spanning `span` units, about `count` ticks.
+const niceStep = (span, count = 6) => [5, 10, 20, 25, 50, 100, 200].find((s) => span / s <= count) ?? 500;
 
 const ordinal = (n) => {
   const tens = n % 100;
   if (tens >= 11 && tens <= 13) return `${n}th`;
   return `${n}${{ 1: "st", 2: "nd", 3: "rd" }[n % 10] ?? "th"}`;
 };
-
-// A key to the 0-centered scale, from well below to well above average.
-const SCALE_KEY = [
-  [-20, "well below average"],
-  [-10, "below average"],
-  [0, "average"],
-  [10, "above average"],
-  [20, "well above average"],
-];
-
-function ScaleKey() {
-  return (
-    <div className="nil-guide-scale" aria-label="How to read the scores">
-      <span className="nil-guide-label">Scores (pts)</span>
-      <ul>
-        {SCALE_KEY.map(([v, label]) => (
-          <li key={v}>
-            <span className={`nil-scale-chip ${v > 0 ? "is-pos" : v < 0 ? "is-neg" : ""}`}>{fmtIndex(v)}</span>
-            {label}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-// What the points mean in real stats, per position: the season production at 0 pts
-// and what each +10 pts adds.
-const GROUP_NAMES = {
-  QB: "Quarterback", RB: "Running back", WR: "Wide receiver", TE: "Tight end",
-};
-
-function UnitsTable({ units }) {
-  return (
-    <div className="nil-guide-units">
-      <h3>What a point means</h3>
-      <p>10 pts is about the gap between an average and a clearly productive player. Over a season:</p>
-      <div className="nil-table-wrap">
-        <table className="nil-table">
-          <thead>
-            <tr><th>Position</th><th className="nil-td-num">0 pts (average)</th><th className="nil-td-num">Each +10 pts</th></tr>
-          </thead>
-          <tbody>
-            {Object.entries(units).map(([g, u]) => (
-              <tr key={g}>
-                <td>{GROUP_NAMES[g] ?? g}</td>
-                <td className="nil-td-num">{fmtRaw(u.zero)} {u.unit}</td>
-                <td className="nil-td-num">+{fmtRaw(u.per10)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="nil-table-note">
-        Points added = PPA, the college version of EPA: points a player added to his offense,
-        play by play.
-      </p>
-    </div>
-  );
-}
 
 function ExampleRange({ team }) {
   const extent = Math.max(4, Math.abs(team.lo), Math.abs(team.hi));
@@ -128,11 +37,15 @@ function ExampleRange({ team }) {
 // that fits them, and the example player: his expected score sits on the line,
 // his actual score above or below it, and the gap between them is "beat
 // expectations by".
-const CHART = { w: 560, h: 320, left: 44, right: 16, top: 16, bottom: 40 };
+const CHART = { w: 560, h: 320, left: 60, right: 16, top: 16, bottom: 40 };
 
 function ExpectedChart({ line, player }) {
   const xs = [-40, 30];
-  const ys = [-20, 30];
+  const values = [...line.points.map(([, v]) => v), player.production, 0];
+  const yStep = niceStep(Math.max(...values) - Math.min(...values));
+  const ys = [Math.floor(Math.min(...values) / yStep) * yStep, Math.ceil(Math.max(...values) / yStep) * yStep];
+  const yTicks = [];
+  for (let t = ys[0]; t <= ys[1]; t += yStep) yTicks.push(t);
   const plotW = CHART.w - CHART.left - CHART.right;
   const plotH = CHART.h - CHART.top - CHART.bottom;
   const sx = (v) => CHART.left + ((v - xs[0]) / (xs[1] - xs[0])) * plotW;
@@ -149,7 +62,7 @@ function ExpectedChart({ line, player }) {
       className="nil-expected-chart"
       viewBox={`0 0 ${CHART.w} ${CHART.h}`}
       role="img"
-      aria-label={`Every ${line.position} transfer's portal rating (vs. that year's average) against how well he played, with the trend line. ${player.name}'s rating of ${fmtIndex(player.cost)} lands on the line at an expected score of ${fmtIndex(player.expected)}; he actually scored ${fmtIndex(player.production)}.`}
+      aria-label={`Every ${line.position} transfer's portal rating (vs. that year's average) against the PPA he produced, with the trend line. ${player.name}'s rating of ${fmtIndex(player.cost)} lands on the line at an expected ${fmtTenths(player.expected)} PPA; he actually produced ${fmtTenths(player.production)}.`}
     >
       {[-30, -20, -10, 0, 10, 20, 30].map((t) => (
         <g key={`x${t}`}>
@@ -157,7 +70,7 @@ function ExpectedChart({ line, player }) {
           <text className="nil-tick" x={sx(t)} y={CHART.top + plotH + 16} textAnchor="middle">{fmtIndex(t)}</text>
         </g>
       ))}
-      {[-20, -10, 0, 10, 20, 30].map((t) => (
+      {yTicks.map((t) => (
         <g key={`y${t}`}>
           <line className="nil-grid" x1={CHART.left} x2={CHART.left + plotW} y1={sy(t)} y2={sy(t)} />
           <text className="nil-tick" x={CHART.left - 8} y={sy(t) + 4} textAnchor="end">{fmtIndex(t)}</text>
@@ -167,7 +80,7 @@ function ExpectedChart({ line, player }) {
         Portal rating vs. that year's average (0 = average) →
       </text>
       <text className="nil-axis-title" transform={`translate(12 ${CHART.top + plotH / 2}) rotate(-90)`} textAnchor="middle">
-        How well he played →
+        PPA he produced →
       </text>
 
       {line.points.map(([c, v], i) => (
@@ -179,17 +92,19 @@ function ExpectedChart({ line, player }) {
 
       {/* the gap between expected and actual */}
       <line className="nil-expected-gap" x1={px} x2={px} y1={expY} y2={actY} />
-      <text className="nil-expected-gap-label" x={px + 8} y={(expY + actY) / 2 + 4}>
-        {fmtPoints(player.over_expected)}
+      {/* label on whichever side of the gap has room */}
+      <text className="nil-expected-gap-label" x={px > CHART.w - 70 ? px - 8 : px + 8}
+        y={(expY + actY) / 2 + 4} textAnchor={px > CHART.w - 70 ? "end" : "start"}>
+        {fmtTenths(equation(player.expected, player.over_expected).difference)}
       </text>
 
       <circle className="nil-expected-on-line" cx={px} cy={expY} r={5.5} />
       <text className="nil-expected-label" x={px - 9} y={expY + (gapAbove ? 16 : -10)} textAnchor="end">
-        Expected {fmtIndex(player.expected)}
+        Expected {fmtTenths(player.expected)}
       </text>
       <circle className="nil-expected-player" cx={px} cy={actY} r={6.5} />
       <text className="nil-expected-label is-strong" x={px - 10} y={actY + (gapAbove ? -2 : 16)} textAnchor="end">
-        {player.name}: {fmtIndex(player.production)}
+        {player.name}: {fmtTenths(player.production)}
       </text>
     </svg>
   );
@@ -200,11 +115,11 @@ function ExpectedChart({ line, player }) {
 function ExpectedExplainer({ line, player }) {
   const a = Number(line.intercept.toFixed(1));
   const b = Number(line.slope.toFixed(3));
-  const x = Math.round(player.cost);
+  const x = Math.round(player.cost * 10) / 10;
   const result = a + b * x;
   // "−0.2 + 0.344 × portal rating", with the starting number's own sign
   const start = a < 0 ? `−${Math.abs(a)}` : `${a}`;
-  const xText = x < 0 ? `(${fmtIndex(x)})` : fmtIndex(x);
+  const xText = x < 0 ? `(${fmtTenths(x)})` : fmtTenths(x);
   const per10 = (b * 10).toFixed(1);
   return (
     <div className="nil-guide-expected">
@@ -214,11 +129,11 @@ function ExpectedExplainer({ line, player }) {
           <li>
             <strong>Compare his rating with that year's transfers.</strong> {player.name}'s{" "}
             {fmtRating(player.rating)} vs. the {player.season} average ({fmtRating(player.season_rating_mean)})
-            = {fmtIndex(player.cost)}.
+            = {fmtTenths(player.cost)}.
           </li>
           <li>
             <strong>Plot every {line.position} transfer</strong> ({line.n.toLocaleString()}): rating
-            across, production up. Non-players count at about −5 to −8.
+            across, PPA up. Players who didn't play count as 0.
           </li>
           <li>
             <strong>Fit a straight line</strong> through the dots:
@@ -229,13 +144,13 @@ function ExpectedExplainer({ line, player }) {
           <li>
             <strong>Plug him in:</strong>
             <span className="nil-guide-formula">
-              {start} + {b} × {xText} = {fmtPoints(result)}, about {fmtIndex(result)}
+              {start} + {b} × {xText} = {fmtTenths(result).replace("+", "")} PPA
             </span>
           </li>
         </ol>
         <p>
-          <strong>Why not {fmtIndex(x)}?</strong> Ratings are a rough guess, so the line is flat:
-          +10 rating adds only about {per10} expected. Each position has its own line.
+          Ratings are a rough guess, so the line is fairly flat: each +10 of rating adds only about{" "}
+          {per10} expected PPA. Each position has its own line.
         </p>
       </div>
       <ExpectedChart line={line} player={player} />
@@ -243,8 +158,9 @@ function ExpectedExplainer({ line, player }) {
   );
 }
 
-export default function ReadingGuide({ example, scale, units }) {
+export default function ReadingGuide({ example, scale }) {
   const { player, team } = example;
+  const eq = equation(player.expected, player.over_expected);
   const costSd = (player.cost - scale.mean) / scale.sd;
   const ratingNote = costSd >= 1.5
     ? `one of the top-rated transfers of ${player.season}`
@@ -254,24 +170,34 @@ export default function ReadingGuide({ example, scale, units }) {
     <details className="card nil-guide" open>
       <summary>New here? Start with this quick guide</summary>
 
-      <ol className="nil-guide-steps">
-        {STEPS.map((s, i) => (
-          <li key={s.title}>
-            <span className="nil-guide-num">{i + 1}</span>
-            <strong>{s.title}</strong>
-            <p>{s.text}</p>
-          </li>
-        ))}
-      </ol>
-
-      <ScaleKey />
-
-      {units && <UnitsTable units={units} />}
-
-      {example.line && <ExpectedExplainer line={example.line} player={player} />}
+      <div className="nil-guide-core">
+        <p>
+          <strong>PPA (predicted points added)</strong> is the college version of EPA: how much each
+          play he was part of changed his team's expected points, added up over the season. Only QBs,
+          RBs, WRs and TEs have it. QBs are part of far more plays, so their numbers are much bigger:
+          compare players within a position.
+        </p>
+        <p>
+          This project compares a transfer's <strong>expected PPA</strong> with the{" "}
+          <strong>actual PPA</strong> he produced in his first season after transferring. His
+          expected PPA is how an average player with his portal rating performs.
+        </p>
+        <p>
+          <strong>Actual − expected = the difference:</strong> how much better (+) or worse (−) he
+          played than a typical player with the same rating.
+        </p>
+        <p>
+          A player's portal rating stands in for how much a school spent on his NIL, so a bigger
+          difference means a better return on that investment. The rankings put the biggest
+          differences first.
+        </p>
+      </div>
 
       <div className="nil-guide-example">
         <p className="eyebrow">Example</p>
+        <p className="nil-guide-example-intro">
+          Here's how it works for {player.name} at {player.destination}.
+        </p>
         <h3>
           {player.name}, {player.position}: {player.origin} → {player.destination} ({player.season})
         </h3>
@@ -283,51 +209,39 @@ export default function ReadingGuide({ example, scale, units }) {
             <span className="nil-guide-note">{fmtStars(player.stars)}, {ratingNote}</span>
           </div>
           <div>
-            <span className="nil-guide-label">Expected score</span>
-            <span className="nil-guide-value">{fmtIndex(player.expected)}</span>
+            <span className="nil-guide-label">Expected PPA</span>
+            <span className="nil-guide-value">{fmtAmount(eq.expected)}</span>
             <span className="nil-guide-note">Typical for {player.position}s with his rating</span>
           </div>
           <div>
-            <span className="nil-guide-label">Actual score</span>
-            <span className="nil-guide-value">
-              {fmtIndex(player.production)}
-            </span>
+            <span className="nil-guide-label">Actual PPA</span>
+            <span className="nil-guide-value">{fmtAmount(eq.actual)}</span>
             <span className="nil-guide-note">His {player.season} season</span>
           </div>
           <div className="is-result">
             <span className="nil-guide-label">Beat expectations by</span>
-            <span className="nil-guide-value">{fmtPoints(player.over_expected)}<span className="nil-unit">pts</span></span>
+            <span className="nil-guide-value">{fmtTenths(eq.difference)}<span className="nil-unit">PPA</span></span>
             <span className="nil-guide-note">
-              {fmtTenths(equation(player.expected, player.over_expected).actual)} actual −{" "}
-              {fmtTenths(equation(player.expected, player.over_expected).expected)} expected
+              {fmtAmount(eq.actual)} actual − {fmtAmount(eq.expected)} expected
             </span>
           </div>
         </div>
 
-        {player.actual_raw != null && (
-          <p className="nil-guide-plain">
-            <strong>In plain English:</strong> {player.position}s rated like him usually add about{" "}
-            {fmtRaw(player.expected_raw)} points. He added {fmtRaw(player.actual_raw)},
-            beating his rating by {fmtPoints(player.over_expected).replace("+", "")} pts.
-          </p>
-        )}
+        <p className="nil-guide-plain">
+          <strong>In plain English:</strong> {player.position}s rated like him usually add about{" "}
+          {fmtRaw(player.expected)} points. He added {fmtRaw(player.production)}, beating his rating
+          by {fmtRaw(player.over_expected)}.
+        </p>
 
         <p className="nil-guide-team">
-          <strong>For the school:</strong> averaged over {team.name}'s {team.n_measured} scored
+          <strong>On his school's page:</strong> averaged over {team.name}'s {team.n_measured} scored
           transfers, that's {fmtPoints(team.mean)} per player, {ordinal(team.rank)} of{" "}
           {team.n_ranked}.
         </p>
         <ExampleRange team={team} />
       </div>
 
-      <dl className="nil-guide-glossary">
-        {GLOSSARY.map(([term, def]) => (
-          <div key={term}>
-            <dt>{term}</dt>
-            <dd>{def}</dd>
-          </div>
-        ))}
-      </dl>
+      {example.line && <ExpectedExplainer line={example.line} player={player} />}
     </details>
   );
 }

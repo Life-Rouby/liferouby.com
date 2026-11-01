@@ -8,6 +8,7 @@ import About from './pages/About'
 import CFBowledgePage from './cfbowledge/CFBowledgePage'
 import PortalCompToolPage from './portal-comp-tool/PortalCompToolPage'
 import TeamPage from './portal-comp-tool/TeamPage'
+import PlayerPage from './portal-comp-tool/PlayerPage'
 
 // The tool used to live at /cfb-nil-comparison-tool; keep old links working.
 function OldTeamRedirect() {
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="portal-comp-tool" element={<PortalCompToolPage />} />
         <Route path="portal-comp-tool/team/:slug" element={<TeamPage />} />
+        <Route path="portal-comp-tool/player/:id" element={<PlayerPage />} />
         <Route path="cfb-nil-comparison-tool" element={<Navigate to="/portal-comp-tool" replace />} />
         <Route path="cfb-nil-comparison-tool/team/:slug" element={<OldTeamRedirect />} />
       </Route>

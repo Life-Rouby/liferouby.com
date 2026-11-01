@@ -4,7 +4,6 @@ Robustness checks for the team leaderboard (production over expected per player)
 Re-runs production scoring and team aggregation under alternative choices and
 compares each team's leaderboard position with the baseline:
 
-    no_cap          don't cap pool PPA at the 1st/99th percentiles
     rated_only      drop transfers whose rating was imputed
     no_2021         drop the 2021 portal class (its data looks incomplete)
 
@@ -18,22 +17,20 @@ Called from team_aggregate.aggregate_teams; writes data/processed/robustness_rep
 
 import pandas as pd
 
-from team_aggregate import (CAP_PERCENTILES, MIN_MEASURED_TOTAL, add_production_columns,
-                            add_ranks, aggregate, fbs_reference_pools)
+from team_aggregate import MIN_MEASURED_TOTAL, add_production_columns, add_ranks, aggregate
 
 VARIANTS = {
     "baseline": {},
-    "no_cap": {"cap": (0, 100)},
     "rated_only": {"keep": lambda d: ~d["rating_imputed"].astype(bool)},
     "no_2021": {"keep": lambda d: d["season"] != 2021},
 }
 TIERS = ["top", "middle", "bottom"]
 
 
-def variant_leaderboard(transfers, roster, metrics, teams, cap=CAP_PERCENTILES, keep=None):
+def variant_leaderboard(transfers, keep=None):
     """Team totals leaderboard under one set of choices."""
     df = transfers[keep(transfers)] if keep else transfers
-    scored = add_production_columns(df, fbs_reference_pools(roster, metrics, teams, cap))
+    scored = add_production_columns(df)
     totals = add_ranks(aggregate(scored.rename(columns={"destination": "team"}), ["team"]),
                        MIN_MEASURED_TOTAL)
     board = totals[totals["leaderboard_eligible"]]
@@ -48,9 +45,9 @@ def tier(rank_pct: pd.Series) -> pd.Series:
     return pd.cut(rank_pct, [0, 1 / 3, 2 / 3, 1], labels=TIERS, include_lowest=True)
 
 
-def run_robustness(transfers, roster, metrics, teams):
+def run_robustness(transfers):
     """Return (per-team robustness table, report text)."""
-    boards = {name: variant_leaderboard(transfers, roster, metrics, teams, **opts)
+    boards = {name: variant_leaderboard(transfers, **opts)
               for name, opts in VARIANTS.items()}
     base = boards["baseline"]
 

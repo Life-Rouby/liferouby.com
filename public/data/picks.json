@@ -98,11 +98,11 @@
             },
             "Week 9": {
               "opponent": "vs Navy",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Miami (FL)",
@@ -137,7 +137,7 @@
               "won": null
             }
           },
-          "total": 60.0
+          "total": 70.0
         },
         {
           "team": "Alabama",
@@ -338,11 +338,11 @@
             },
             "Week 9": {
               "opponent": "Arizona State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "boosted",
+              "points": 20.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Utah",
@@ -377,7 +377,7 @@
               "won": null
             }
           },
-          "total": 70.5
+          "total": 90.5
         },
         {
           "team": "Tennessee",
@@ -698,11 +698,11 @@
             },
             "Week 9": {
               "opponent": "Texas State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Colorado State",
@@ -737,7 +737,7 @@
               "won": null
             }
           },
-          "total": 60.0
+          "total": 70.0
         },
         {
           "team": "TCU",
@@ -818,11 +818,11 @@
             },
             "Week 9": {
               "opponent": "Kansas",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Arizona",
@@ -857,7 +857,7 @@
               "won": null
             }
           },
-          "total": 43.5
+          "total": 53.5
         },
         {
           "team": "Florida State",
@@ -1298,11 +1298,11 @@
             },
             "Week 9": {
               "opponent": "Washington",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Illinois",
@@ -1538,11 +1538,11 @@
             },
             "Week 9": {
               "opponent": "@ Fresno State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Texas State",
@@ -1582,7 +1582,7 @@
         {
           "team": "Louisiana Tech",
           "slot": 14,
-          "droppedWeek": null,
+          "droppedWeek": "Week 9",
           "weeks": {
             "Week 0": {
               "opponent": "-",
@@ -1658,14 +1658,134 @@
             },
             "Week 9": {
               "opponent": "@ South Alabama",
-              "status": "scheduled",
-              "points": null,
+              "status": "dropped",
+              "points": 0,
               "favored": null,
               "spread": null,
               "won": null
             },
             "Week 10": {
               "opponent": "@ Troy",
+              "status": "dropped",
+              "points": 0,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 11": {
+              "opponent": "Southern Miss",
+              "status": "dropped",
+              "points": 0,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 12": {
+              "opponent": "Arkansas State",
+              "status": "dropped",
+              "points": 0,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 13": {
+              "opponent": "@ Georgia Southern",
+              "status": "dropped",
+              "points": 0,
+              "favored": null,
+              "spread": null,
+              "won": null
+            }
+          },
+          "total": 10.0
+        },
+        {
+          "team": "UNLV",
+          "slot": 15,
+          "droppedWeek": null,
+          "weeks": {
+            "Week 0": {
+              "opponent": "-",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 1": {
+              "opponent": "@ Hawai'i",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 2": {
+              "opponent": "@ North Texas",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 3": {
+              "opponent": "-",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 4": {
+              "opponent": "@ Akron",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 5": {
+              "opponent": "California",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 6": {
+              "opponent": "North Dakota State",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 7": {
+              "opponent": "@ Air Force",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 8": {
+              "opponent": "-",
+              "status": "dropped",
+              "points": null,
+              "favored": null,
+              "spread": null,
+              "won": null
+            },
+            "Week 9": {
+              "opponent": "Northern Illinois",
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
+            },
+            "Week 10": {
+              "opponent": "Wyoming",
               "status": "scheduled",
               "points": null,
               "favored": null,
@@ -1673,7 +1793,7 @@
               "won": null
             },
             "Week 11": {
-              "opponent": "Southern Miss",
+              "opponent": "@ New Mexico",
               "status": "scheduled",
               "points": null,
               "favored": null,
@@ -1681,7 +1801,7 @@
               "won": null
             },
             "Week 12": {
-              "opponent": "Arkansas State",
+              "opponent": "@ San Jos\u00e9 State",
               "status": "scheduled",
               "points": null,
               "favored": null,
@@ -1689,7 +1809,7 @@
               "won": null
             },
             "Week 13": {
-              "opponent": "@ Georgia Southern",
+              "opponent": "Nevada",
               "status": "scheduled",
               "points": null,
               "favored": null,
@@ -1710,13 +1830,13 @@
         "Week 6": 60.0,
         "Week 7": 91.5,
         "Week 8": 30.0,
-        "Week 9": 0,
+        "Week 9": 60.0,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 611.5,
+      "seasonTotal": 671.5,
       "boostCard": {
         "Week 1": "Tennessee",
         "Week 2": "Nebraska",
@@ -1724,7 +1844,8 @@
         "Week 4": "Louisiana",
         "Week 5": "TCU",
         "Week 6": "Oregon State",
-        "Week 7": "Texas A&M"
+        "Week 7": "Texas A&M",
+        "Week 9": "BYU"
       },
       "sabotageCard": {}
     },
@@ -1809,11 +1930,11 @@
             },
             "Week 9": {
               "opponent": "@ USC",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Oregon",
@@ -1929,11 +2050,11 @@
             },
             "Week 9": {
               "opponent": "Boston College",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ NC State",
@@ -1968,7 +2089,7 @@
               "won": null
             }
           },
-          "total": 71.5
+          "total": 81.5
         },
         {
           "team": "Troy",
@@ -2049,11 +2170,11 @@
             },
             "Week 9": {
               "opponent": "@ James Madison",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 27.5,
+              "favored": false,
+              "spread": 17.5,
+              "won": true
             },
             "Week 10": {
               "opponent": "Louisiana Tech",
@@ -2088,7 +2209,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 57.5
         },
         {
           "team": "Auburn",
@@ -2169,11 +2290,11 @@
             },
             "Week 9": {
               "opponent": "@ Ole Miss",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 10.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "Arkansas",
@@ -2289,11 +2410,11 @@
             },
             "Week 9": {
               "opponent": "Stanford",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Georgia Tech",
@@ -2328,7 +2449,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "Michigan State",
@@ -2529,11 +2650,11 @@
             },
             "Week 9": {
               "opponent": "@ Texas Tech",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 4.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "TCU",
@@ -2769,11 +2890,11 @@
             },
             "Week 9": {
               "opponent": "Virginia",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Merrimack",
@@ -2808,7 +2929,7 @@
               "won": null
             }
           },
-          "total": 71.5
+          "total": 81.5
         },
         {
           "team": "Northwestern",
@@ -2889,11 +3010,11 @@
             },
             "Week 9": {
               "opponent": "@ Oregon",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 4.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Iowa",
@@ -3009,11 +3130,11 @@
             },
             "Week 9": {
               "opponent": "@ Iowa State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Kansas State",
@@ -3061,13 +3182,13 @@
         "Week 6": 70.0,
         "Week 7": 69.5,
         "Week 8": 55.0,
-        "Week 9": 0,
+        "Week 9": 57.5,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 560.5,
+      "seasonTotal": 618.0,
       "boostCard": {
         "Week 1": "Hawaii",
         "Week 3": "Auburn",
@@ -3159,11 +3280,11 @@
             },
             "Week 9": {
               "opponent": "vs Florida",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Ole Miss",
@@ -3198,7 +3319,7 @@
               "won": null
             }
           },
-          "total": 72.5
+          "total": 82.5
         },
         {
           "team": "James Madison",
@@ -3279,11 +3400,11 @@
             },
             "Week 9": {
               "opponent": "Troy",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Southern Miss",
@@ -3399,11 +3520,11 @@
             },
             "Week 9": {
               "opponent": "@ Middle Tennessee",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Delaware",
@@ -3438,7 +3559,7 @@
               "won": null
             }
           },
-          "total": 10
+          "total": 20.0
         },
         {
           "team": "Tulane",
@@ -3519,11 +3640,11 @@
             },
             "Week 9": {
               "opponent": "@ Charlotte",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Tulsa",
@@ -3558,7 +3679,7 @@
               "won": null
             }
           },
-          "total": 36.5
+          "total": 46.5
         },
         {
           "team": "Western Michigan",
@@ -3639,11 +3760,11 @@
             },
             "Week 9": {
               "opponent": "Bowling Green",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -3678,7 +3799,7 @@
               "won": null
             }
           },
-          "total": 50.0
+          "total": 60.0
         },
         {
           "team": "North Texas",
@@ -3759,11 +3880,11 @@
             },
             "Week 9": {
               "opponent": "Florida Atlantic",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Rice",
@@ -3798,7 +3919,7 @@
               "won": null
             }
           },
-          "total": 53.0
+          "total": 63.0
         },
         {
           "team": "Pitt",
@@ -3879,11 +4000,11 @@
             },
             "Week 9": {
               "opponent": "Georgia Tech",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -3918,7 +4039,7 @@
               "won": null
             }
           },
-          "total": 51.5
+          "total": 61.5
         },
         {
           "team": "South Carolina",
@@ -3999,11 +4120,11 @@
             },
             "Week 9": {
               "opponent": "@ Oklahoma",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 13.5,
+              "favored": false,
+              "spread": 3.5,
+              "won": true
             },
             "Week 10": {
               "opponent": "Texas A&M",
@@ -4038,7 +4159,7 @@
               "won": null
             }
           },
-          "total": 60.5
+          "total": 74.0
         },
         {
           "team": "ECU",
@@ -4119,11 +4240,11 @@
             },
             "Week 9": {
               "opponent": "Temple",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "USF",
@@ -4158,7 +4279,7 @@
               "won": null
             }
           },
-          "total": 32.5
+          "total": 42.5
         },
         {
           "team": "Cal",
@@ -4239,11 +4360,11 @@
             },
             "Week 9": {
               "opponent": "@ NC State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 9.5,
+              "won": false
             },
             "Week 10": {
               "opponent": null,
@@ -4291,13 +4412,13 @@
         "Week 6": 94.5,
         "Week 7": 36.5,
         "Week 8": 20.0,
-        "Week 9": 0,
+        "Week 9": 83.5,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 496.5,
+      "seasonTotal": 580.0,
       "boostCard": {
         "Week 1": "Georgia",
         "Week 2": "South Carolina",
@@ -4387,11 +4508,11 @@
             },
             "Week 9": {
               "opponent": "Arizona",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "West Virginia",
@@ -4426,7 +4547,7 @@
               "won": null
             }
           },
-          "total": 65.0
+          "total": 75.0
         },
         {
           "team": "Indiana",
@@ -4507,11 +4628,11 @@
             },
             "Week 9": {
               "opponent": "Minnesota",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -4546,7 +4667,7 @@
               "won": null
             }
           },
-          "total": 70.0
+          "total": 80.0
         },
         {
           "team": "USC",
@@ -4627,11 +4748,11 @@
             },
             "Week 9": {
               "opponent": "Ohio State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 16.5,
+              "favored": false,
+              "spread": 6.5,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -4666,7 +4787,7 @@
               "won": null
             }
           },
-          "total": 70.0
+          "total": 86.5
         },
         {
           "team": "Clemson",
@@ -4747,11 +4868,11 @@
             },
             "Week 9": {
               "opponent": "@ Florida State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 14.5,
+              "favored": false,
+              "spread": 4.5,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Syracuse",
@@ -4786,7 +4907,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 54.5
         },
         {
           "team": "Penn State",
@@ -4867,11 +4988,11 @@
             },
             "Week 9": {
               "opponent": "Purdue",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Washington",
@@ -4906,7 +5027,7 @@
               "won": null
             }
           },
-          "total": 30.0
+          "total": 40.0
         },
         {
           "team": "Washington",
@@ -4987,11 +5108,11 @@
             },
             "Week 9": {
               "opponent": "@ Nebraska",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 17.5,
+              "favored": false,
+              "spread": 7.5,
+              "won": true
             },
             "Week 10": {
               "opponent": "Penn State",
@@ -5026,7 +5147,7 @@
               "won": null
             }
           },
-          "total": 43.0
+          "total": 60.5
         },
         {
           "team": "Utah",
@@ -5107,11 +5228,11 @@
             },
             "Week 9": {
               "opponent": "@ Cincinnati",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "BYU",
@@ -5146,7 +5267,7 @@
               "won": null
             }
           },
-          "total": 80.0
+          "total": 90.0
         },
         {
           "team": "Wisconsin",
@@ -5227,11 +5348,11 @@
             },
             "Week 9": {
               "opponent": "@ Iowa",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "Rutgers",
@@ -5467,11 +5588,11 @@
             },
             "Week 9": {
               "opponent": "@ UCF",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Iowa State",
@@ -5506,7 +5627,7 @@
               "won": null
             }
           },
-          "total": 53.5
+          "total": 63.5
         }
       ],
       "weeklyTotal": {
@@ -5519,13 +5640,13 @@
         "Week 6": 40.0,
         "Week 7": 53.0,
         "Week 8": 41.5,
-        "Week 9": 0,
+        "Week 9": 98.5,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 592.0,
+      "seasonTotal": 690.5,
       "boostCard": {
         "Week 1": "Texas Tech",
         "Week 2": "Baylor",
@@ -5618,11 +5739,11 @@
             },
             "Week 9": {
               "opponent": "Northwestern",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Ohio State",
@@ -5657,7 +5778,7 @@
               "won": null
             }
           },
-          "total": 40.0
+          "total": 50.0
         },
         {
           "team": "Ole Miss",
@@ -5738,11 +5859,11 @@
             },
             "Week 9": {
               "opponent": "Auburn",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Georgia",
@@ -5777,7 +5898,7 @@
               "won": null
             }
           },
-          "total": 53.0
+          "total": 63.0
         },
         {
           "team": "Vanderbilt",
@@ -5978,11 +6099,11 @@
             },
             "Week 9": {
               "opponent": "@ Wake Forest",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 13.5,
+              "won": false
             },
             "Week 10": {
               "opponent": null,
@@ -6098,11 +6219,11 @@
             },
             "Week 9": {
               "opponent": "UAB",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ East Carolina",
@@ -6137,7 +6258,7 @@
               "won": null
             }
           },
-          "total": 63.0
+          "total": 73.0
         },
         {
           "team": "UConn",
@@ -6218,11 +6339,11 @@
             },
             "Week 9": {
               "opponent": "@ Air Force",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "North Carolina",
@@ -6338,11 +6459,11 @@
             },
             "Week 9": {
               "opponent": "Kansas State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Arizona State",
@@ -6377,7 +6498,7 @@
               "won": null
             }
           },
-          "total": 43
+          "total": 53.0
         },
         {
           "team": "Liberty",
@@ -6458,11 +6579,11 @@
             },
             "Week 9": {
               "opponent": "Florida International",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ New Mexico State",
@@ -6497,7 +6618,7 @@
               "won": null
             }
           },
-          "total": 60.0
+          "total": 70.0
         },
         {
           "team": "UTEP",
@@ -6698,11 +6819,11 @@
             },
             "Week 9": {
               "opponent": "Utah",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 7.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Houston",
@@ -6870,13 +6991,13 @@
         "Week 6": 53.5,
         "Week 7": 40.0,
         "Week 8": 50.5,
-        "Week 9": 0,
+        "Week 9": 50.0,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 511.5,
+      "seasonTotal": 561.5,
       "boostCard": {
         "Week 1": "Colorado",
         "Week 2": "UConn ",
@@ -6967,11 +7088,11 @@
             },
             "Week 9": {
               "opponent": "California",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Duke",
@@ -7006,7 +7127,7 @@
               "won": null
             }
           },
-          "total": 51.0
+          "total": 61.0
         },
         {
           "team": "Virginia Tech",
@@ -7327,11 +7448,11 @@
             },
             "Week 9": {
               "opponent": "@ Colorado",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 3.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Oklahoma State",
@@ -7567,11 +7688,11 @@
             },
             "Week 9": {
               "opponent": "Marshall",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 3.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Coastal Carolina",
@@ -7807,11 +7928,11 @@
             },
             "Week 9": {
               "opponent": "vs Georgia",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 11.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "Oklahoma",
@@ -7927,11 +8048,11 @@
             },
             "Week 9": {
               "opponent": "UTEP",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -7966,7 +8087,7 @@
               "won": null
             }
           },
-          "total": 70.0
+          "total": 80.0
         },
         {
           "team": "Iowa",
@@ -8047,11 +8168,11 @@
             },
             "Week 9": {
               "opponent": "Wisconsin",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Northwestern",
@@ -8086,7 +8207,7 @@
               "won": null
             }
           },
-          "total": 72.0
+          "total": 82.0
         },
         {
           "team": "FAU",
@@ -8167,11 +8288,11 @@
             },
             "Week 9": {
               "opponent": "@ North Texas",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 15.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "UTSA",
@@ -8459,13 +8580,13 @@
         "Week 6": 44.0,
         "Week 7": 83.5,
         "Week 8": 23.0,
-        "Week 9": 0,
+        "Week 9": 30.0,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 540.5,
+      "seasonTotal": 570.5,
       "boostCard": {
         "Week 1": "Virginia Tech",
         "Week 2": "Florida",
@@ -8560,11 +8681,11 @@
             },
             "Week 9": {
               "opponent": "@ North Carolina",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Notre Dame",
@@ -8599,7 +8720,7 @@
               "won": null
             }
           },
-          "total": 70.0
+          "total": 80.0
         },
         {
           "team": "Georiga Tech",
@@ -8800,11 +8921,11 @@
             },
             "Week 9": {
               "opponent": "South Carolina",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Florida",
@@ -8920,11 +9041,11 @@
             },
             "Week 9": {
               "opponent": "@ Rutgers",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Michigan State",
@@ -8959,7 +9080,7 @@
               "won": null
             }
           },
-          "total": 45.5
+          "total": 55.5
         },
         {
           "team": "Missouri",
@@ -9040,11 +9161,11 @@
             },
             "Week 9": {
               "opponent": "@ Arkansas",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Texas",
@@ -9079,7 +9200,7 @@
               "won": null
             }
           },
-          "total": 55.5
+          "total": 65.5
         },
         {
           "team": "UNLV",
@@ -9280,11 +9401,11 @@
             },
             "Week 9": {
               "opponent": "Army",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": null,
@@ -9319,7 +9440,7 @@
               "won": null
             }
           },
-          "total": 64.5
+          "total": 74.5
         },
         {
           "team": "Fresno State",
@@ -9400,11 +9521,11 @@
             },
             "Week 9": {
               "opponent": "Oregon State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 16.0,
+              "favored": false,
+              "spread": 6.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Utah State",
@@ -9439,7 +9560,7 @@
               "won": null
             }
           },
-          "total": 42.5
+          "total": 58.5
         },
         {
           "team": "Jacksonville State",
@@ -9520,11 +9641,11 @@
             },
             "Week 9": {
               "opponent": "@ New Mexico State",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Sam Houston",
@@ -9559,7 +9680,7 @@
               "won": null
             }
           },
-          "total": 50.0
+          "total": 60.0
         },
         {
           "team": "Ohio",
@@ -9760,11 +9881,11 @@
             },
             "Week 9": {
               "opponent": "Baylor",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 2.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Kansas",
@@ -9812,13 +9933,13 @@
         "Week 6": 57.5,
         "Week 7": 40.0,
         "Week 8": 57.5,
-        "Week 9": 0,
+        "Week 9": 66.0,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 516.5,
+      "seasonTotal": 582.5,
       "boostCard": {
         "Week 1": "Georgia Tech",
         "Week 2": "Memphis",
@@ -9910,11 +10031,11 @@
             },
             "Week 9": {
               "opponent": "Mississippi State",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Missouri",
@@ -9949,7 +10070,7 @@
               "won": null
             }
           },
-          "total": 60.0
+          "total": 70.0
         },
         {
           "team": "SMU",
@@ -10030,11 +10151,11 @@
             },
             "Week 9": {
               "opponent": "@ Syracuse",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Virginia Tech",
@@ -10150,11 +10271,11 @@
             },
             "Week 9": {
               "opponent": "@ Maryland",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "Nebraska",
@@ -10189,7 +10310,7 @@
               "won": null
             }
           },
-          "total": 50.5
+          "total": 60.5
         },
         {
           "team": "UCLA",
@@ -10270,11 +10391,11 @@
             },
             "Week 9": {
               "opponent": "Nevada",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 10.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": true
             },
             "Week 10": {
               "opponent": "@ Minnesota",
@@ -10309,7 +10430,7 @@
               "won": null
             }
           },
-          "total": 100.0
+          "total": 110.0
         },
         {
           "team": "Army",
@@ -10390,11 +10511,11 @@
             },
             "Week 9": {
               "opponent": "@ Memphis",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 6.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "Air Force",
@@ -10630,11 +10751,11 @@
             },
             "Week 9": {
               "opponent": "@ BYU",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 17.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "Colorado",
@@ -10750,11 +10871,11 @@
             },
             "Week 9": {
               "opponent": "SMU",
-              "status": "scheduled",
-              "points": 0,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 18.5,
+              "favored": false,
+              "spread": 8.5,
+              "won": true
             },
             "Week 10": {
               "opponent": "Clemson",
@@ -10789,7 +10910,7 @@
               "won": null
             }
           },
-          "total": 37.5
+          "total": 56.0
         },
         {
           "team": "Oregon State",
@@ -11230,11 +11351,11 @@
             },
             "Week 9": {
               "opponent": "Miami (FL)",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": false,
+              "spread": 13.5,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ UConn",
@@ -11350,11 +11471,11 @@
             },
             "Week 9": {
               "opponent": "Clemson",
-              "status": "scheduled",
-              "points": null,
-              "favored": null,
-              "spread": null,
-              "won": null
+              "status": "normal",
+              "points": 0.0,
+              "favored": true,
+              "spread": 0.0,
+              "won": false
             },
             "Week 10": {
               "opponent": "@ Boston College",
@@ -11402,13 +11523,13 @@
         "Week 6": 83.5,
         "Week 7": 63.0,
         "Week 8": 99.5,
-        "Week 9": 0,
+        "Week 9": 48.5,
         "Week 10": 0,
         "Week 11": 0,
         "Week 12": 0,
         "Week 13": 0
       },
-      "seasonTotal": 557.5,
+      "seasonTotal": 606.0,
       "boostCard": {
         "Week 1": "Florida State",
         "Week 2": "Texas",
