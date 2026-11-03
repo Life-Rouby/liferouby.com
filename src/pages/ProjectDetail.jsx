@@ -1,16 +1,27 @@
 import { Link, useParams } from 'react-router-dom'
 import projects from '../data/projects'
+import useImageTone from '../components/useImageTone'
 
 const sections = [
   { key: 'inspiration', heading: 'Inspiration' },
   { key: 'whatItDoes', heading: 'What it does' },
   { key: 'howWeBuiltIt', heading: 'How we built it' },
+  { key: 'conclusions', heading: 'Conclusions' },
   { key: 'whatWeLearned', heading: 'What we learned' },
 ]
+
+// What the demo button says, matched to where the link goes; `linkLabel` overrides it.
+function demoLabel(project) {
+  if (project.linkLabel) return project.linkLabel
+  if (/youtube\.com|youtu\.be/.test(project.link)) return 'Watch the demo'
+  if (/devpost\.com/.test(project.link)) return 'See it on Devpost'
+  return 'Try it live'
+}
 
 export default function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find((p) => p.slug === slug)
+  const tone = useImageTone(project?.image)
 
   if (!project) {
     return (
@@ -31,7 +42,7 @@ export default function ProjectDetail() {
         &larr; Back to projects
       </Link>
 
-      <div className="project-detail-hero">
+      <div className={`project-detail-hero${tone === 'light' ? ' is-light' : ''}`}>
         <img src={project.image} alt="" className="project-detail-hero-img" />
         <div className="project-detail-hero-overlay">
           <h1 className="project-detail-title">{project.title}</h1>
@@ -45,13 +56,25 @@ export default function ProjectDetail() {
         {(project.link || project.github) && (
           <div className="project-links">
             {project.link && (
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                Demo
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary project-demo-btn"
+              >
+                {demoLabel(project)}
+                <span aria-hidden="true">↗</span>
               </a>
             )}
             {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                GitHub
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                View on GitHub
+                <span aria-hidden="true">↗</span>
               </a>
             )}
           </div>

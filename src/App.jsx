@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useParams } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
@@ -6,14 +6,18 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import About from './pages/About'
 import CFBowledgePage from './cfbowledge/CFBowledgePage'
-import PortalCompToolPage from './portal-comp-tool/PortalCompToolPage'
-import TeamPage from './portal-comp-tool/TeamPage'
-import PlayerPage from './portal-comp-tool/PlayerPage'
+import CFBargainPage from './cfbargain/CFBargainPage'
+import TeamPage from './cfbargain/TeamPage'
+import PlayerPage from './cfbargain/PlayerPage'
 
-// The tool used to live at /cfb-nil-comparison-tool; keep old links working.
-function OldTeamRedirect() {
-  const { slug } = useParams()
-  return <Navigate to={`/portal-comp-tool/team/${slug}`} replace />
+// CFBargain used to live at /cfb-nil-comparison-tool and then /portal-comp-tool;
+// keep old links working (query strings like ?season= carry over).
+const OLD_CFBARGAIN_PATHS = ['cfb-nil-comparison-tool', 'portal-comp-tool']
+
+function OldCFBargainRedirect() {
+  const { '*': rest } = useParams()
+  const { search } = useLocation()
+  return <Navigate to={`/cfbargain${rest ? `/${rest}` : ''}${search}`} replace />
 }
 
 export default function App() {
@@ -25,11 +29,12 @@ export default function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:slug" element={<ProjectDetail />} />
         <Route path="about" element={<About />} />
-        <Route path="portal-comp-tool" element={<PortalCompToolPage />} />
-        <Route path="portal-comp-tool/team/:slug" element={<TeamPage />} />
-        <Route path="portal-comp-tool/player/:id" element={<PlayerPage />} />
-        <Route path="cfb-nil-comparison-tool" element={<Navigate to="/portal-comp-tool" replace />} />
-        <Route path="cfb-nil-comparison-tool/team/:slug" element={<OldTeamRedirect />} />
+        <Route path="cfbargain" element={<CFBargainPage />} />
+        <Route path="cfbargain/team/:slug" element={<TeamPage />} />
+        <Route path="cfbargain/player/:id" element={<PlayerPage />} />
+        {OLD_CFBARGAIN_PATHS.map((path) => (
+          <Route key={path} path={`${path}/*`} element={<OldCFBargainRedirect />} />
+        ))}
       </Route>
       <Route path="/cfbowledge" element={<CFBowledgePage />} />
     </Routes>

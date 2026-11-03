@@ -6,7 +6,7 @@ import {
   equation, fmtAmount, fmtRating, fmtStars, fmtTenths, playerHref, POSITIONS, rankFill, statLine, teamSlug,
   useTeams, useTransfers,
 } from "./useNilData";
-import "./portal-comp-tool.css";
+import "./cfbargain.css";
 
 const ordinal = (n) => {
   const tens = n % 100;
@@ -20,7 +20,7 @@ const positionLabel = (id) => POSITIONS.find((p) => p.id === id)?.label.toLowerC
 function School({ team, name, season }) {
   if (!team) return <span>{name}</span>;
   return (
-    <Link className="nil-team-link" to={`/portal-comp-tool/team/${teamSlug(team.team)}?season=${season}`}>
+    <Link className="nil-team-link" to={`/cfbargain/team/${teamSlug(team.team)}?season=${season}`}>
       <TeamLogo team={team} size={28} />
       {team.team}
     </Link>
@@ -29,7 +29,7 @@ function School({ team, name, season }) {
 
 // One transfer: his price, what he was expected to add, what he added, and
 // where that puts him among the same year's transfers at his position.
-// Reached at /portal-comp-tool/player/:id, where :id starts with the transfer_id.
+// Reached at /cfbargain/player/:id, where :id starts with the transfer_id.
 export default function PlayerPage() {
   const { id } = useParams();
   const transferId = Number.parseInt(id, 10);
@@ -55,7 +55,7 @@ export default function PlayerPage() {
       .sort((a, b) => a.season - b.season);
   }, [transfers.data, t]);
 
-  const back = <Link to="/portal-comp-tool" className="project-detail-back">← All transfers</Link>;
+  const back = <Link to="/cfbargain" className="project-detail-back">← All transfers</Link>;
   const loadError = error ?? transfers.error;
   if (loadError) return <section className="page nil-page nil-team-page">{back}<p className="nil-empty">Couldn't load the data ({loadError}).</p></section>;
   if (!data || !transfers.data) return <section className="page nil-page nil-team-page"><p className="nil-empty">Loading…</p></section>;

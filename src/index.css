@@ -134,6 +134,12 @@ ul {
   padding-top: 1.25rem;
 }
 
+/* Project pages: about 60% of the window on wide screens, never narrower than
+   the site's usual reading width. */
+.main:has(.project-detail) {
+  max-width: max(var(--max-width), 60vw);
+}
+
 .footer {
   padding: 1.5rem;
   text-align: center;
@@ -542,11 +548,22 @@ ul {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: auto;
   padding-top: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.project-links .btn {
+  gap: 0.5rem;
+}
+
+/* The main call to action on a project page */
+.project-demo-btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.05rem;
 }
 
 /* Project tiles (Projects listing) */
@@ -609,6 +626,22 @@ ul {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Light images: dark title text over a white fade */
+.project-tile.is-light .project-tile-overlay,
+.project-detail-hero.is-light .project-detail-hero-overlay {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0));
+}
+
+.project-tile.is-light .project-tile-title,
+.project-detail-hero.is-light .project-detail-title {
+  color: #1a1a2e;
+}
+
+.project-tile.is-light .project-tile-tagline,
+.project-detail-hero.is-light .project-detail-tagline {
+  color: rgba(26, 26, 46, 0.8);
+}
+
 /* Project detail */
 
 .project-detail-back {
@@ -659,7 +692,6 @@ ul {
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 2rem;
-  max-width: 720px;
 }
 
 .project-detail-section h2 {

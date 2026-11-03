@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-// Data files written by projects/portal-comp-tool/src/export_site_data.py.
+// Data files written by projects/cfbargain/src/export_site_data.py.
 // Each file is fetched once per page load and shared between views.
 const cache = {};
 
 function loadJson(name) {
   if (!cache[name]) {
-    cache[name] = fetch(`/data/portal-comp-tool/${name}.json`).then((res) => {
+    cache[name] = fetch(`/data/cfbargain/${name}.json`).then((res) => {
       if (!res.ok) throw new Error(`Failed to load ${name}.json (status ${res.status})`);
       return res.json();
     });
@@ -56,7 +56,7 @@ export function teamSlug(name) {
 
 // Stats for the selected scope: "all" = 2021-2025 totals, otherwise one season.
 // A transfer's own page: its id, then the name for a readable URL.
-export const playerHref = (t) => `/portal-comp-tool/player/${t.transfer_id}-${teamSlug(t.full_name)}`;
+export const playerHref = (t) => `/cfbargain/player/${t.transfer_id}-${teamSlug(t.full_name)}`;
 
 export function teamStats(team, season) {
   return season === "all" ? team.totals : team.seasons[season] ?? null;

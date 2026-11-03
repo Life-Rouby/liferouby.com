@@ -47,7 +47,7 @@ export default function TeamBoard({ rows, season }) {
                 <td className="nil-td-muted">{r.rank}</td>
                 <td className="nil-td-name nil-td-left">
                   {r.team ? (
-                    <Link className="nil-team-link" to={`/portal-comp-tool/team/${teamSlug(r.name)}?season=${season}`}>
+                    <Link className="nil-team-link" to={`/cfbargain/team/${teamSlug(r.name)}?season=${season}`}>
                       <TeamLogo team={r.team} size={24} />
                       {r.name}
                     </Link>
