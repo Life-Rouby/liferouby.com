@@ -108,7 +108,7 @@ export default function PlayerBoard({ rows, season }) {
                     <SchoolLogo
                       team={team}
                       name={t.destination}
-                      to={team && `/portal-comp-tool/team/${teamSlug(team.team)}?season=${season}`}
+                      to={team && `/cfbargain/team/${teamSlug(team.team)}?season=${season}`}
                     />
                   </td>
                   <td className="nil-eq-term nil-tight">

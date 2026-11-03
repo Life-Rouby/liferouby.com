@@ -8,7 +8,7 @@ import {
   equation, fmtAmount, fmtRating, fmtStars, fmtTenths, playerHref, POSITIONS, rankFill, teamSlug, useTeams,
   useTransfers,
 } from "./useNilData";
-import "./portal-comp-tool.css";
+import "./cfbargain.css";
 
 const VIEWS = [
   { id: "players", label: "Players" },
@@ -107,10 +107,10 @@ function Tip({ title, sub, rating, expected, difference, extra, hint }) {
   );
 }
 
-// CFB Portal Comparison Tool: which transfers outplayed (or fell short of) what their portal
+// CFBargain: which transfers outplayed (or fell short of) what their portal
 // rating says they cost, one player at a time; school pages keep the per-school view.
-// Reachable at /portal-comp-tool but intentionally not listed on the Projects page yet.
-export default function PortalCompToolPage() {
+// Lives at /cfbargain and is listed on the Projects page.
+export default function CFBargainPage() {
   const { data, error } = useTeams();
   const transfers = useTransfers();
   const [params, setParams] = useSearchParams();
@@ -175,7 +175,7 @@ export default function PortalCompToolPage() {
     else next.set("max", String(hi));
     setParams(next, { replace: true });
   };
-  const schoolHref = (name) => `/portal-comp-tool/team/${teamSlug(name)}?season=${season}`;
+  const schoolHref = (name) => `/cfbargain/team/${teamSlug(name)}?season=${season}`;
 
   // Chart dots, colored by rank like the table's Difference pills.
   const points = view === "players"
@@ -225,7 +225,7 @@ export default function PortalCompToolPage() {
     <section className="page nil-page">
       <header className="page-header nil-header">
         <p className="eyebrow">College football · Transfer portal</p>
-        <h1>CFB Portal Comparison Tool</h1>
+        <h1>CFBargain</h1>
         <p className="page-intro">
           Which quarterbacks, running backs, wide receivers and tight end transfers played better than their portal rating said they would?
         </p>

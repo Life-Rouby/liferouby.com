@@ -1,10 +1,10 @@
-# CFB Portal Comparison Tool (portal-comp-tool)
+# CFBargain
 
 Compares each FBS transfer's on-field production with what his portal rating says he
 should produce: his **expected PPA** vs. the **actual PPA** he produced in his first season
 after transferring. The portal rating stands in for what a school spent on his NIL, so a
 bigger difference (actual − expected) means a better return on that investment.
-The site page lives at [liferouby.com/portal-comp-tool](https://liferouby.com/portal-comp-tool)
+The site page lives at [liferouby.com/cfbargain](https://liferouby.com/cfbargain)
 and is intentionally not listed on the Projects page yet.
 
 The pipeline builds a player-level dataset of FBS → FBS transfers with production
@@ -34,7 +34,7 @@ The project does **not** pull actual team-level NIL spending numbers.
 ## Project layout
 
 ```
-projects/portal-comp-tool/
+projects/cfbargain/
 ├── pull_cfbd_data.py          # downloads raw data from the CFBD API (cached)
 ├── requirements.txt
 ├── notebooks/
@@ -60,9 +60,9 @@ projects/portal-comp-tool/
 The site lives outside this folder, at the repo root:
 
 ```
-src/portal-comp-tool/                # React page, team pages, charts, styles
-public/data/portal-comp-tool/        # teams.json, transfers.json (written by export_site_data.py)
-src/App.jsx                    # routes /portal-comp-tool and /portal-comp-tool/team/:slug
+src/cfbargain/                # React page, team pages, charts, styles
+public/data/cfbargain/        # teams.json, transfers.json (written by export_site_data.py)
+src/App.jsx                    # routes /cfbargain and /cfbargain/team/:slug
 ```
 
 ## Setup
@@ -82,7 +82,7 @@ a full pull is about 35 calls. Each response is cached and skipped on later runs
    - Windows: `set CFBD_API_KEY=your_key`
 3. From this folder: `python pull_cfbd_data.py`
 
-Run it from `projects/portal-comp-tool/`. The script writes to `data/raw/` relative to the
+Run it from `projects/cfbargain/`. The script writes to `data/raw/` relative to the
 current directory.
 
 ### Building the dataset and site data
@@ -92,11 +92,11 @@ python src/build_dataset.py
 ```
 
 This reads only `data/raw/`, makes no API calls, writes everything in
-`data/processed/`, and exports the site JSON to `public/data/portal-comp-tool/`.
+`data/processed/`, and exports the site JSON to `public/data/cfbargain/`.
 
 ### Viewing the site locally
 
-From the repo root: `npm run dev`, then open http://localhost:5173/portal-comp-tool.
+From the repo root: `npm run dev`, then open http://localhost:5173/cfbargain.
 
 ## Data sources
 
@@ -604,21 +604,21 @@ Scope: QB, RB, WR and TE only (2,363 of 6,744 transfers).
 
 Routes (inside the site layout, in `src/App.jsx`):
 
-- `/portal-comp-tool`: main page
-- `/portal-comp-tool/team/:slug`: one page per team (slug = lowercase team name with dashes)
+- `/cfbargain`: main page
+- `/cfbargain/team/:slug`: one page per team (slug = lowercase team name with dashes)
 
-Files in `src/portal-comp-tool/`:
+Files in `src/cfbargain/`:
 
 | File | What it does |
 |---|---|
-| `PortalCompToolPage.jsx` | Main page: headline stats, quick guide, season / position / conference filters, the two views, methodology |
+| `CFBargainPage.jsx` | Main page: headline stats, quick guide, season / position / conference filters, the two views, methodology |
 | `ReadingGuide.jsx` | "New here?" guide: what PPA is and what the project compares, the Cam Ward example, how expected is calculated (with a chart of the QB line), glossary |
 | `PlayerBoard.jsx` | Player rankings: every scored transfer, best actual − expected first; 50 rows, then "Show all" |
 | `PlayerScatter.jsx` | Price vs. results scatter (SVG): one dot per player, expected PPA across, actual PPA up, a dashed "got what they paid for" line; hover picks the nearest dot |
 | `TeamPage.jsx` | School page: summary cards, year-by-year table, every-player table |
 | `TeamLogo.jsx` | ESPN logo with a team-color badge fallback |
 | `useNilData.js` | Loads and caches the JSON; formatters, `equation()`, `statLine()`, `rankColor()` |
-| `portal-comp-tool.css` | All styles for these pages |
+| `cfbargain.css` | All styles for these pages |
 
 Design notes:
 
@@ -778,5 +778,5 @@ The matching ones are in `src/build_dataset.py`:
   the portal-rating cost measure.
 - Review the flagged fuzzy matches and athlete-ID mismatches in `match_report.txt`.
 - Consider a curved expected-production line (see above).
-- Git cleanup: commit `projects/portal-comp-tool/`, `src/portal-comp-tool/`, `public/data/portal-comp-tool/`
+- Git cleanup: commit `projects/cfbargain/`, `src/cfbargain/`, `public/data/cfbargain/`
   and the route change in `src/App.jsx` on a new branch.

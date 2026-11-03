@@ -4,7 +4,7 @@ import TeamLogo from "./TeamLogo";
 import {
   equation, fmtAmount, fmtRating, fmtStars, fmtSubtracted, fmtTenths, fmtPercent, fmtPoints, playerHref, statLine, teamSlug, teamStats, useTeams, useTransfers,
 } from "./useNilData";
-import "./portal-comp-tool.css";
+import "./cfbargain.css";
 
 const COLUMNS = [
   { key: "season", label: "Season" },
@@ -245,7 +245,7 @@ export default function TeamPage() {
     );
   }, [team, transfers.data, season]);
 
-  const back = <Link to="/portal-comp-tool" className="project-detail-back">← All transfers</Link>;
+  const back = <Link to="/cfbargain" className="project-detail-back">← All transfers</Link>;
 
   if (error) return <section className="page nil-page nil-team-page">{back}<p className="nil-empty">Couldn't load the data ({error}).</p></section>;
   if (!data) return <section className="page nil-page nil-team-page"><p className="nil-empty">Loading…</p></section>;
@@ -277,7 +277,7 @@ export default function TeamPage() {
             <h1>{team.team}</h1>
             <p className="nil-team-sub">
               Players who transferred in, {scopeLabel} · Scores cover QB, RB, WR and TE only ·{" "}
-              <Link to="/portal-comp-tool">How to read these numbers</Link>
+              <Link to="/cfbargain">How to read these numbers</Link>
             </p>
           </div>
         </header>
